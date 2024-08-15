@@ -1,103 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web Studio</title>
-</head>
-<body>
+  </head>
+  <body>
+    <!-- TODO: header should wrap only the first block -->
     <header class="header">
-        <div class="conteiner">
-            <nav class="nav">
-                <ul class="menu">
-                <li class="menu-item">
-                <a class="menu-link" href="#">Studio</a>
-                </li>
-                <li class="menu-item">
-                    <a class="menu-link" href="#">Portfolio</a>
-                </li>
-                <li class="menu-item">
-                    <a class="menu-link" href="#">Contacts</a>
-                </li>
-                </ul>
-                <a class="logo" href= "#"><img src="images/optimised/Logo.jpg" alt="website logo"></a>
-                <div class="contact">
-                <li><a class="mail" href="malito:info@devstudio.com">info@devstudio.com</a></li>
-                <li><a class="phone" href="tel:110001111111">+11 (000) 111-11-11</a></li>
-                </div>
-            </nav>
-            <section class="hero">
-<h1>
-    Effective Solutions for Your Business
-</h1>
-             </section>
+      <div class="conteiner">
+        <!-- TODO: nav should wrap only ul.menu -->
+        <nav class="nav">
+          <ul class="menu">
+            <li class="menu-item">
+              <a class="menu-link" href="#">Studio</a>
+            </li>
+            <li class="menu-item">
+              <a class="menu-link" href="#">Portfolio</a>
+            </li>
+            <li class="menu-item">
+              <a class="menu-link" href="#">Contacts</a>
+            </li>
+          </ul>
+          <!-- TODO: move me as the first element of the parent block -->
+          <a class="logo" href="#"
+            ><img src="images/optimised/Logo.jpg" alt="website logo"
+          /></a>
+          <!-- TODO: ul should be a parent and this ul should be wrapped in nav -->
+          <div class="contact">
+            <li>
+              <a class="mail" href="malito:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+            <li>
+              <a class="phone" href="tel:110001111111">+11 (000) 111-11-11</a>
+            </li>
+          </div>
+        </nav>
+        <!-- TODO: all sections should be wrapped in main -->
+        <section class="hero">
+          <h1>Effective Solutions for Your Business</h1>
+          <!-- TODO: add button with attribute type -->
+        </section>
+      </div>
+      <section class="servis-section">
+        <!-- TODO: replace .service by ul, and each heading and paragraph should be wrapped in li -->
+        <div class="service">
+          <li>
+            <h3 class="">Strategy</h3>
+            <!-- TODO: remove empty classes -->
+            <p class="">
+              <!-- TODO: remove br -->
+              Our goal is to identify the business
+              <br />problem to walk away with the <br />
+              perfect and creative solution.
+            </p>
+          </li>
+          <h3 class="">Punctuality</h3>
+          <p class="">
+            Bring the key message to <br />
+            the brand's audience for the best price <br />
+            within the shortest possible time.
+          </p>
+          <h3 class="">Diligence</h3>
+          <p class="">
+            Research and confirm brands that <br />
+            present the strongest digital growth <br />
+            opportunities and minimize risk.
+          </p>
+          <h3 class="">Technologies</h3>
+          <p class="">
+            Design practice focused on digital <br />
+            experiences. We bring forth a deep <br />
+            passion for problem-solving.
+          </p>
         </div>
-<section class="servis-section">
-    <div class="service">
-        <h3 class="">Strategy</h3>
-<p class="">
-    Our goal is to identify the business 
-    <br>problem to walk away with the <br>
-    perfect and creative solution.
-    </p>
-    <h3 class="">Punctuality</h3>
-    <p class="">Bring the key message to <br>
-        the brand's audience for the best price <br>
-        within the shortest possible time.
-    </p>
-    <h3 class="">Diligence</h3>
-    <p class="">Research and confirm brands that <br>
-        present the strongest digital growth <br>
-        opportunities and minimize risk.
-    </p>
-    <h3 class="">Technologies</h3>
-    <p class="">Design practice focused on digital <br>
-        experiences. We bring forth a deep <br>
-        passion for problem-solving.
-    </p>
-    </div>
-</section>
-<section class="projects-section">
-    <h2 class="">What are we doing</h2>
-    <div class="project">
-    <a href="#"class=""><img src="images/optimised/web_studio_desktop.jpg" 
-        alt="web studio desktop">
-    </a>
-<a href="#" class=""><img src="images/optimised/web_studio_mobail.jpg" alt="web_studio_mobail">
-</a>
-<a href="#" class=""><img src="images/optimised/web_studio_laptop_mobail.jpg" alt="web studio laptop amd mobail">
-</a>
+      </section>
+      <section class="projects-section">
+        <h2 class="">What are we doing</h2>
+        <!-- TODO: replace div by ul and wrap each link in li -->
+        <div class="project">
+          <a href="#" class=""
+            ><img
+              src="images/optimised/web_studio_desktop.jpg"
+              alt="web studio desktop"
+            />
+          </a>
+          <a href="#" class=""
+            ><img
+              src="images/optimised/web_studio_mobail.jpg"
+              alt="web_studio_mobail"
+            />
+          </a>
+          <a href="#" class=""
+            ><img
+              src="images/optimised/web_studio_laptop_mobail.jpg"
+              alt="web studio laptop amd mobail"
+            />
+          </a>
         </div>
-</section>
-<section class="team-section">
-    <h2 class="">Our Team</h2>
-    <div class="team">
-        <h3 class="">Mark Guerrero</h3>
-        <img src="images/original/Mark Guerrero.jpg" alt="Mark Guerrero Product Designer" class="">
-        <p class="">Product Designer</p>
-    </div>
-    <div class="team">
-        <h3 class="">Tom Ford</h3>
-        <img src="images/optimised/Tom Ford.jpg" alt="Tom Ford Frontend Developer" class="">
-        <p class="">Frontend Developer</p>
-    </div>
-    <div class="team">
-        <h3 class="">Camila Garcia</h3>
-        <img src="images/optimised/Camila Garcia.jpg" alt="Camila Garcia Marketing" class="">
-        <p class="">Marketing</p>
-    </div>
-    <div class="team">
-        <h3 class="">Daniel Wilson</h3>
-        <img src="images/optimised/Daniel Wilson.jpg" alt="Daniel Wilson UI Designer" class="">
-        <p class="">UI Designer</p>
-    </div>
-</section>
-<footer class="footer">
-<img src="images/optimised/Logo.jpg" alt="" class="website logo">
-<p class="">Increase the flow of customers and <br>
-    sales for your business with digital <br>
-    marketing & growth solutions.</p>
-</footer>
-    </header>  
-</body>
+      </section>
+      <section class="team-section">
+        <h2 class="">Our Team</h2>
+        <!-- TODO: replace all div.team by li and wrap all lis in ul -->
+        <div class="team">
+          <h3 class="">Mark Guerrero</h3>
+          <img
+            src="images/original/Mark Guerrero.jpg"
+            alt="Mark Guerrero Product Designer"
+            class=""
+          />
+          <!-- TODO: replace p by span -->
+          <p class="">Product Designer</p>
+        </div>
+        <div class="team">
+          <h3 class="">Tom Ford</h3>
+          <img
+            src="images/optimised/Tom Ford.jpg"
+            alt="Tom Ford Frontend Developer"
+            class=""
+          />
+          <p class="">Frontend Developer</p>
+        </div>
+        <div class="team">
+          <h3 class="">Camila Garcia</h3>
+          <img
+            src="images/optimised/Camila Garcia.jpg"
+            alt="Camila Garcia Marketing"
+            class=""
+          />
+          <p class="">Marketing</p>
+        </div>
+        <div class="team">
+          <h3 class="">Daniel Wilson</h3>
+          <img
+            src="images/optimised/Daniel Wilson.jpg"
+            alt="Daniel Wilson UI Designer"
+            class=""
+          />
+          <p class="">UI Designer</p>
+        </div>
+      </section>
+      <footer class="footer">
+        <img src="images/optimised/Logo.jpg" alt="" class="website logo" />
+        <p class="">
+          Increase the flow of customers and <br />
+          sales for your business with digital <br />
+          marketing & growth solutions.
+        </p>
+      </footer>
+    </header>
+  </body>
 </html>
