@@ -9,6 +9,7 @@
     <!-- TODO: header should wrap only the first block -->
     <header class="header">
       <div class="conteiner">
+        <a class="logo" href="#"><img src="images/optimised/Logo.jpg" alt="website logo" /></a>
         <!-- TODO: nav should wrap only ul.menu -->
         <nav class="nav">
           <ul class="menu">
@@ -22,89 +23,119 @@
               <a class="menu-link" href="#">Contacts</a>
             </li>
           </ul>
-          <!-- TODO: move me as the first element of the parent block -->
-          <a class="logo" href="#"
-            ><img src="images/optimised/Logo.jpg" alt="website logo"
-          /></a>
+           </nav>
+          <!-- TODO: move me as the first element of the parent block -->       
           <!-- TODO: ul should be a parent and this ul should be wrapped in nav -->
           <div class="contact">
+            <ul>
             <li>
-              <a class="mail" href="malito:info@devstudio.com"
+              <a class="mail" href="mailto:info@devstudio.com"
                 >info@devstudio.com</a
               >
             </li>
             <li>
               <a class="phone" href="tel:110001111111">+11 (000) 111-11-11</a>
             </li>
+            </ul>
+            </div>
           </div>
-        </nav>
+       
+        </header>
+        <main class="main">
         <!-- TODO: all sections should be wrapped in main -->
         <section class="hero">
           <h1>Effective Solutions for Your Business</h1>
-          <!-- TODO: add button with attribute type -->
+          <button type="button" onclick="location.href='#'">Order Service</button>
         </section>
-      </div>
+          <!-- TODO: add button with attribute type -->
+        
+       
+      
       <section class="servis-section">
         <!-- TODO: replace .service by ul, and each heading and paragraph should be wrapped in li -->
-        <div class="service">
+        <ul class="service">
           <li>
             <h3 class="">Strategy</h3>
+           
             <!-- TODO: remove empty classes -->
-            <p class="">
+          
+                 </li>
+                 <li>
+                      <p>
               <!-- TODO: remove br -->
               Our goal is to identify the business
-              <br />problem to walk away with the <br />
+              problem to walk away with the
               perfect and creative solution.
             </p>
+            </li>
+         
+          <li>
+          <h3>Punctuality</h3>
           </li>
-          <h3 class="">Punctuality</h3>
-          <p class="">
-            Bring the key message to <br />
-            the brand's audience for the best price <br />
+          <li>
+          <p>
+            Bring the key message to 
+            the brand's audience for the best price 
             within the shortest possible time.
           </p>
-          <h3 class="">Diligence</h3>
-          <p class="">
-            Research and confirm brands that <br />
-            present the strongest digital growth <br />
+          </li>
+          <li>
+          <h3>Diligence</h3>
+          </li>
+          <li>
+          <p>
+            Research and confirm brands that 
+            present the strongest digital growth 
             opportunities and minimize risk.
           </p>
-          <h3 class="">Technologies</h3>
-          <p class="">
-            Design practice focused on digital <br />
-            experiences. We bring forth a deep <br />
+          </li>
+          <li>
+          <h3>Technologies</h3>
+          </li>
+          <li>
+          <p>
+            Design practice focused on digital 
+            experiences. We bring forth a deep 
             passion for problem-solving.
           </p>
-        </div>
+          </li>
+        
+        </ul>
       </section>
       <section class="projects-section">
         <h2 class="">What are we doing</h2>
         <!-- TODO: replace div by ul and wrap each link in li -->
-        <div class="project">
+        <ul class="project">
+            <li>
           <a href="#" class=""
             ><img
               src="images/optimised/web_studio_desktop.jpg"
               alt="web studio desktop"
             />
           </a>
+          </li>
+          <li>
           <a href="#" class=""
             ><img
               src="images/optimised/web_studio_mobail.jpg"
               alt="web_studio_mobail"
             />
           </a>
+          </li>
+          <li>
           <a href="#" class=""
             ><img
               src="images/optimised/web_studio_laptop_mobail.jpg"
               alt="web studio laptop amd mobail"
             />
           </a>
-        </div>
+          </li>
+        </ul>
       </section>
       <section class="team-section">
         <h2 class="">Our Team</h2>
         <!-- TODO: replace all div.team by li and wrap all lis in ul -->
-        <div class="team">
+        <li class="team">
           <h3 class="">Mark Guerrero</h3>
           <img
             src="images/original/Mark Guerrero.jpg"
@@ -113,8 +144,9 @@
           />
           <!-- TODO: replace p by span -->
           <p class="">Product Designer</p>
-        </div>
-        <div class="team">
+        </li>
+        <ul class="team">
+        <li>
           <h3 class="">Tom Ford</h3>
           <img
             src="images/optimised/Tom Ford.jpg"
@@ -122,8 +154,8 @@
             class=""
           />
           <p class="">Frontend Developer</p>
-        </div>
-        <div class="team">
+        </li>
+        <li class="team">
           <h3 class="">Camila Garcia</h3>
           <img
             src="images/optimised/Camila Garcia.jpg"
@@ -131,7 +163,7 @@
             class=""
           />
           <p class="">Marketing</p>
-        </div>
+        </li>
         <div class="team">
           <h3 class="">Daniel Wilson</h3>
           <img
@@ -139,9 +171,11 @@
             alt="Daniel Wilson UI Designer"
             class=""
           />
+          </ul>
           <p class="">UI Designer</p>
         </div>
       </section>
+      </main>
       <footer class="footer">
         <img src="images/optimised/Logo.jpg" alt="" class="website logo" />
         <p class="">
@@ -150,6 +184,7 @@
           marketing & growth solutions.
         </p>
       </footer>
-    </header>
-  </body>
-</html>
+      
+        
+      </body>
+    </html>
