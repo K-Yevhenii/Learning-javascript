@@ -11,7 +11,7 @@ main#main .aside + .article .section > ul > li.item + li.item > button[disabled]
 
 ## Create selector
 
-**Goal** - create a selector for elements that starts from 'goal-'. Make a selector as specific as possible.
+**Goal** - create selectors for elements that starts from 'goal-'. Make a selector as specific as possible.
 
 ```html
 <header></header>
@@ -114,6 +114,10 @@ main#main .aside + .article .section > ul > li.item + li.item > button[disabled]
 </footer>
 ```
 
+```css
+/* Add your selectors here */
+```
+
 ## UI elements. Part 1
 
 **Goal** - create reusable styles a button and a link. Use css-variables for common colors.
@@ -135,7 +139,7 @@ States:
 - Hover background-color - #379247
 - Active background-color - #1b4823
 - Focus style - same as default color, but add border 2px of the same color
-- Disabled background-color - #a0a0a0
+- Disabled background-color - #a0a0a0.
 
 **Bonus goal**: make button corners rounded - 5px.
 
