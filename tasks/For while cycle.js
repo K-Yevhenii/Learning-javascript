@@ -51,6 +51,7 @@ function countLettersInWordWhile() {
   while (i < str1.length) {
     let currentChar = str1[i];
 
+    // TODO: use === instead
     if (str2.includes(currentChar)) {
       count++;
     }
