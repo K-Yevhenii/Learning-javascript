@@ -16,6 +16,6 @@ const array = ['foo', null, 42, {}];
 
 ```js
 const obj = {
-  a: {b: c: [[{d: 'target'}]]}
-}
+  a: { b: { c: [[{ d: 'target' }]] } },
+};
 ```
