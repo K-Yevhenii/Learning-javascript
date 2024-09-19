@@ -88,7 +88,7 @@ const numbers = [5, -1, 45, 8, -22, 54];
 
 ### Reverse string
 
-**Goal** - write a function reads value passed by user and reverses string. If user doesn't enter anything return a message `Please, provide your message`. Don't use built-in `.reverse method`
+**Goal** - write a function reads value passed by user and reverses string. If user doesn't enter anything return a message `Please, provide your message`. Don't use built-in `.reverse` method, use `for` instead.
 For example, `asdfqwer` should return `rewqfdsa`.
 
 ```js

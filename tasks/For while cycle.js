@@ -21,56 +21,65 @@
 // function countLettersInWord() {}
 
 function countLettersInWordFor() {
-    let word = prompt("Enter word");
-    let letters = prompt("Enter letter");
-    let count = 0;
+  // TODO: make first 2 variables const
+  let word = prompt('Enter word');
+  // TODO: letters -> letter
+  let letters = prompt('Enter letter');
+  let count = 0;
 
-    for (let i = 0; i < word.length; i++) {
-        let currentChar = word[i];
+  for (let i = 0; i < word.length; i++) {
+    let currentChar = word[i];
 
-        if (letters.includes(currentChar)) {
-            count++;
-        }
+    // TODO: use === instead
+    if (letters.includes(currentChar)) {
+      count++;
     }
-    alert(count)
+  }
+
+  // TODO: return count instead
+  alert(count);
 }
-// countLettersInWordWhile(str1, str2) {
 
-//     let str1 = "example";
-//     let str2 = "sample";
-//     let count = 0;
-//     let i = 0;
-//     while (i < str1.length) {
-//         let currentChar = str1[i];
+function countLettersInWordWhile() {
+  // TODO: make str1 and str2 const
+  let str1 = 'banana';
+  let str2 = 'a';
 
-//         if (str2.includes(currentChar)) {
-//             count++
-//             return count
-//         }
-//     }
-// }
+  let count = 0;
+  let i = 0;
+
+  while (i < str1.length) {
+    let currentChar = str1[i];
+
+    // TODO: use === instead
+    if (str2.includes(currentChar)) {
+      count++;
+    }
+
+    i++;
+  }
+
+  return count;
+}
 
 
 // ### The biggest number
 
-//     ** Goal ** - find the biggest number using for cycle.Important - 
+//     ** Goal ** - find the biggest number using for cycle.Important -
 // discuss task before implementation.
 
 // ```js
 // const numbers = [5, -1, 45, 8, -22, 54];
 
-
 function biggestNumber() {
+  const numbers = [5, -1, 45, 8, -22, 54];
+  let maxNumber = numbers[0];
 
-    const numbers = [5, -1, 45, 8, -22, 54];
-    let maxNumber = numbers[0];
-
-    for (let i = 0; i < numbers.length; i++) {
-        if (numbers[i] > maxNumber) {
-            maxNumber = numbers[i];
-        }
+  for (let i = 1; i < numbers.length; i++) {
+    if (numbers[i] > maxNumber) {
+      maxNumber = numbers[i];
     }
-    console.log(maxNumber);
-
+  }
+  console.log(maxNumber);
 }
-biggestNumber(); 
+biggestNumber();
