@@ -2,7 +2,8 @@
 
 ## Glossary
 
-**Idempotence** - a feature when a method has the same result regardless amount of times called. GET, PUT, and DELETE are idempotent
+**Idempotence** - a feature when a method has the same result regardless amount of times called. GET, PUT, and DELETE are idempotent.
+
 **Upsert** - used for PUT method when:
 
 - a single entity matched by certain criteria (typically by id), it is updated.
