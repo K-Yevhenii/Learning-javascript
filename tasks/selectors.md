@@ -1,5 +1,45 @@
 # Selectors
 
+## UI elements. Part 1
+
+**Goal** - create reusable styles a button and a link. Use css-variables for common colors.
+
+### For button and link
+
+- Font size - 14px
+- Font - Montserrat; use google fonts.
+
+### For button
+
+Common:
+
+- Button color - #fff.
+
+States:
+
+- Default background-color - #45b759
+- Hover background-color - #379247
+- Active background-color - #1b4823
+- Focus style - same as default color, but add border 2px of the same color
+- Disabled background-color - #a0a0a0.
+
+**Bonus goal**: make button corners rounded - 5px.
+
+```css
+/* Styles for button */
+```
+
+### For link
+
+- Default, hover, active and focused should be the same as in button.
+- Visited color - #0d2311.
+
+```css
+/* Styles for link */
+```
+
+**Bonus goal**: link should be underlined only when it's active or hovered.
+
 ## Create markup from selector
 
 **Goal** - create HTML where a button matches selector
@@ -117,43 +157,3 @@ main#main .aside + .article .section > ul > li.item + li.item > button[disabled]
 ```css
 /* Add your selectors here */
 ```
-
-## UI elements. Part 1
-
-**Goal** - create reusable styles a button and a link. Use css-variables for common colors.
-
-### For button and link
-
-- Font size - 14px
-- Font - Montserrat; use google fonts.
-
-### For button
-
-Common:
-
-- Button color - #fff.
-
-States:
-
-- Default background-color - #45b759
-- Hover background-color - #379247
-- Active background-color - #1b4823
-- Focus style - same as default color, but add border 2px of the same color
-- Disabled background-color - #a0a0a0.
-
-**Bonus goal**: make button corners rounded - 5px.
-
-```css
-/* Styles for button */
-```
-
-### For link
-
-- Default, hover, active and focused should be the same as in button.
-- Visited color - #0d2311.
-
-```css
-/* Styles for link */
-```
-
-**Bonus goal**: link should be underlined only when it's active or hovered.
