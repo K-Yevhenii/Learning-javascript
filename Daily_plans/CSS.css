@@ -1,0 +1,40 @@
+/* Part 1. Basic selectors  */
+/* Will be applied because the most specific */
+#text {
+  color: green;
+}
+
+.class {
+  color: brown;
+}
+
+span {
+  color: teal;
+}
+
+/* Part 2. Multiple selectors with the same priority */
+.inner.cool {
+  color: violet;
+}
+
+/* This .inner.cool will be applied because it's latest */
+.inner.cool {
+  color: yellow;
+}
+
+/* Part 3. Selectors priority */
+/* 110 */
+#text.inner {
+}
+
+/* 201 */
+ul#text#random-id {
+}
+
+/* 3 */
+ul > li > span {
+}
+
+/* 111 */
+button#id[disabled] {
+}
