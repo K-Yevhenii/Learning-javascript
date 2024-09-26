@@ -83,6 +83,7 @@ loginUser()
   .then((token) => getUserProfile(token))
   .then((user) => getUserOrders(user.id))
   .catch((error) => console.log(error));
+  .finally(() => console.log('Finished'))
 ```
 
 ## `async...await`
@@ -93,6 +94,28 @@ async function loadUserPage() {
     const token = await loginUser();
     const user = await getUserProfile(token);
     const orders = await getUserOrders(user.id);
+  } catch (error) {
+    console.log(error);
+  } finally {
+    console.log('Finished');
+  }
+}
+```
+
+```js
+async function getData() {
+  try {
+    const result = await axios.method(`${API_HOST}/${path}`, {
+      // Only for GET: query params that will be built as query string
+      params: { foo: 'bar', baz: 123 },
+      // Only for POST, PUT, PATCH request body converted to application/json
+      data: { foo: 'bar', baz: 123 },
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+
+    // http://localhost:8000/api?foo=bar&baz=123
   } catch (error) {
     console.log(error);
   }
