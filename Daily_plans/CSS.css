@@ -1,4 +1,4 @@
-/* Part 1. Basic selectors  */
+/* Part 1. Basic selectors 
 /* Will be applied because the most specific */
 #text {
   color: green;
@@ -37,4 +37,16 @@ ul > li > span {
 
 /* 111 */
 button#id[disabled] {
+}
+
+span ~ span {
+  color: blueviolet;
+}
+
+span + span {
+  color: aqua;
+}
+
+span {
+  color: black;
 }

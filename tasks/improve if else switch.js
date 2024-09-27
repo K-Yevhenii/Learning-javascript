@@ -123,4 +123,57 @@ function traffic() {
             break;
     }
 }
-// console.log(traffic());
+//  
+
+function tempColor() {
+    const color = "red";
+    const red = "Warm color";
+    const orange = "Warm color";
+    const yellow = "Warm color";
+    const blue = "Cold color";
+    const violet = "Cold color";
+
+    if (color === 'red' || color === 'yellow' || color === 'orange') {
+        return "Warm color";
+    }
+
+    if (color == red) {
+        return red
+
+    } else if (color == orange) {
+        return orange
+
+    } else if (color == yellow) {
+        return yellow
+
+    } else if (color == blue) {
+        return blue
+
+    } else if (color == violet) {
+        return violet
+
+    } else {
+        throw new Error(`Unknown color found ${color}`);
+    }
+}
+
+tempColor()
+
+function tempColorMass() {
+    // const color = prompt("Enter your color");
+    const color = 'blue'
+    const warmColor = ['red', 'orange', 'yellow']
+    const coldColor = ['blue', 'violet']
+    if (warmColor.includes(color)) {
+        // alert('Warm color')
+        console.log('Warm color');
+
+    } else if (coldColor.includes(color)) {
+        // alert('Cold color')
+        console.log('Cold color');
+
+    } else {
+        throw new Error(`Unknown color found ${color}`);
+    }
+}
+// tempColorMass()
