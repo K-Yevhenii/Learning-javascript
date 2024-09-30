@@ -13,19 +13,15 @@ async function loginUser(email, password) {
             },
             baseURL: API_HOST,
         });
-        accessToken = result.data.access;
-        refreshToken = result.data.refresh;
+        const accessToken = result.data.access;
+        const refreshToken = result.data.refresh;
 
         console.log('Access Token:', accessToken);
         console.log('Refresh Token:', refreshToken);
 
         console.log(result);
 
-        return {
-            accessToken: result.data.access,
-            refreshToken: result.data.refresh,
-        };
-
+        return accessToken;
     } catch (error) {
         console.log('error login');
 
@@ -87,9 +83,13 @@ async function getById() {
 }
 
 async function main() {
-    const result = await loginUser();
+    const adminAccessToken = await loginUser('admin@email.com', '123');
+    const userAccessToken = await loginUser('user@email.com', '123');
+
     await getAuctionsList();
-    await getById(AUCTIONS_ID, result.accessToken);
+
+    await getById(AUCTIONS_ID, adminAccessToken);
+    await getById(AUCTIONS_ID, userAccessToken);
 }
 
 main()
