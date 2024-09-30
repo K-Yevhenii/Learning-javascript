@@ -1,17 +1,15 @@
 const API_HOST = "http://localhost:8000/"
 
-let accessToken;
-let refreshToken;
 
-async function loginUser() {
+// TODO: pass email and password as params
+async function loginUser(email, password) {
     try {
         const result = await axios({
             method: 'post',
             url: '/users/login/',
             data: {
-                "email": "y.korniakov@gmail.com",
-                "password": "1234"
-
+                email: email,
+                password: password,
             },
             baseURL: API_HOST,
         });
@@ -22,7 +20,11 @@ async function loginUser() {
         console.log('Refresh Token:', refreshToken);
 
         console.log(result);
-        return { accessToken, refreshToken }
+
+        return {
+            accessToken: result.data.access,
+            refreshToken: result.data.refresh,
+        };
 
     } catch (error) {
         console.log('error login');
@@ -31,24 +33,11 @@ async function loginUser() {
     }
 }
 
-// async function token() {
-//     try {
-//         const result = await ({
-//             method: 'post',
-//             url: '/users/login/',
-//             data: {
-//                 access: 'token',
-//                 refresh: 'token',
-//             },
-//             baseURL: API_HOST,
-//         });
-//         console.log(data);
-//         return result.data;
-//     } catch (error) {
-//         console.log('error token');
-//     }
+// TODO: pass value for params as function parameter in order to use like this:
+// async function main () {
+//     await getAuctionsList({ status: 'active' })
+//     await getAuctionsList({ start_from: '2024-09-30T18:18:25.676Z' })
 // }
-
 async function getAuctionsList() {
     try {
         const result = await axios({
@@ -63,6 +52,8 @@ async function getAuctionsList() {
         console.log(result);
         console.log('Auctions list');
 
+        return result.data
+
     } catch (error) {
         console.log('error');
 
@@ -70,6 +61,8 @@ async function getAuctionsList() {
     }
 }
 const AUCTIONS_ID = 2
+// TODO: pass auctionId as function param and accessToken
+// TODO: getAuctionById
 async function getById() {
 
     console.log(' Fet By Id');
@@ -94,9 +87,9 @@ async function getById() {
 }
 
 async function main() {
-    await loginUser()
-    await getAuctionsList()
-    // await token(loginUser)
-    await getById()
+    const result = await loginUser();
+    await getAuctionsList();
+    await getById(AUCTIONS_ID, result.accessToken);
 }
+
 main()
