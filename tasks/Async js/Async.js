@@ -19,10 +19,9 @@ async function loginUser(email, password) {
             },
             baseURL: API_HOST,
         });
-        console.log('Access Token:', accessToken);
-        console.log('Refresh Token:', refreshToken);
 
         console.log(result);
+        console.log('Access Token:', result.data.access);
 
         return result.data.access
 
@@ -34,35 +33,6 @@ async function loginUser(email, password) {
 
     }
 }
-
-// TODO: pass value for params as function parameter in order to use like this:
-// async function main () {
-//     await getAuctionsList({ status: 'active' })
-//     await getAuctionsList({ start_from: '2024-09-30T18:18:25.676Z' })
-// }
-
-// async function AuctionsOptionFilter() {
-//     console.log('Auctions Option Filter');
-
-//     try {
-//         const result = await axios({
-//             method: 'pul',
-//             url: '/auctions/',
-//             headers: {
-//                 'Authorization': `Bearer ${accessToken}`
-//             },
-//             data: {
-
-//                 status: 'not_conducted'
-//             }
-//         });
-//         return result.data;
-//     } catch (error) {
-
-//     }
-// }
-// const optionFilter = AuctionsOptionFilter();
-
 
 async function getAuctionsList(params) {
     console.log('Auctions list');
@@ -124,6 +94,7 @@ async function registerUser() {
             method: 'post',
             url: '/users/register/',
             data: formData,
+            baseURL: API_HOST,
         });
         return result.data
 
@@ -133,16 +104,105 @@ async function registerUser() {
 
 }
 // 
-async function createAuctionAdmin() {
+async function createAuctionAdmin(accessToken) {
     try {
+        const formData = new FormData();
+        formData.append('name', 'car');
+        formData.append('initial_price', 10000);
+        formData.append('description', 'New');
+
         const result = await axios({
             method: 'post',
             url: '/auctions/',
+            data: formData,
+            headers: {
+                'Authorization': `Bearer ${accessToken}`
+            },
+            baseURL: API_HOST,
+        });
+        console.log(result);
+        console.log('Auctions list');
+
+        return result.data
+
+
+    } catch (error) {
+        console.log('error');
+
+
+    }
+}
+async function startAuction(auctionId, accessToken) {
+    try {
+        const result = await axios({
+            method: 'post',
+            url: `/auctions/${auctionId}/start/`,
+
+            headers: {
+                'Authorization': `Bearer ${accessToken}`
+            },
+            baseURL: API_HOST,
+        });
+        console.log(result.data);
+        return result.data
+
+    } catch (error) {
+
+    }
+}
+
+// TODO: fix `socket_id` on the backend and uncomment
+// async function auctionsBids(auctionId, accessToken) {
+//     try {
+//         const result = await axios({
+//             method: 'post',
+//             url: `/auctions/${auctionId}/bits/`,
+
+//             headers: {
+//                 'Authorization': `Bearer ${accessToken}`
+//             },
+//             baseURL: API_HOST,
+//         });
+//         console.log(result.data);
+//         return result.data
+
+//     } catch (error) {
+
+//     }
+// }
+async function finishAuction(auctionId, accessToken) {
+    try {
+        // TODO: should return 200, not 201
+        const result = await axios({
+            method: 'post',
+            url: `/auctions/${auctionId}/finish/`,
+
+            headers: {
+                'Authorization': `Bearer ${accessToken}`
+            },
+            baseURL: API_HOST,
+        });
+        console.log(result.data);
+        return result.data
+
+    } catch (error) {
+
+    }
+}
+
+async function renameAuctionAdmin(auctionId) {
+    try {
+        const result = await axios({
+            method: 'put',
+            url: `/auctions/${auctionId}`,
             data: {
                 name: 'car',
-                initial_price: 10000,
+                initial_price: 10001,
                 description: 'New',
-            }
+            },
+            headers: {
+                'Authorization': `Bearer ${accessToken}`
+            },
             baseURL: API_HOST,
         });
         console.log(result);
@@ -160,13 +220,19 @@ async function createAuctionAdmin() {
 
 // 
 async function main() {
-    const newUser = await registerUser()
-    const newUserToken = await loginUser(newUser.email, newUser.password)
+
+    // TODO: fix register flow and uncomment
+    // const newUser = await registerUser()
+    // const newUserToken = await loginUser(newUser.email, newUser.password)
     const adminToken = await loginUser('y.korniakov@gmail.com', '1234');
+
     await getAuctionsList();
-    await getAuctionById(AUCTIONS_ID, result.accessToken);
-    await getAuctionById(5, result.accessToken);
-    await getAuctionById(6, result.accessToken);
+    const newCreateAuctionsAdmin = await createAuctionAdmin(adminToken)
+    await renameAuctionAdmin(newCreateAuctionsAdmin.id, adminToken)
+    await getAuctionById(newCreateAuctionsAdmin.id, adminToken);
+    await startAuction(newCreateAuctionsAdmin.id, adminToken)
+    await finishAuction(newCreateAuctionsAdmin.id, adminToken)
+
 }
 
 main()
