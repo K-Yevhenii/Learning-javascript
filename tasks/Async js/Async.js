@@ -1,6 +1,12 @@
 const API_HOST = "http://localhost:8000/"
 
-
+// - Register a user
+// - Create an auction as admin
+// - Change auction name as admin
+// - Start auction as admin
+// - Retrieve single auction as user
+// - Make an auction bid as user
+// - Finish auction as admin
 // TODO: pass email and password as params
 async function loginUser(email, password) {
     try {
@@ -13,18 +19,14 @@ async function loginUser(email, password) {
             },
             baseURL: API_HOST,
         });
-        accessToken = result.data.access;
-        refreshToken = result.data.refresh;
-
         console.log('Access Token:', accessToken);
         console.log('Refresh Token:', refreshToken);
 
         console.log(result);
 
-        return {
-            accessToken: result.data.access,
-            refreshToken: result.data.refresh,
-        };
+        return result.data.access
+
+
 
     } catch (error) {
         console.log('error login');
@@ -38,15 +40,37 @@ async function loginUser(email, password) {
 //     await getAuctionsList({ status: 'active' })
 //     await getAuctionsList({ start_from: '2024-09-30T18:18:25.676Z' })
 // }
-async function getAuctionsList() {
+
+// async function AuctionsOptionFilter() {
+//     console.log('Auctions Option Filter');
+
+//     try {
+//         const result = await axios({
+//             method: 'pul',
+//             url: '/auctions/',
+//             headers: {
+//                 'Authorization': `Bearer ${accessToken}`
+//             },
+//             data: {
+
+//                 status: 'not_conducted'
+//             }
+//         });
+//         return result.data;
+//     } catch (error) {
+
+//     }
+// }
+// const optionFilter = AuctionsOptionFilter();
+
+
+async function getAuctionsList(params) {
+    console.log('Auctions list');
     try {
         const result = await axios({
             method: 'get',
             url: '/auctions/',
-            params: {
-                status: 'active',
-
-            },
+            params: params,
             baseURL: API_HOST,
         });
         console.log(result);
@@ -54,23 +78,24 @@ async function getAuctionsList() {
 
         return result.data
 
+
     } catch (error) {
         console.log('error');
 
 
     }
 }
-const AUCTIONS_ID = 2
+const AUCTIONS_ID = '4'
 // TODO: pass auctionId as function param and accessToken
 // TODO: getAuctionById
-async function getById() {
+async function getAuctionById(auctionId, accessToken) {
 
-    console.log(' Fet By Id');
+    console.log('Fet By Id');
 
     try {
         const result = await axios({
             method: 'get',
-            url: `/auctions/${AUCTIONS_ID}`,
+            url: `/auctions/${auctionId}`,
 
             // params: { status: 'active' },
             headers: {
@@ -86,10 +111,62 @@ async function getById() {
     }
 }
 
+async function registerUser() {
+    try {
+        const formData = new FormData();
+        formData.append('first_name', 'yarniakov');
+        formData.append('last_name', 'koniakov');
+        formData.append('email', 'ya.korniakov@gmail.com');
+        formData.append('password', '12345');
+
+
+        const result = await axios({
+            method: 'post',
+            url: '/users/register/',
+            data: formData,
+        });
+        return result.data
+
+    } catch (error) {
+
+    }
+
+}
+// 
+async function createAuctionAdmin() {
+    try {
+        const result = await axios({
+            method: 'post',
+            url: '/auctions/',
+            data: {
+                name: 'car',
+                initial_price: 10000,
+                description: 'New',
+            }
+            baseURL: API_HOST,
+        });
+        console.log(result);
+        console.log('Auctions list');
+
+        return result.data
+
+
+    } catch (error) {
+        console.log('error');
+
+
+    }
+}
+
+// 
 async function main() {
-    const result = await loginUser();
+    const newUser = await registerUser()
+    const newUserToken = await loginUser(newUser.email, newUser.password)
+    const adminToken = await loginUser('y.korniakov@gmail.com', '1234');
     await getAuctionsList();
-    await getById(AUCTIONS_ID, result.accessToken);
+    await getAuctionById(AUCTIONS_ID, result.accessToken);
+    await getAuctionById(5, result.accessToken);
+    await getAuctionById(6, result.accessToken);
 }
 
 main()
