@@ -26,7 +26,6 @@ async function loginUser(email, password) {
         return result.data.access
 
 
-
     } catch (error) {
         console.log('error login');
 
