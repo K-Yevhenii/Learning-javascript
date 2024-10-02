@@ -233,5 +233,5 @@ async function main() {
     await finishAuction(newCreateAuctionsAdmin.id, adminToken)
 
 }
-
+querySelector
 main()
