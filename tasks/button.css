@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "Montserrat_Alternates";
+  src: url("../tasks/custom-font-import/Montserrat_Alternates/MontserratAlternates-LightItalic.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  background-color: dimgrey;
+}
+
+.btn {
+  font-family: "Montserrat_Alternates", sans-serif;
+}
+.container {
+  max-width: 1200px;
+  padding: 160px 15px;
+  text-align: center;
+}
+.btn:focus {
+  background-color: rgb(22, 187, 224);
+  color: rgb(255, 240, 243);
+  padding: 20px 50px;
+  font-size: 14px;
+  border: none;
+  border-radius: 25px;
+}
