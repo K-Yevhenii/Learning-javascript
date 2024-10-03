@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      main#main
+        .aside
+        + .article
+        .section
+        > ul
+        > li.item
+        + li.item
+        > button[disabled] {
+      }
+    </style>
+  </head>
+  <body>
+    <main id="main">
+      <aside class="aside"></aside>
+      <article class="article">
+        <div>
+          <section class="section">
+            <ul>
+              <li class="item"></li>
+              <li class="item">
+                <button disabled class="butn"></button>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
