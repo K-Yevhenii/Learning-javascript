@@ -1,0 +1,21 @@
+header + main > section.section + section > div + p.goal-1 {
+}
+
+header
+  + main
+  > section.section
+  + section
+  > div
+  + p.goal-1
+  + nav#navigation
+  > ul
+  > li
+  > ul
+  > li
+  + li
+  > a
+  + a#home-page.goal-2 {
+}
+
+header + main + footer.footer > div + div > h3 ~ p.goal-3 {
+}
