@@ -1,0 +1,63 @@
+@font-face {
+  font-family: "Montserrat_Alternates";
+  src: url("../tasks/custom-font-import/Montserrat_Alternates/MontserratAlternates-LightItalic.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  background-color: dimgrey;
+  font-family: "Montserrat_Alternates", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 160px 15px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+.btn {
+  color: #fff;
+  background-color: #45b759;
+  border-radius: 25px;
+  font-family: inherit;
+}
+
+.btn:hover {
+  background-color: #379247;
+}
+.btn:focus {
+  border: solid 2px #45b759;
+  /* 
+  `border` is short form of these CSS properties:
+  border-color: #45b759;
+  border-style: solid;
+  border-width: 2px; */
+}
+.btn:active {
+  background-color: #1b4823;
+}
+
+.btn:disabled {
+  background-color: #a0a0a0;
+}
+.link {
+  color: #fff;
+  color: #45b759;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #379247;
+  text-decoration: underline;
+}
+.link:focus {
+  border: solid 2px #45b759;
+  text-decoration: underline;
+}
+.link:active {
+  color: #1b4823;
+}
+.link:visited {
+  color: #0d2311;
+}
