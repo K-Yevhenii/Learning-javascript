@@ -5,6 +5,15 @@
   font-weight: normal;
   font-style: normal;
 }
+:root {
+  /* TODO: move to :root {} */
+  --active-color: #1b4823;
+  --hover-color: #379247;
+  /* TODO: remove me */
+  --focus-color: #45b759;
+  --default-color: #45b759;
+  /* TODO: rename to --active-color and rename colors for hover and active */
+}
 body {
   background-color: dimgrey;
   font-family: "Montserrat_Alternates", sans-serif;
@@ -16,17 +25,14 @@ body {
 
   font-size: 14px;
   box-sizing: border-box;
-
-  --active-color: #1b4823;
-  --hover-color: #379247;
-  --focus-color: #45b759;
 }
 
 .btn {
   margin-left: 25px;
   text-transform: uppercase;
   color: #fff;
-  background-color: #45b759;
+  /* TODO: apply variable */
+  background-color: var(--default-color);
   border-radius: 25px;
   font-family: inherit;
 }
@@ -52,7 +58,7 @@ body {
 .link {
   margin-left: 25px;
   color: #fff;
-  background-color: var(--focus-color);
+  background-color: var(--default-color);
   text-decoration: none;
   border-radius: 15px;
   font-family: inherit;
@@ -67,7 +73,8 @@ body {
   text-decoration: underline;
 }
 .link:active {
-  color: #1b4823;
+  /* TODO: apply variable */
+  color: var(--active-color);
 }
 .link:visited {
   color: #0d2311;
