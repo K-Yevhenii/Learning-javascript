@@ -5,39 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./css-hw-02.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+    />
   </head>
   <body>
     <!-- heder -->
     <header class="header">
       <!-- menu nav -->
       <div class="menu-nav">
-        <a href="#" class="logo"><img src="" alt="WebStudio-logo" /></a>
+        <a href="#" class="logo"
+          ><img src="./img-convert/WebStudio.jpg" alt="WebStudio-logo"
+        /></a>
         <nav class="nav">
-          <ul class="menu">
+          <ul class="menu list">
             <li class="menu-item">
-              <a href="#" class="menu-link">Студія</a>
+              <a href="#" class="link">Студія</a>
             </li>
             <li class="menu-item">
-              <a href="#" class="menu-link">Портфоліо</a>
+              <a href="#" class="link">Портфоліо</a>
             </li>
             <li class="menu-item">
-              <a href="#" class="menu-link">Контакти</a>
+              <a href="#" class="link">Контакти</a>
             </li>
           </ul>
         </nav>
-        <!-- contacts -->
-        <div class="contacts"></div>
-        <ul>
-          <li>
-            <a class="mail" href="mailto:someone@example.com"
-              >info@devstudio.com</a
-            >
-          </li>
-          <li>
-            <a class="phone" href="tel:110001111111">+11 (000) 111-11-11</a>
-          </li>
-        </ul>
       </div>
+      <!-- contacts -->
+      <ul class="contacts list">
+        <li>
+          <a class="link" href="mailto:someone@example.com"
+            >info@devstudio.com</a
+          >
+        </li>
+        <li>
+          <a class="link" href="tel:110001111111">+11 (000) 111-11-11</a>
+        </li>
+      </ul>
     </header>
     <!-- main -->
     <main class="main">
@@ -83,14 +94,24 @@
         <ul class="project">
           <li>
             <a href="#"
-              ><img src="" alt="Розробка програмного забезпечення"
+              ><img
+                src="./img-convert/Software_development.jpg"
+                alt="Розробка програмного забезпечення"
             /></a>
           </li>
           <li>
-            <a href="#"><img src="" alt="Мобільний UX/UI дизайн" /></a>
+            <a href="#"
+              ><img
+                src="./img-convert/mobile_UX_UI .jpg"
+                alt="Мобільний UX/UI дизайн"
+            /></a>
           </li>
           <li>
-            <a href="#"><img src="" alt="Цифровий графічний дизайн" /></a>
+            <a href="#"
+              ><img
+                src="./img-convert/Digital_graphic_design.jpg"
+                alt="Цифровий графічний дизайн"
+            /></a>
           </li>
         </ul>
       </section>
@@ -100,45 +121,66 @@
         <ul class="team">
           <li>
             <h3>Ігор Дем'яненко</h3>
-            <img src="#" alt="Ігор Дем'яненко Product Designer" />
+            <img
+              src="./img-convert/Igor_Demyanenko.jpg"
+              alt="Ігор Дем'яненко Product Designer"
+            />
           </li>
 
           <span>Product Designer</span>
           <li>
             <h3>Ольга Рєпіна</h3>
-            <img src="#" alt="Ольга Рєпіна Frontend Developer" />
+            <img
+              src="./img-convert/Olga_Repina.jpg"
+              alt="Ольга Рєпіна Frontend Developer"
+            />
           </li>
           <li><span>Frontend Developer</span></li>
 
           <li>
             <h3>Микола Тарасов</h3>
-            <img src="#" alt="Микола Тарасов Marketing" />
+            <img
+              src="./img-convert/Mykola_Tarasov.jpg"
+              alt="Микола Тарасов Marketing"
+            />
           </li>
           <li><span>Marketing</span></li>
 
           <li>
             <h3>Михайло Єрмаков</h3>
-            <img src="#" alt="Микола Тарасов UI Designer" />
+            <img
+              src="./img-convert/Mikhail_Yermakov.jpg"
+              alt="Михайло Єрмаков UI Designer"
+            />
           </li>
           <li><span>UI Designer</span></li>
         </ul>
       </section>
     </main>
-    <footer class="footer">
-      <img src="#" alt="WebStudio-logo" />
-      <ul class="footer-contacts">
-        <li class="footer-contact">
-          <h4 class="adras">м. Київ, пр-т Лесі Українки, 26</h4>
-        </li>
-        <li>
-          <a class="foter-mail" href="mailto:someone@example.com"
-            >info@devstudio.com</a
-          >
-        </li>
-        <li>
-          <a class="foter-phone" href="tel:110001111111">+11 (000) 111-11-11</a>
-        </li>
-      </ul>
-    </footer>
+    <!-- footer -->
+    <div class="footer">
+      <footer>
+        <address>
+          <a href="#" class="logo-footer"
+            ><img src="./img-convert/WebStudio_footer.jpg" alt="WebStudio-logo"
+          /></a>
+          <ul class="footer-contacts">
+            <li class="footer-contact">
+              <h4 class="footer-address">м. Київ, пр-т Лесі Українки, 26</h4>
+            </li>
+            <li>
+              <a class="footer-mail" href="mailto:someone@example.com"
+                >info@devstudio.com</a
+              >
+            </li>
+            <li>
+              <a class="footer-phone" href="tel:110001111111"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+          </ul>
+        </address>
+      </footer>
+    </div>
   </body>
 </html>
