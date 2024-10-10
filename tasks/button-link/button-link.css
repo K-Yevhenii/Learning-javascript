@@ -12,19 +12,18 @@ body {
 
 .container {
   max-width: 1200px;
-  padding: 160px 15px;
+  padding: 25px 15px;
+
   font-size: 14px;
   box-sizing: border-box;
 
-  --btnColorActive: #1b4823;
-  --btnColorHover: #379247;
-  --btnLinkFocus: solid 2px #45b759;
-  --btnLinkColor: #45b759;
+  --active-color: #1b4823;
+  --hover-color: #379247;
+  --focus-color: #45b759;
 }
 
 .btn {
-  margin-top: 25px;
-  margin-right: 10px;
+  margin-left: 25px;
   text-transform: uppercase;
   color: #fff;
   background-color: #45b759;
@@ -33,10 +32,10 @@ body {
 }
 
 .btn:hover {
-  background-color: var(--btnColorHover);
+  background-color: var(--hover-color);
 }
 .btn:focus {
-  border: var(--btnLinkFocus);
+  border: solid 2px var(--focus-color);
   /* 
   `border` is short form of these CSS properties:
   border-color: #45b759;
@@ -44,24 +43,27 @@ body {
   border-width: 2px; */
 }
 .btn:active {
-  background-color: var(--btnColorActive);
+  background-color: var(--active-color);
 }
 
 .btn:disabled {
   background-color: #a0a0a0;
 }
 .link {
+  margin-left: 25px;
   color: #fff;
-  color: var(--btnLinkColor);
+  background-color: var(--focus-color);
   text-decoration: none;
+  border-radius: 15px;
+  font-family: inherit;
 }
 
 .link:hover {
-  color: var(--btnColorHover);
+  color: var(--hover-color);
   text-decoration: underline;
 }
 .link:focus {
-  border: var(--btnLinkFocus);
+  border: solid 2px var(--focus-color);
   text-decoration: underline;
 }
 .link:active {
