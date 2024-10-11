@@ -52,7 +52,7 @@ body {
   justify-content: center;
   gap: 20%;
   height: 80px;
-  background-color: #0b6e7c;
+  background: rgb(255, 255, 255);
   font-weight: 500;
 }
 
@@ -78,6 +78,7 @@ body {
 }
 
 .menu-item:not(:last-child) {
+  /*ви вибирає всі крім останнього */
   margin-right: 50px; /* Відстань між пунктами меню */
 }
 
@@ -88,4 +89,139 @@ body {
 
 .contacts li:not(:last-child) {
   margin-right: 50px;
+}
+.hero {
+  /* Bg */
+  display: flex;
+  justify-content: center;
+  background-color: #2f303a;
+  color: #ffffff;
+  position: absolute;
+  text-align: center;
+  width: 1600px;
+  height: 600px;
+  left: 0;
+  top: 80px;
+}
+h1 {
+  /* Ефективні рішення для вашого бізнесу */
+
+  position: absolute;
+  width: 696px;
+  top: 280px;
+  /* ------ */
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 60px;
+  letter-spacing: 2.64px; /* 44px * 0.06 = 2.64px */
+
+  text-transform: uppercase;
+}
+.btn {
+  /* bg */
+  position: absolute;
+  width: 216px;
+  height: 50px;
+  top: 430px;
+  /* Style */
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  background: rgb(33, 150, 243);
+  color: #ffffff;
+}
+.service-sections {
+  position: absolute;
+  width: 1170px;
+  height: 98px;
+  left: 215px;
+  right: 215px;
+  top: 774px;
+  bottom: 1474px;
+}
+
+.service li:not(:last-child) {
+  /* Тут здається, що відступи трохи різні */
+  margin-right: 30px;
+}
+.service {
+  list-style: none;
+  display: flex;
+}
+.h3-service {
+  width: 270px;
+  height: 16px;
+  color: rgb(33, 33, 33);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 3%;
+  text-align: left;
+  text-transform: uppercase;
+}
+.p-service {
+  padding-top: 10px;
+  width: 270px;
+  height: 72px;
+  left: 215px;
+  top: 800px;
+
+  color: rgb(117, 117, 117);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 3%;
+  text-align: left;
+}
+
+.projects-section {
+  position: absolute;
+  width: 1170px;
+  height: 386px;
+  left: 215px;
+  right: 215px;
+  top: 966px;
+  bottom: 994px;
+}
+h2 {
+  width: 366px;
+  height: 42px;
+  left: 617px;
+  top: 966px;
+  color: rgb(33, 33, 33);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 42px;
+  letter-spacing: 3%;
+  text-align: center;
+}
+.project {
+  list-style: none;
+  display: flex;
+  /* img */
+  width: 370px;
+  height: 294px;
+  left: 215px;
+  top: 1058px;
+}
+.team-section {
+  /* Section bg */
+  position: absolute;
+  width: 1600px;
+  height: 648px;
+  left: 0;
+  top: 1446px;
+  /* Наша команда */
+  width: 264px;
+  height: 42px;
+  left: 668px;
+  top: 1540px;
+}
+.team {
+  list-style: none;
+  display: flex;
+  /* img */
+  width: 270px;
+  height: 260px;
+  left: 215px;
+  top: 1632px;
 }
