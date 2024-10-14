@@ -125,6 +125,7 @@ h1 {
   max-width: 1170px;
   margin: 0 auto;
   padding: 95px 0;
+  justify-content: center;
 }
 
 .service li:not(:last-child) {
@@ -136,20 +137,17 @@ h1 {
   display: flex;
 }
 .h3-service {
-  width: 270px;
-  height: 16px;
+  max-width: 270px;
   color: rgb(33, 33, 33);
   font-size: 14px;
   font-weight: 700;
   line-height: 16px;
   letter-spacing: 3%;
-  text-align: left;
   text-transform: uppercase;
 }
 .p-service {
   padding-top: 10px;
   width: 270px;
-  height: 72px;
   left: 215px;
   top: 800px;
 
@@ -162,19 +160,14 @@ h1 {
 }
 
 .projects-section {
-  position: absolute;
-  width: 1170px;
-  height: 386px;
-  left: 215px;
-  right: 215px;
+  max-width: 1170px;
+  justify-content: center;
   top: 966px;
-  bottom: 994px;
+  margin: 0 auto;
 }
 h2 {
-  width: 366px;
-  height: 42px;
-  left: 617px;
-  top: 966px;
+  max-width: 366px;
+  left: 417px;
   color: rgb(33, 33, 33);
   font-size: 36px;
   font-weight: 700;
@@ -193,7 +186,7 @@ h2 {
 }
 .team-section {
   /* Section bg */
-  position: absolute;
+
   width: 1600px;
   height: 648px;
   left: 0;
