@@ -45,6 +45,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-size: 14px;
+  /* max-width: 1920px; */
 }
 
 .header {
@@ -124,12 +125,11 @@ h1 {
 .service-sections {
   max-width: 1170px;
   margin: 0 auto;
-  padding: 95px 0;
+  padding: 94px 0;
   justify-content: center;
 }
 
 .service li:not(:last-child) {
-  /* Тут здається, що відступи трохи різні */
   margin-right: 30px;
 }
 .service {
@@ -147,9 +147,7 @@ h1 {
 }
 .p-service {
   padding-top: 10px;
-  width: 270px;
-  left: 215px;
-  top: 800px;
+  max-width: 270px;
 
   color: rgb(117, 117, 117);
   font-size: 14px;
@@ -160,49 +158,61 @@ h1 {
 }
 
 .projects-section {
-  max-width: 1170px;
-  justify-content: center;
-  top: 966px;
-  margin: 0 auto;
+  margin-bottom: 94px;
 }
 h2 {
+  margin: 0 auto 50px;
   max-width: 366px;
-  left: 417px;
   color: rgb(33, 33, 33);
   font-size: 36px;
-  font-weight: 700;
   line-height: 42px;
   letter-spacing: 3%;
   text-align: center;
 }
+
 .project {
   list-style: none;
   display: flex;
-  /* img */
-  width: 370px;
-  height: 294px;
-  left: 215px;
-  top: 1058px;
+  justify-content: center;
 }
-.team-section {
-  /* Section bg */
+.project li:not(:last-child) {
+  margin-right: 30px;
+}
+.our-team {
+  background: rgb(245, 244, 250);
 
-  width: 1600px;
-  height: 648px;
-  left: 0;
-  top: 1446px;
-  /* Наша команда */
-  width: 264px;
-  height: 42px;
-  left: 668px;
-  top: 1540px;
+.team-section {
+  max-height: 648px;
+}
+.team li:not(:last-child) {
+  margin-right: 30px;
 }
 .team {
-  list-style: none;
   display: flex;
-  /* img */
-  width: 270px;
-  height: 260px;
-  left: 215px;
-  top: 1632px;
+  list-style: none;
+  justify-content: center;
+}
+.team li {
+  border-radius: 0px 0px 4px 4px;
+  /* material shadow v1 */
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  background: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.team img {
+  max-width: 270px;
+}
+.team h3 {
+  max-height: 129px;
+}
+
+.team span {
+  max-width: 130px;
+  color: rgb(117, 117, 117);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 3%;
 }
