@@ -1,0 +1,14 @@
+.text {
+  font: 500 14px 'Inter';
+  margin: 10px auto 30px;
+}
+
+#main .section div {
+}
+
+.section.first-section {
+}
+
+.item ~ .item {
+  color: red;
+}
