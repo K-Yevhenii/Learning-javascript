@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <!-- TODO: should be at the end of head -->
+    <!-- stylesheet / fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="./css-hw-02.css" />
   </head>
   <body>
     <!-- heder -->
@@ -40,53 +52,41 @@
         </li>
       </ul>
     </header>
-    <!-- stylesheet / fonts -->
-    <link rel="stylesheet" href="./css-hw-02.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
-    />
     <!-- main -->
     <main class="main">
       <section class="hero">
         <h1>Ефективні рішення для вашого бізнесу</h1>
         <!-- TODO: remove border -->
-        <button class="btn">Замовити послугу</button>
+        <button class="btn" type="button">Замовити послугу</button>
       </section>
       <!-- TODO: rename to services -->
-      <section class="service-sections">
-        <ul class="service">
+      <section class="service-list">
+        <ul class="service-item">
           <li>
             <!-- TODO: service-title -->
-            <h3 class="h3-service">УВАГА ДО ДЕТАЛЕЙ</h3>
+            <h3 class="service-title">УВАГА ДО ДЕТАЛЕЙ</h3>
             <!-- TODO: service-description -->
-            <p class="p-service">
+            <p class="service-content">
               Ідейні міркування, і навіть початок повсякденної роботи з
               формування позиції.
             </p>
           </li>
           <li>
-            <h3 class="h3-service">ПУНКТУАЛЬНІСТЬ</h3>
-            <p class="p-service">
+            <h3 class="service-title">ПУНКТУАЛЬНІСТЬ</h3>
+            <p class="service-content">
               Завдання організації, особливо рамки і місце навчання кадрів тягне
               у себе.
             </p>
           </li>
           <li>
-            <h3 class="h3-service">ПЛАНУВАННЯ</h3>
-            <p class="p-service">
+            <h3 class="service-title">ПЛАНУВАННЯ</h3>
+            <p class="service-content">
               Так само консультація з широким активом значною мірою зумовлює.
             </p>
           </li>
           <li>
-            <h3 class="h3-service">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
-            <p class="p-service">
+            <h3 class="service-title">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
+            <p class="service-content">
               Значимість цих проблем настільки очевидна, що реалізація планових
               завдань.
             </p>
@@ -94,9 +94,9 @@
         </ul>
       </section>
       <!-- projects-section -->
-      <section class="projects-section">
+      <section class="project-list">
         <h2>Чим ми займаємося</h2>
-        <ul class="project">
+        <ul class="project-item">
           <li>
             <a href="#"
               ><img
@@ -130,16 +130,20 @@
                 src="./img-convert/Igor_Demyanenko.jpg"
                 alt="Ігор Дем'яненко Product Designer"
               />
-              <h3>Ігор Дем'яненко</h3>
-              <span>Product Designer</span>
+              <div class="team-member">
+                <h3>Ігор Дем'яненко</h3>
+                <span>Product Designer</span>
+              </div>
             </li>
             <li>
               <img
                 src="./img-convert/Olga_Repina.jpg"
                 alt="Ольга Рєпіна Frontend Developer"
               />
-              <h3>Ольга Рєпіна</h3>
-              <span>Frontend Developer</span>
+              <div class="team-member">
+                <h3>Ольга Рєпіна</h3>
+                <span>Frontend Developer</span>
+              </div>
             </li>
 
             <li>
@@ -147,8 +151,10 @@
                 src="./img-convert/Mykola_Tarasov.jpg"
                 alt="Микола Тарасов Marketing"
               />
-              <h3>Микола Тарасов</h3>
-              <span>Marketing</span>
+              <div class="team-member">
+                <h3>Микола Тарасов</h3>
+                <span>Marketing</span>
+              </div>
             </li>
 
             <li>
@@ -156,8 +162,10 @@
                 src="./img-convert/Mikhail_Yermakov.jpg"
                 alt="Михайло Єрмаков UI Designer"
               />
-              <h3>Михайло Єрмаков</h3>
-              <span>UI Designer</span>
+              <div class="team-member">
+                <h3>Михайло Єрмаков</h3>
+                <span>UI Designer</span>
+              </div>
             </li>
           </ul>
         </section>
@@ -168,9 +176,9 @@
 
     <footer class="footer">
       <a href="#" class="logo-footer"
-        ><img src="./img-convert/WebStudio_footer.jpg" alt="WebStudio-logo"
+        ><img src="./img/WebStudio.png" alt="WebStudio-logo"
       /></a>
-      <ul class="footer-contacts">
+      <ul class="footer-contacts list">
         <li class="footer-contact">
           <!-- TODO: Replace h2 by address adn remove address above -->
           <address class="footer-address">
