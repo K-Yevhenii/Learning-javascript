@@ -12,6 +12,7 @@ ul {
   margin: 0;
 }
 
+/* TODO: remove empty styles */
 img {
   /* display: block;
   width: 100%;
@@ -30,18 +31,23 @@ address {
   margin: 0 auto; */
 }
 
+/* TODO: use selector by tag */
 .link,
 .active-link {
   color: inherit;
   text-decoration: none;
 }
 
+/* TODO: use selector by tag */
 .list {
   list-style: none;
 }
 
 /* MAIN STYLES */
 body {
+  /* TODO: use shorthand form in all stylesheet
+    font: ...;
+  */
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-size: 14px;
@@ -99,14 +105,17 @@ body {
   padding: 200px 0;
 }
 
+/* TODO: use selector .hero-title */
 h1 {
   /* Ефективні рішення для вашого бізнесу */
 
+  /* TODO: remove it */
   max-width: 696px;
   margin: 0 auto 30px;
   /* ------ */
   font-size: 44px;
   font-weight: 900;
+  /* TODO: make line-height in percents in all stylesheet */
   line-height: 60px;
   letter-spacing: 2.64px; /* 44px * 0.06 = 2.64px */
 
@@ -114,6 +123,7 @@ h1 {
 }
 .btn {
   /* bg */
+  /* TODO: use paddings instead of width and height */
   width: 216px;
   height: 50px;
   /* Style */
@@ -126,6 +136,7 @@ h1 {
   max-width: 1170px;
   margin: 0 auto;
   padding: 94px 0;
+  /* TODO: remove me */
   justify-content: center;
 }
 
@@ -146,16 +157,19 @@ h1 {
 }
 .service-description {
   padding-top: 10px;
+  /* TODO: remove me or set it to li */
   max-width: 270px;
 
   color: rgb(117, 117, 117);
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
+  /* TODO: apply 0.3px */
   letter-spacing: 3%;
 }
 
 .project-list {
+  /* TODO: padding-bottom */
   margin-bottom: 94px;
 }
 h2 {
@@ -190,9 +204,11 @@ h2 {
   list-style: none;
   justify-content: center;
 }
+/* TODO: team-member-info */
 .team-member {
   padding: 30px 0px;
 }
+/* TODO: team-member */
 .team li {
   border-radius: 0px 0px 4px 4px;
   /* material shadow v1 */
@@ -202,14 +218,18 @@ h2 {
   text-align: center;
 }
 
+/* TODO: .team-member-avatar */
 .team img {
   max-width: 270px;
 }
+
+/* TODO: .team-member-name */
 .team h3 {
   margin-bottom: 10px;
 }
 
 .team span {
+  /* TODO: to css variable */
   color: rgb(117, 117, 117);
   font-size: 16px;
   font-weight: 400;
@@ -223,6 +243,7 @@ h2 {
 .logo-footer img {
   margin-bottom: 20px;
   max-width: 145px;
+  /* TODO: remove margin-left in all elements of footer */
   margin-left: 215px;
 }
 
@@ -231,8 +252,10 @@ h2 {
   margin-left: 215px;
   padding-bottom: 60px;
 }
+/* TODO: list like .footer-address, .footer-mail, .footer-phone {...}     */
 .footer-address {
   color: rgb(255, 255, 255);
+  /* TODO: remove font-family and font-size */
   font-family: Roboto;
   font-size: 14px;
   font-weight: 400;
