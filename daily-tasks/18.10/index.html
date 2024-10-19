@@ -3,41 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
   </head>
   <body>
-    <div>
-      <ul>
-        <li><a href="#">Main</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Portfolio</a></li>
-      </ul>
-    </div>
-    <div>
-      <div class="main-section">
-        <button>View all</button>
-        <span id="text"
-          >Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam voluptatibus voluptatem
-          molestiae debitis a soluta, animi impedit quos, quam magni magnam eaque ipsa. Nobis,
-          impedit tempora. Id non voluptatem molestiae?</span
-        >
-        <span id="text"
-          >Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam voluptatibus voluptatem
-          molestiae debitis a soluta, animi impedit quos, quam magni magnam eaque ipsa. Nobis,
-          impedit tempora. Id non voluptatem molestiae?</span
-        >
-        <span id="text"
-          >Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam voluptatibus voluptatem
-          molestiae debitis a soluta, animi impedit quos, quam magni magnam eaque ipsa. Nobis,
-          impedit tempora. Id non voluptatem molestiae?</span
-        >
-      </div>
-    </div>
-    <div>
-      <img src="path-to-logo.png" alt="" />
-
-      <li><a href="#">Main</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">Portfolio</a></li>
-    </div>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">Main</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Portfolio</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="main-section">
+        <button type="button">View all</button>
+        <p class="text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+          voluptatibus voluptatem molestiae debitis a soluta, animi impedit
+          quos, quam magni magnam eaque ipsa. Nobis, impedit tempora. Id non
+          voluptatem molestiae?
+        </p>
+        <p class="text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+          voluptatibus voluptatem molestiae debitis a soluta, animi impedit
+          quos, quam magni magnam eaque ipsa. Nobis, impedit tempora. Id non
+          voluptatem molestiae?
+        </p>
+        <p class="text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+          voluptatibus voluptatem molestiae debitis a soluta, animi impedit
+          quos, quam magni magnam eaque ipsa. Nobis, impedit tempora. Id non
+          voluptatem molestiae?
+        </p>
+      </section>
+    </main>
+    <footer>
+      <img src="path-to-logo.png" alt="logo" />
+      <nav>
+        <ul>
+          <!-- .item ~ .item {
+                color: red;
+                } -->
+          <!-- До другого li застосується -->
+          <li class="item"><a href="#">Main</a></li>
+          <li class="item"><a href="#">Contact</a></li>
+          <li class="item"><a href="#">Portfolio</a></li>
+        </ul>
+      </nav>
+    </footer>
   </body>
 </html>

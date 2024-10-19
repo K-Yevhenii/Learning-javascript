@@ -1,14 +1,25 @@
 .text {
-  font: 500 14px 'Inter';
+  font: 500 14px "Inter";
   margin: 10px auto 30px;
 }
 
 #main .section div {
+  /* sum=111 */
 }
 
 .section.first-section {
+  /* sum=20 */
 }
 
 .item ~ .item {
   color: red;
+}
+.text {
+  font-weight: 500;
+  font-size: 14px;
+  font-family: "Inter";
+  margin-top: 10px;
+  margin-right: auto;
+  margin-bottom: 30px;
+  margin-left: auto;
 }

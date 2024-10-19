@@ -45,6 +45,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-size: 14px;
+  max-width: 1600px;
 }
 
 .header {
@@ -257,3 +258,19 @@ h2 {
   letter-spacing: 3%;
   text-align: left;
 }
+
+/* _____________________________ */
+/* tes code */
+.box {
+  height: 100px;
+  width: 100ppx;
+  padding: 10px;
+  block-size: border-box;
+  background: #174e62;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.content {
+}
+/* __________________________________________ */
