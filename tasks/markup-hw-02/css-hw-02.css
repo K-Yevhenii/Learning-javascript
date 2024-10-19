@@ -122,21 +122,21 @@ h1 {
   background: rgb(33, 150, 243);
   color: #ffffff;
 }
-.service-list {
+.service-sections {
   max-width: 1170px;
   margin: 0 auto;
   padding: 94px 0;
   justify-content: center;
 }
 
-.service-item li:not(:last-child) {
+.service-list li:not(:last-child) {
   margin-right: 30px;
 }
-.service-item {
+.service-list {
   list-style: none;
   display: flex;
 }
-.service-title {
+.service-list {
   color: rgb(33, 33, 33);
   font-size: 14px;
   font-weight: 700;
@@ -144,7 +144,7 @@ h1 {
   letter-spacing: 3%;
   text-transform: uppercase;
 }
-.service-content {
+.service-description {
   padding-top: 10px;
   max-width: 270px;
 
@@ -258,19 +258,3 @@ h2 {
   letter-spacing: 3%;
   text-align: left;
 }
-
-/* _____________________________ */
-/* tes code */
-.box {
-  height: 100px;
-  width: 100ppx;
-  padding: 10px;
-  block-size: border-box;
-  background: #174e62;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-.content {
-}
-/* __________________________________________ */
