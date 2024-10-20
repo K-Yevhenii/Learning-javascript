@@ -24,8 +24,10 @@ address {
 }
 
 /* TODO: use selector by tag */
-.link,
+
 .active-link {
+  /* не спрацьовує tag, можливо із-за href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+поки ще не розібрався чому .link, */
   color: inherit;
   text-decoration: none;
 }
@@ -40,9 +42,7 @@ body {
   /* TODO: use shorthand form in all stylesheet
     font: ...;
   */
-  /* font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-size: 14px; */
+
   font: normal 14px "Roboto", sans-serif;
 }
 
@@ -99,14 +99,9 @@ body {
 
 /* TODO: use selector .hero-title */
 .hero-title {
-  /* Ефективні рішення для вашого бізнесу */
-
   /* TODO: remove it */
-
-  /* ------ */
   margin-bottom: 30px;
-  font-size: 44px;
-  font-weight: 900;
+  font: 900 44px;
   /* TODO: make line-height in percents in all stylesheet */
   line-height: 136%;
   letter-spacing: 2.64px; /* 44px * 0.06 = 2.64px */
@@ -115,9 +110,7 @@ body {
 .btn {
   /* bg */
   /* TODO: use paddings instead of width and height */
-  /* width: 216px;
-  height: 50px; */
-  /* Style */
+  padding: 10px 18px;
   border-radius: 4px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   background: rgb(33, 150, 243);
@@ -128,7 +121,6 @@ body {
   margin: 0 auto;
   padding: 94px 0;
   /* TODO: remove me */
-  justify-content: center;
 }
 
 .service-list li:not(:last-child) {
