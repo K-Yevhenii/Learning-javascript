@@ -15,16 +15,32 @@
   background-color: palevioletred;
   margin-bottom: 40px;
 }
+
+.box-sizing-wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+
 .container {
-  margin: 20px;
   display: flex;
   justify-content: center; /* Горизонтальне центрування */
   align-items: center; /* Вертикальне центрування */
   width: 250px;
   height: 250px;
+  margin: 25px;
+  padding: 25px;
+  border: solid 15px red;
   text-align: center;
-  box-sizing: border-box;
   background-color: rgb(5, 90, 90);
+}
+
+.border-box {
+  box-sizing: border-box;
+}
+
+.content-box {
+  box-sizing: content-box;
 }
 .content {
   padding: 20px;
