@@ -12,14 +12,6 @@ ul {
   margin: 0;
 }
 
-/* TODO: remove empty styles */
-img {
-  /* display: block;
-  width: 100%;
-  max-width: 100%;
-  height: auto; */
-}
-
 address {
   font-style: normal;
 }
@@ -48,10 +40,10 @@ body {
   /* TODO: use shorthand form in all stylesheet
     font: ...;
   */
-  font-family: "Roboto", sans-serif;
+  /* font-family: "Roboto", sans-serif;
   font-style: normal;
-  font-size: 14px;
-  max-width: 1600px;
+  font-size: 14px; */
+  font: normal 14px "Roboto", sans-serif;
 }
 
 .header {
@@ -106,26 +98,25 @@ body {
 }
 
 /* TODO: use selector .hero-title */
-h1 {
+.hero-title {
   /* Ефективні рішення для вашого бізнесу */
 
   /* TODO: remove it */
-  max-width: 696px;
-  margin: 0 auto 30px;
+
   /* ------ */
+  margin-bottom: 30px;
   font-size: 44px;
   font-weight: 900;
   /* TODO: make line-height in percents in all stylesheet */
-  line-height: 60px;
+  line-height: 136%;
   letter-spacing: 2.64px; /* 44px * 0.06 = 2.64px */
-
   text-transform: uppercase;
 }
 .btn {
   /* bg */
   /* TODO: use paddings instead of width and height */
-  width: 216px;
-  height: 50px;
+  /* width: 216px;
+  height: 50px; */
   /* Style */
   border-radius: 4px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
@@ -158,19 +149,18 @@ h1 {
 .service-description {
   padding-top: 10px;
   /* TODO: remove me or set it to li */
-  max-width: 270px;
 
   color: rgb(117, 117, 117);
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
   /* TODO: apply 0.3px */
-  letter-spacing: 3%;
+  letter-spacing: 0.3px;
 }
 
-.project-list {
+.projects {
   /* TODO: padding-bottom */
-  margin-bottom: 94px;
+  padding-bottom: 94px;
 }
 h2 {
   margin: 0 auto 50px;
@@ -181,12 +171,12 @@ h2 {
   text-align: center;
 }
 
-.project-item {
+.project-list {
   list-style: none;
   display: flex;
   justify-content: center;
 }
-.project-item li:not(:last-child) {
+.project-list li:not(:last-child) {
   margin-right: 30px;
 }
 .our-team {
