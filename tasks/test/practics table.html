@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=tta, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      th,
+      td {
+        border: solid 1px #000000;
+        padding: 5px;
+      }
+      table {
+        border-collapse: collapse;
+        text-align: center;
+      }
+      tr:hover {
+        background-color: #c7c7c7;
+      }
+      .vertical {
+        vertical-align: bottom;
+      }
+      .css-shorthand-properties-order {
+        margin-bottom: 20px;
+      }
+      .chess-board td {
+        padding: 20px;
+      }
+      .chess-board tr:nth-child(2n-1) td:nth-child(2n-1),
+      .chess-board tr:nth-child(2n) td:nth-child(2n) {
+        background: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <table class="css-shorthand-properties-order">
+      <thead>
+        <tr>
+          <th></th>
+          <th>top</th>
+          <th>right</th>
+          <th>bottom</th>
+          <th>left</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>4 сторони</td>
+          <td class="vertical" rowspan="4">1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>3 сторони</td>
+
+          <td>2</td>
+          <td>3</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>2 сторони</td>
+
+          <td>2</td>
+          <td>1</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>1 сторона</td>
+
+          <td colspan="3">1</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="chess-board">
+      <tbody>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

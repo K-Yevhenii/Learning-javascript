@@ -25,9 +25,7 @@ address {
 
 /* TODO: use selector by tag */
 
-.active-link {
-  /* не спрацьовує tag, можливо із-за href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
-поки ще не розібрався чому .link, */
+a {
   color: inherit;
   text-decoration: none;
 }
@@ -42,8 +40,11 @@ body {
   /* TODO: use shorthand form in all stylesheet
     font: ...;
   */
-
-  font: normal 14px "Roboto", sans-serif;
+  font: 400 14px "Roboto", sans-serif;
+  letter-spacing: 0.42px;
+}
+* {
+  line-height: 24px;
 }
 
 .header {
@@ -101,7 +102,7 @@ body {
 .hero-title {
   /* TODO: remove it */
   margin-bottom: 30px;
-  font: 900 44px;
+  font: 900 44px "Roboto", sans-serif;
   /* TODO: make line-height in percents in all stylesheet */
   line-height: 136%;
   letter-spacing: 2.64px; /* 44px * 0.06 = 2.64px */
@@ -123,19 +124,18 @@ body {
   /* TODO: remove me */
 }
 
-.service-list li:not(:last-child) {
+/* .service-list li:not(:last-child) {
   margin-right: 30px;
-}
+} */
 .service-list {
   list-style: none;
   display: flex;
+  gap: 30px;
 }
 .service-list {
   color: rgb(33, 33, 33);
-  font-size: 14px;
   font-weight: 700;
   line-height: 16px;
-  letter-spacing: 3%;
   text-transform: uppercase;
 }
 .service-description {
@@ -143,9 +143,7 @@ body {
   /* TODO: remove me or set it to li */
 
   color: rgb(117, 117, 117);
-  font-size: 14px;
   font-weight: 400;
-  line-height: 24px;
   /* TODO: apply 0.3px */
   letter-spacing: 0.3px;
 }
@@ -157,9 +155,9 @@ body {
 h2 {
   margin: 0 auto 50px;
   color: rgb(33, 33, 33);
-  font-size: 36px;
+  font: 700 36px "Roboto", sans-serif;
   line-height: 120%;
-  letter-spacing: 3%;
+  letter-spacing: 1.8px;
   text-align: center;
 }
 
@@ -171,27 +169,29 @@ h2 {
 .project-list li:not(:last-child) {
   margin-right: 30px;
 }
-.our-team {
+.team {
   background: rgb(245, 244, 250);
   padding: 94px 0;
 }
 .team-section {
   max-height: 648px;
 }
-.team li:not(:last-child) {
+/* .team-list li:not(:last-child) {
   margin-right: 30px;
-}
-.team {
+} */
+
+.team-list {
   display: flex;
   list-style: none;
   justify-content: center;
+  gap: 30px;
 }
 /* TODO: team-member-info */
-.team-member {
+.team-member-info {
   padding: 30px 0px;
 }
 /* TODO: team-member */
-.team li {
+.team-member {
   border-radius: 0px 0px 4px 4px;
   /* material shadow v1 */
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
@@ -201,7 +201,7 @@ h2 {
 }
 
 /* TODO: .team-member-avatar */
-.team img {
+.team-member-avatar {
   max-width: 270px;
 }
 
@@ -214,9 +214,7 @@ h2 {
   /* TODO: to css variable */
   color: rgb(117, 117, 117);
   font-size: 16px;
-  font-weight: 400;
   line-height: 19px;
-  letter-spacing: 3%;
 }
 .footer {
   background: rgb(47, 48, 58);
@@ -238,28 +236,12 @@ h2 {
 .footer-address {
   color: rgb(255, 255, 255);
   /* TODO: remove font-family and font-size */
-  font-family: Roboto;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 3%;
 }
 
 .footer-mail {
   color: rgba(255, 255, 255, 0.6);
-  font-family: Roboto;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 3%;
 }
 
 .footer-phone {
   color: rgba(255, 255, 255, 0.6);
-  font-family: Roboto;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 3%;
-  text-align: left;
 }
