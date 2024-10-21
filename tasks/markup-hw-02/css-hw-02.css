@@ -16,37 +16,37 @@ address {
   font-style: normal;
 }
 
+/* TODO: apply me only with max-width and margin */
 .container {
   /* width: 100%;
   max-width: 1158px;
+  margin: 0 auto;
   padding: 0 15px;
-  margin: 0 auto; */
+   */
 }
 
-/* TODO: use selector by tag */
 
 a {
   color: inherit;
   text-decoration: none;
 }
 
-/* TODO: use selector by tag */
+
 li {
   list-style: none;
 }
 /* MAIN STYLES */
 body {
-  /* TODO: use shorthand form in all stylesheet
-    font: ...;
-  */
   font: 400 14px "Roboto", sans-serif;
   letter-spacing: 0.42px;
+  /* TODO: remove max-width */
   max-width: 1600px;
 }
 :root {
   --background-hero-footer: #2f303a;
   --main-color: #ffffff;
   --text-description-color: #757575;
+  /* TODO: --main-text */
   --maine-text: #212121;
 }
 * {
@@ -106,19 +106,15 @@ body {
   padding: 200px 0;
 }
 
-/* TODO: use selector .hero-title */
 .hero-title {
-  /* TODO: remove it */
   margin-bottom: 30px;
   font: 900 44px "Roboto", sans-serif;
-  /* TODO: make line-height in percents in all stylesheet */
   line-height: 136%;
   letter-spacing: 2.64px; /* 44px * 0.06 = 2.64px */
   text-transform: uppercase;
 }
 .btn {
   /* bg */
-  /* TODO: use paddings instead of width and height */
   padding: 10px 18px;
   border-radius: 4px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
@@ -129,7 +125,6 @@ body {
   max-width: 1170px;
   margin: 0 auto;
   padding: 94px 0;
-  /* TODO: remove me */
 }
 
 /* .service-list li:not(:last-child) {
@@ -144,20 +139,20 @@ body {
   color: var(--maine-text);
   font-weight: 700;
   line-height: 16px;
+  /* TODO: move me to service-title */
   text-transform: uppercase;
 }
 .service-description {
+  /* TODO: should be margin of title */
   padding-top: 10px;
   /* TODO: remove me or set it to li */
 
   color: var(--text-description-color);
   font-weight: 400;
-  /* TODO: apply 0.3px */
   letter-spacing: 0.3px;
 }
 
 .projects {
-  /* TODO: padding-bottom */
   padding-bottom: 94px;
 }
 h2 {
@@ -194,11 +189,11 @@ h2 {
   justify-content: center;
   gap: 30px;
 }
-/* TODO: team-member-info */
+
 .team-member-info {
   padding: 30px 0px;
 }
-/* TODO: team-member */
+
 .team-member {
   border-radius: 0px 0px 4px 4px;
   /* material shadow v1 */
@@ -208,7 +203,7 @@ h2 {
   text-align: center;
 }
 
-/* TODO: .team-member-avatar */
+
 .team-member-avatar {
   max-width: 270px;
 }
@@ -219,7 +214,6 @@ h2 {
 }
 
 .team span {
-  /* TODO: to css variable */
   color: var(--text-description-color);
   font-size: 16px;
   line-height: 19px;
@@ -231,7 +225,7 @@ h2 {
 .logo-footer img {
   margin-bottom: 20px;
   max-width: 145px;
-  /* TODO: remove margin-left in all elements of footer */
+  /* TODO: remove margin-left in all elements of footer and pack footer in container */
   margin-left: 215px;
 }
 
@@ -246,6 +240,7 @@ h2 {
   /* TODO: remove font-family and font-size */
 }
 
+/* TODO: don't repeat me */
 .footer-mail {
   color: rgba(255, 255, 255, 0.6);
 }
