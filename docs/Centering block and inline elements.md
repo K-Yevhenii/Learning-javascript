@@ -37,6 +37,7 @@
 
 # Вирівнювання вбудованих елементів(inline-elements) по вертикалі
 
+@singvarr - find an example
     •	vertical-align: middle; — для вирівнювання по середині.
     •	vertical-align: top; — для вирівнювання по верхньому краю.
     •	vertical-align: bottom; — для вирівнювання по нижньому краю.
