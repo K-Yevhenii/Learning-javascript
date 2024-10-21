@@ -31,10 +31,9 @@ a {
 }
 
 /* TODO: use selector by tag */
-.list {
+li {
   list-style: none;
 }
-
 /* MAIN STYLES */
 body {
   /* TODO: use shorthand form in all stylesheet
@@ -42,6 +41,13 @@ body {
   */
   font: 400 14px "Roboto", sans-serif;
   letter-spacing: 0.42px;
+  max-width: 1600px;
+}
+:root {
+  --background-hero-footer: #2f303a;
+  --main-color: #ffffff;
+  --text-description-color: #757575;
+  --maine-text: #212121;
 }
 * {
   line-height: 24px;
@@ -52,7 +58,7 @@ body {
   justify-content: center;
   gap: 20%;
   height: 80px;
-  background: rgb(255, 255, 255);
+  background: var(--main-color);
   font-weight: 500;
 }
 
@@ -77,9 +83,11 @@ body {
   align-items: center;
 }
 
-.menu-item:not(:last-child) {
-  /*ви вибирає всі крім останнього */
-  margin-right: 50px; /* Відстань між пунктами меню */
+/* .menu-item:not(:last-child) {
+  margin-right: 50px;
+} */
+.menu-item {
+  gap: 50px;
 }
 
 .contacts {
@@ -92,7 +100,7 @@ body {
 }
 .hero {
   /* Bg */
-  background-color: #2f303a;
+  background-color: var(--background-hero-footer);
   color: #ffffff;
   text-align: center;
   padding: 200px 0;
@@ -133,7 +141,7 @@ body {
   gap: 30px;
 }
 .service-list {
-  color: rgb(33, 33, 33);
+  color: var(--maine-text);
   font-weight: 700;
   line-height: 16px;
   text-transform: uppercase;
@@ -142,7 +150,7 @@ body {
   padding-top: 10px;
   /* TODO: remove me or set it to li */
 
-  color: rgb(117, 117, 117);
+  color: var(--text-description-color);
   font-weight: 400;
   /* TODO: apply 0.3px */
   letter-spacing: 0.3px;
@@ -154,7 +162,7 @@ body {
 }
 h2 {
   margin: 0 auto 50px;
-  color: rgb(33, 33, 33);
+  color: var(--maine-text);
   font: 700 36px "Roboto", sans-serif;
   line-height: 120%;
   letter-spacing: 1.8px;
@@ -196,7 +204,7 @@ h2 {
   /* material shadow v1 */
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-  background: rgb(255, 255, 255);
+  background: var(--main-color);
   text-align: center;
 }
 
@@ -212,12 +220,12 @@ h2 {
 
 .team span {
   /* TODO: to css variable */
-  color: rgb(117, 117, 117);
+  color: var(--text-description-color);
   font-size: 16px;
   line-height: 19px;
 }
 .footer {
-  background: rgb(47, 48, 58);
+  background: var(--background-hero-footer);
   padding-top: 60px;
 }
 .logo-footer img {
@@ -234,7 +242,7 @@ h2 {
 }
 /* TODO: list like .footer-address, .footer-mail, .footer-phone {...}     */
 .footer-address {
-  color: rgb(255, 255, 255);
+  color: var(--main-color);
   /* TODO: remove font-family and font-size */
 }
 
