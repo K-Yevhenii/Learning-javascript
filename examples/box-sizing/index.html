@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div>
+      <h2>Example of margin collapsing</h2>
+      <div class="box top">margin-bottom: 20px; схлопування</div>
+      <div class="box bottom">margin-top: 40px; схлопування</div>
+    </div>
+    <div>
+      <h2>Випадання margin'ів</h2>
+      <div class="margin-container">
+        <div class="outer">
+          <div class="inner"></div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h2>Example of box-sizing</h2>
+      <div class="box-sizing-wrapper">
+        <div class="container border-box">
+          <h1 class="title">This is border-box</h1>
+        </div>
+        <div class="container content-box">
+          <h1 class="title">This is content-box</h1>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

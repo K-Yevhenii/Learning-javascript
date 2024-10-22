@@ -1,0 +1,68 @@
+.box {
+  width: 200px;
+  height: 100px;
+  color: antiquewhite;
+  text-align: center;
+}
+
+.top {
+  margin-bottom: 20px;
+  background-color: teal;
+}
+
+.bottom {
+  margin-top: 40px;
+  background-color: palevioletred;
+  margin-bottom: 40px;
+}
+
+.margin-container {
+  border: solid 5px rebeccapurple;
+}
+
+.outer {
+  width: 200px;
+  height: 200px;
+  margin-top: 30px;
+  background-color: teal;
+}
+
+.inner {
+  width: 100px;
+  height: 100px;
+  /* This margin is applied because its margin smaller than margin of .outer */
+  margin-top: 40px;
+  background-color: palevioletred;
+}
+
+.box-sizing-wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center; /* Горизонтальне центрування */
+  align-items: center; /* Вертикальне центрування */
+  width: 250px;
+  height: 250px;
+  margin: 25px;
+  padding: 25px;
+  border: solid 15px red;
+  text-align: center;
+  background-color: teal;
+}
+
+.border-box {
+  box-sizing: border-box;
+}
+
+.content-box {
+  box-sizing: content-box;
+}
+.content {
+  padding: 20px;
+}
+.title {
+  color: aliceblue;
+}

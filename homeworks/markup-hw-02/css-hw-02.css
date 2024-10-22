@@ -1,0 +1,252 @@
+/* RESET */
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+address {
+  font-style: normal;
+}
+
+/* TODO: apply me only with max-width and margin */
+.container {
+  /* width: 100%;
+  max-width: 1158px;
+  margin: 0 auto;
+  padding: 0 15px;
+   */
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+li {
+  list-style: none;
+}
+/* MAIN STYLES */
+body {
+  font: 400 14px "Roboto", sans-serif;
+  letter-spacing: 0.42px;
+<<<<<<< HEAD:tasks/markup-hw-02/css-hw-02.css
+=======
+  /* TODO: remove max-width */
+  max-width: 1600px;
+>>>>>>> 45b5895123ebeb23677a9bde863ebf09eae2a411:homeworks/markup-hw-02/css-hw-02.css
+}
+:root {
+  --background-hero-footer: #2f303a;
+  --main-color: #ffffff;
+  --text-description-color: #757575;
+  /* TODO: --main-text */
+  --maine-text: #212121;
+}
+* {
+  line-height: 24px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  gap: 20%;
+  height: 80px;
+  background: var(--main-color);
+  font-weight: 500;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-nav {
+  display: flex; /* Flexbox для вирівнювання логотипа і меню */
+  align-items: center;
+}
+
+.logo {
+  margin-right: 93px; /* Відступ між логотипом і меню */
+}
+
+.menu {
+  display: flex; /* flexbox горизонтального вирівнювання */
+  justify-content: center;
+  align-items: center;
+}
+
+/* .menu-item:not(:last-child) {
+  margin-right: 50px;
+} */
+.menu-item {
+  gap: 50px;
+}
+
+.contacts {
+  display: flex;
+  align-items: center;
+}
+
+.contacts li:not(:last-child) {
+  margin-right: 50px;
+}
+.hero {
+  background-color: var(--background-hero-footer);
+  color: #ffffff;
+  text-align: center;
+  padding: 200px 0;
+}
+
+.hero-title {
+  margin-bottom: 30px;
+  font: 900 44px "Roboto", sans-serif;
+  line-height: 136%;
+  letter-spacing: 2.64px; /* 44px * 0.06 = 2.64px */
+  text-transform: uppercase;
+}
+.btn {
+  /* bg */
+  padding: 10px 18px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  background: rgb(33, 150, 243);
+  color: #ffffff;
+}
+.service-sections {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 94px 0;
+}
+
+/* .service-list li:not(:last-child) {
+  margin-right: 30px;
+} */
+.service-list {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+.service-list {
+  color: var(--maine-text);
+  font-weight: 700;
+  line-height: 16px;
+  /* TODO: move me to service-title */
+  text-transform: uppercase;
+}
+.service-description {
+  /* TODO: should be margin of title */
+  padding-top: 10px;
+  /* TODO: remove me or set it to li */
+
+  color: var(--text-description-color);
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+.projects {
+  padding-bottom: 94px;
+}
+h2 {
+  margin: 0 auto 50px;
+  color: var(--maine-text);
+  font: 700 36px "Roboto", sans-serif;
+  line-height: 120%;
+  letter-spacing: 1.8px;
+  text-align: center;
+}
+
+.project-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+.project-list li:not(:last-child) {
+  margin-right: 30px;
+}
+.team {
+  background: rgb(245, 244, 250);
+  padding: 94px 0;
+}
+.team-section {
+  max-height: 648px;
+}
+/* .team-list li:not(:last-child) {
+  margin-right: 30px;
+} */
+
+.team-list {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 30px;
+}
+
+.team-member-info {
+  padding: 30px 0px;
+}
+
+.team-member {
+  border-radius: 0px 0px 4px 4px;
+  /* material shadow v1 */
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  background: var(--main-color);
+  text-align: center;
+}
+
+
+.team-member-avatar {
+  max-width: 270px;
+}
+
+/* TODO: .team-member-name */
+.team h3 {
+  margin-bottom: 10px;
+}
+
+.team span {
+  color: var(--text-description-color);
+  font-size: 16px;
+  line-height: 19px;
+}
+.footer {
+  background: var(--background-hero-footer);
+  padding-top: 60px;
+}
+.logo-footer img {
+  margin-bottom: 20px;
+  max-width: 145px;
+  /* TODO: remove margin-left in all elements of footer and pack footer in container */
+  margin-left: 215px;
+}
+
+.footer-contacts {
+  list-style: none;
+  margin-left: 215px;
+  padding-bottom: 60px;
+}
+/* TODO: list like .footer-address, .footer-mail, .footer-phone {...}     */
+.footer-address {
+  color: var(--main-color);
+  /* TODO: remove font-family and font-size */
+}
+
+/* TODO: don't repeat me */
+.footer-mail {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-phone {
+  color: rgba(255, 255, 255, 0.6);
+}
