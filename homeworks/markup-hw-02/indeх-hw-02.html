@@ -51,14 +51,16 @@
       </ul>
     </header>
     <!-- main -->
-    <main class="main">
+    <main>
       <section class="hero">
-        <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-        <!-- TODO: remove border -->
-        <button class="btn" type="button">Замовити послугу</button>
+        <div class="container">
+          <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
+          <!-- TODO: remove border -->
+          <button class="btn" type="button">Замовити послугу</button>
+        </div>
       </section>
       <!-- TODO: rename to services -->
-      <section class="service-sections">
+      <section class="service-sections container">
         <ul class="service-list">
           <li>
             <h3 class="service-title">УВАГА ДО ДЕТАЛЕЙ</h3>
@@ -93,7 +95,6 @@
       <!-- .projects -->
       <section class="projects">
         <h2>Чим ми займаємося</h2>
-
         <ul class="project-list">
           <!-- TODO: project-item to all -->
           <li class="project-item">
@@ -103,14 +104,14 @@
                 alt="Розробка програмного забезпечення"
             /></a>
           </li>
-          <li>
+          <li class="project-item">
             <a href="#"
               ><img
                 src="./img-convert/mobile_UX_UI .jpg"
                 alt="Мобільний UX/UI дизайн"
             /></a>
           </li>
-          <li>
+          <li class="project-item">
             <a href="#"
               ><img
                 src="./img-convert/Digital_graphic_design.jpg"
@@ -122,82 +123,88 @@
       <!-- Our team -->
       <section class="team-section">
         <div class="team">
-          <h2>Наша команда</h2>
-          <ul class="team-list">
-            <li class="team-member">
-              <img
-                class="team-member-avatar"
-                src="./img-convert/Igor_Demyanenko.jpg"
-                alt="Ігор Дем'яненко Product Designer"
-              />
-              <div class="team-member-info">
-                <h3>Ігор Дем'яненко</h3>
-                <span>Product Designer</span>
-              </div>
-            </li>
+          <div class="container">
+            <h2>Наша команда</h2>
+            <ul class="team-list">
+              <li class="team-member">
+                <img
+                  class="team-member-avatar"
+                  src="./img-convert/Igor_Demyanenko.jpg"
+                  alt="Ігор Дем'яненко Product Designer"
+                />
+                <div class="team-member-info">
+                  <h3>Ігор Дем'яненко</h3>
+                  <span>Product Designer</span>
+                </div>
+              </li>
 
-            <li class="team-member">
-              <img
-                class="team-member-avatar"
-                src="./img-convert/Olga_Repina.jpg"
-                alt="Ольга Рєпіна Frontend Developer"
-              />
-              <div class="team-member-info">
-                <h3>Ольга Рєпіна</h3>
-                <span>Frontend Developer</span>
-              </div>
-            </li>
+              <li class="team-member">
+                <img
+                  class="team-member-avatar"
+                  src="./img-convert/Olga_Repina.jpg"
+                  alt="Ольга Рєпіна Frontend Developer"
+                />
+                <div class="team-member-info">
+                  <h3>Ольга Рєпіна</h3>
+                  <span>Frontend Developer</span>
+                </div>
+              </li>
 
-            <li class="team-member">
-              <img
-                class="team-member-avatar"
-                src="./img-convert/Mykola_Tarasov.jpg"
-                alt="Микола Тарасов Marketing"
-              />
-              <div class="team-member-info">
-                <h3>Микола Тарасов</h3>
-                <span>Marketing</span>
-              </div>
-            </li>
+              <li class="team-member">
+                <img
+                  class="team-member-avatar"
+                  src="./img-convert/Mykola_Tarasov.jpg"
+                  alt="Микола Тарасов Marketing"
+                />
+                <div class="team-member-info">
+                  <h3>Микола Тарасов</h3>
+                  <span>Marketing</span>
+                </div>
+              </li>
 
-            <li class="team-member">
-              <img
-                class="team-member-avatar"
-                src="./img-convert/Mikhail_Yermakov.jpg"
-                alt="Михайло Єрмаков UI Designer"
-              />
-              <div class="team-member-info">
-                <h3>Михайло Єрмаков</h3>
-                <span>UI Designer</span>
-              </div>
-            </li>
-          </ul>
+              <li class="team-member">
+                <img
+                  class="team-member-avatar"
+                  src="./img-convert/Mikhail_Yermakov.jpg"
+                  alt="Михайло Єрмаков UI Designer"
+                />
+                <div class="team-member-info">
+                  <h3>Михайло Єрмаков</h3>
+                  <span>UI Designer</span>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
     </main>
     <!-- footer -->
 
     <footer class="footer">
-      <a href="#" class="logo-footer"
-        ><img src="./img/WebStudio.png" alt="WebStudio-logo"
-      /></a>
-      <ul class="footer-contacts list">
-        <li class="footer-contact">
-          <address class="footer-address">
-            м. Київ, пр-т Лесі Українки, 26
-          </address>
-        </li>
-        <li>
-          <a class="footer-mail" href="mailto:someone@example.com"
-            >info@devstudio.com</a
-          >
-        </li>
-        <li>
-          <a class="footer-phone" href="tel:110001111111"
-            >+11 (000) 111-11-11</a
-          >
-        </li>
-      </ul>
+      <div class="container">
+        <div class="footer-list">
+          <a href="#" class="logo-footer"
+            ><img src="./img/WebStudio.png" alt="WebStudio-logo"
+          /></a>
+          <ul class="footer-contacts list">
+            <li class="footer-contact">
+              <address class="footer-address">
+                м. Київ, пр-т Лесі Українки, 26
+              </address>
+            </li>
+            <li>
+              <a class="footer-mail" href="mailto:someone@example.com"
+                >info@devstudio.com</a
+              >
+            </li>
+            <li>
+              <a class="footer-phone" href="tel:110001111111"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
