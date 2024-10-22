@@ -1,17 +1,22 @@
 /* Part 1. Calculate priority */
+/* 100+10 */
 #main .container {
 }
 
 .class-1.class-2 {
+  /* =20 */
 }
 
 .container > img {
+  /* =11 */
 }
 
 img#logo {
+  /* 101 */
 }
 
-button[type='submit'] {
+button[type="submit"] {
+  /* 11 */
 }
 
 /* Part 2. What color will be shown? */
@@ -25,7 +30,7 @@ button[type='submit'] {
 }
 
 /* 2.2. */
-.foo {
+/* .foo {
   color: red;
 }
 
@@ -35,7 +40,7 @@ li {
 
 li.foo {
   color: yellow;
-}
+} */
 
 /* Part 3. What color will be shown? What's difference between selectors? */
 /* 3.1. */
@@ -62,3 +67,19 @@ On the first level text should be red, on the second - blue
 */
 
 /* Part 5. Create a blue link that will be underlined on hover and will change color to violet when user presses it */
+.list > li {
+  color: brown;
+}
+ul li {
+  color: blue;
+}
+.link {
+  text-decoration: none;
+  color: blue;
+}
+.link:active {
+  color: blueviolet;
+}
+.link:hover {
+  text-decoration: underline;
+}
