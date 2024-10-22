@@ -1,0 +1,64 @@
+/* Part 1. Calculate priority */
+#main .container {
+}
+
+.class-1.class-2 {
+}
+
+.container > img {
+}
+
+img#logo {
+}
+
+button[type='submit'] {
+}
+
+/* Part 2. What color will be shown? */
+/* 2.1. */
+.foo {
+  color: red;
+}
+
+.foo {
+  color: yellow;
+}
+
+/* 2.2. */
+.foo {
+  color: red;
+}
+
+li {
+  color: yellowgreen !important;
+}
+
+li.foo {
+  color: yellow;
+}
+
+/* Part 3. What color will be shown? What's difference between selectors? */
+/* 3.1. */
+a:disabled {
+  color: green;
+}
+
+a[disabled] {
+  color: blue;
+}
+
+/* 3.2 */
+p a {
+  color: black;
+}
+
+p,
+a {
+  color: grey;
+}
+
+/* Part 4. Create a list that consist of 3 lorems. Each list item should have own list that consists of 3 lorems too.
+On the first level text should be red, on the second - blue
+*/
+
+/* Part 5. Create a blue link that will be underlined on hover and will change color to violet when user presses it */
