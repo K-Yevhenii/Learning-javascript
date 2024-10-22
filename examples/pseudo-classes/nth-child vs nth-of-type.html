@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>:nth-child vs. :nth-of-type</title>
+    <style>
+      .first .bold:nth-child(3) {
+        font-weight: 700;
+      }
+
+      .second .bold:nth-of-type(3) {
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>:nth-child</h2>
+    <div class="first">
+      <div class="bold">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum suscipit eaque qui neque
+        quos enim ut obcaecati quia similique sit rerum facilis id saepe minima, reprehenderit,
+        facere soluta accusamus nihil?
+      </div>
+      <div class="bold">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum suscipit eaque qui neque
+        quos enim ut obcaecati quia similique sit rerum facilis id saepe minima, reprehenderit,
+        facere soluta accusamus nihil?
+      </div>
+      <p class="bold">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium eaque deleniti fuga non
+        magni ab, porro dolorem provident itaque alias, recusandae consectetur a vel ullam delectus
+        aspernatur ipsa et aliquam.
+      </p>
+      <div class="bold">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum suscipit eaque qui neque
+        quos enim ut obcaecati quia similique sit rerum facilis id saepe minima, reprehenderit,
+        facere soluta accusamus nihil?
+      </div>
+    </div>
+    <h2>:nth-of-type</h2>
+    <div class="second">
+      <div class="bold">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum suscipit eaque qui neque
+        quos enim ut obcaecati quia similique sit rerum facilis id saepe minima, reprehenderit,
+        facere soluta accusamus nihil?
+      </div>
+      <div class="bold">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum suscipit eaque qui neque
+        quos enim ut obcaecati quia similique sit rerum facilis id saepe minima, reprehenderit,
+        facere soluta accusamus nihil?
+      </div>
+      <p class="bold">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium eaque deleniti fuga non
+        magni ab, porro dolorem provident itaque alias, recusandae consectetur a vel ullam delectus
+        aspernatur ipsa et aliquam.
+      </p>
+      <div class="bold">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum suscipit eaque qui neque
+        quos enim ut obcaecati quia similique sit rerum facilis id saepe minima, reprehenderit,
+        facere soluta accusamus nihil?
+      </div>
+    </div>
+  </body>
+</html>
