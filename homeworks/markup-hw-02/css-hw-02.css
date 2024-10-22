@@ -39,8 +39,11 @@ li {
 body {
   font: 400 14px "Roboto", sans-serif;
   letter-spacing: 0.42px;
+<<<<<<< HEAD:tasks/markup-hw-02/css-hw-02.css
+=======
   /* TODO: remove max-width */
   max-width: 1600px;
+>>>>>>> 45b5895123ebeb23677a9bde863ebf09eae2a411:homeworks/markup-hw-02/css-hw-02.css
 }
 :root {
   --background-hero-footer: #2f303a;
@@ -99,7 +102,6 @@ body {
   margin-right: 50px;
 }
 .hero {
-  /* Bg */
   background-color: var(--background-hero-footer);
   color: #ffffff;
   text-align: center;
