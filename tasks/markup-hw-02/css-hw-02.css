@@ -41,7 +41,6 @@ body {
   */
   font: 400 14px "Roboto", sans-serif;
   letter-spacing: 0.42px;
-  max-width: 1600px;
 }
 :root {
   --background-hero-footer: #2f303a;
@@ -99,7 +98,6 @@ body {
   margin-right: 50px;
 }
 .hero {
-  /* Bg */
   background-color: var(--background-hero-footer);
   color: #ffffff;
   text-align: center;
