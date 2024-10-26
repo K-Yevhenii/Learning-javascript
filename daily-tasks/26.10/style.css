@@ -1,0 +1,43 @@
+body {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.container {
+  display: flex;
+  width: 300px;
+  height: 300px;
+  border: solid 1px blue;
+}
+
+.item {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+}
+
+.third .item:nth-child(2) {
+  flex-grow: 1;
+}
+
+.third .item:nth-child(3) {
+  flex-grow: 2;
+}
+
+.fourth {
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.green {
+  background-color: green;
+}
