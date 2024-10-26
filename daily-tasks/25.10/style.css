@@ -1,0 +1,44 @@
+main#main.element.element-active {
+}
+header.header > a {
+}
+.container span {
+  display: block;
+  width: 300px;
+  height: 300px;
+  background-color: blue;
+}
+.container span:nth-child(4n) {
+  background-color: red;
+}
+a ~ div {
+  box-sizing: border-box;
+  width: 200px;
+  height: 200px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: solid 5px green;
+}
+:root {
+  --button-color: hsla(225, 73%, 57%, 0.8);
+}
+button {
+  color: var(--button-color);
+  padding: 10px 25px;
+  background: transparent;
+  border-radius: 4px;
+  border: solid 2px currentColor;
+}
+button:hover {
+  color: hsla(225, 73%, 47%, 0.8);
+}
+
+button:active {
+  color: hsla(225, 73%, 37%, 0.8);
+}
+button[disabled] {
+  color: hsla(225, 73%, 77%, 0.8);
+}
+.box {
+  margin-left: auto;
+}

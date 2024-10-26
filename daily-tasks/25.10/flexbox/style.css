@@ -1,0 +1,16 @@
+.box {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column-reverse;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  width: 1000px;
+  height: 1000px;
+  background-color: blueviolet;
+}
+.item {
+  width: 200px;
+  height: 200px;
+  /* align-self: flex-end; */
+  background-color: aqua;
+}
