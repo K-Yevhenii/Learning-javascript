@@ -48,7 +48,7 @@ body {
   justify-content: flex-end;
 }
 .box-start.box {
-  justify-content: start;
+  justify-content: flex-start;
 }
 .justify-center.box {
   justify-content: center; /* Центр по горизонталі */
