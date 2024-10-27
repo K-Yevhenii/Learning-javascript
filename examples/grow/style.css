@@ -1,11 +1,16 @@
-.box-grow {
-  display: flex;
+body {
   width: 900px;
+  border: solid 1px rgb(4, 80, 4);
+  background-color: rgb(194, 221, 212);
 }
-.grow-item {
+.box {
+  display: flex;
+}
+.item {
   border: solid 1px rgb(67, 144, 67);
   width: 100px;
   height: 100px;
+  margin: 40px 0;
   background-color: aquamarine;
 }
 .grow-1 {
@@ -23,12 +28,29 @@
 .grow-4 {
   flex-grow: 3;
 }
-.box-column.box-grow {
+.box-column.box {
   flex-direction: column;
   width: 100px;
 }
 
-.box-justify.box-grow {
+.box-between.box {
   justify-content: space-between;
   margin-top: 20px;
+}
+.box-evenly.box {
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+.box-around.box {
+  justify-content: space-around;
+}
+.box-end.box {
+  justify-content: flex-end;
+}
+.box-start.box {
+  justify-content: start;
+}
+.justify-center.box {
+  justify-content: center; /* Центр по горизонталі */
+  align-items: center; /* Центр по вертикалі */
 }
