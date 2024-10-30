@@ -17,11 +17,12 @@ address {
   font-style: normal;
 }
 
-a,
-/* TODO: reset for button background-color, border, padding */
-button {
+a {
   color: inherit;
   text-decoration: none;
+}
+/* TODO: reset for button background-color, border, padding */
+button {
   border: none;
   padding: 0;
   background-color: transparent;
