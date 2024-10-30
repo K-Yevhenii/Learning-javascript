@@ -39,7 +39,7 @@ body {
   --main-color: #ffffff;
   --text-description-color: #757575;
   --main-text: #212121;
-  --menu-item-bg-hover: #2196f3;
+  --hover-color: #2196f3;
   --footer-contacts-text: #ffffff99;
 }
 * {
@@ -93,7 +93,7 @@ body {
 }
 
 .link:hover {
-  color: var(--menu-item-bg-hover);
+  color: var(--hover-color);
 }
 
 .hero {

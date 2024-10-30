@@ -21,7 +21,7 @@ a {
   color: inherit;
   text-decoration: none;
 }
-/* TODO: reset for button background-color, border, padding */
+
 button {
   border: none;
   padding: 0;
@@ -33,18 +33,16 @@ li {
 }
 /* MAIN STYLES */
 :root {
-  /* TODO: prefix portfolio */
   ---main-text-color: #212121;
   --info-text-color: #757575;
-  --btn-bg-hover-color: #2196f3;
+  --hover-color: #2196f3;
   /* btn-color */
   --btn-color: #f5f4fa;
   --btn-text-color: #212121;
 }
 body {
-  font: 700 18px "Roboto", sans-serif;
+  font: 700 18px / 1.875 "Roboto", sans-serif;
   letter-spacing: 1.08px;
-  line-height: 36px;
 
   color: var(--main-text-color);
 }
@@ -53,8 +51,7 @@ body {
   margin: 0 auto;
 }
 .btn {
-  /* TODO: also add line height in percents */
-  font: 500 16px "Roboto", sans-serif;
+  font: 500 16px / 1.625 "Roboto", sans-serif;
   line-height: 26px;
   letter-spacing: 0.48px;
   padding: 6px 22px;
@@ -66,48 +63,40 @@ body {
 .btn:hover {
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
     0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
-  /* TODO: apply variable */
   color: var(--btn-color);
-  background: var(--btn-bg-hover-color);
+  background: var(--hover-color);
 }
 
 .filter-list {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.filter-list {
   gap: 0 16px;
+  margin-bottom: 50px;
 }
 
-/* TODO: add styles for button on hover and header links. Put color in css variable */
 .portfolio-list {
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-top: 50px;
 }
 
-/* TODO: add border for portfolio-item */
-
-/* TODO: shouldn't be here but add vertical and horizontal paddings in div */
 .portfolio-item {
   border: 1px solid rgb(238, 238, 238);
   background: rgb(255, 255, 255);
+  line-height: 0;
 }
 
 .portfolio-info {
-  padding: 20px 0 20px;
+  padding: 20px 24px;
+}
+
+.portfolio-info h4 {
+  line-height: 2;
 }
 .portfolio-info span {
-  /* TODO: use font */
-  font: 400 16px "Roboto", sans-serif;
-  line-height: 30px;
+  font: 400 16px / 1.875 "Roboto", sans-serif;
   letter-spacing: 0.48px;
   color: var(--main-text-color);
-}
-.portfolio-info h4,
-.portfolio-info span {
-  padding-left: 24px;
 }
