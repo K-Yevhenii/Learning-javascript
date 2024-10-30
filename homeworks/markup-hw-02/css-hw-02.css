@@ -68,38 +68,33 @@ body {
   justify-content: space-between;
 }
 
-/* TODO: add padding for logo and links */
 .logo {
   display: flex;
-  padding: 10px;
-  margin-right: 83px;
+  padding: 10px 20px;
+  margin: 0 73px 0 -10px;
 }
 
 .menu {
   display: flex; /* flexbox горизонтального вирівнювання */
   justify-content: center;
   align-items: center;
-  gap: 50px;
+  gap: 30px;
 }
 
-.header-phone:hover,
-/* TODO: should highlight individual link */
-.header-mail:hover {
-  color: var(--menu-item-bg-hover);
-}
-.menu-item:hover {
-  color: var(--menu-item-bg-hover);
-}
 .contacts {
   display: flex;
   align-items: center;
-  gap: 50px;
-}
-.link {
-  padding: 10px;
+  gap: 30px;
+  margin-right: -10px;
 }
 
-/* TODO: use gap for flex-container */
+.link {
+  padding: 20px 10px;
+}
+
+.link:hover {
+  color: var(--menu-item-bg-hover);
+}
 
 .hero {
   color: #ffffff;
@@ -134,7 +129,9 @@ body {
 .service-list {
   display: flex;
   justify-content: space-between;
+  gap: 30px;
 }
+
 .service-list {
   font-weight: 700;
   line-height: 16px;
@@ -155,19 +152,19 @@ body {
 .projects {
   padding-bottom: 94px;
 }
+
 h2 {
-  font: 700 36px "Roboto", sans-serif;
-  margin: 0 auto;
-  padding-bottom: 50px;
-  line-height: 120%;
-  letter-spacing: 1.8px;
+  margin: 0 auto 50px;
+  font: 700 36px / 1.2 "Roboto", sans-serif;
   text-align: center;
+  letter-spacing: 1.8px;
   color: var(--main-text);
 }
 
 .project-list {
   display: flex;
   justify-content: space-between;
+  gap: 30px;
 }
 
 .team {
@@ -181,10 +178,11 @@ h2 {
 .team-list {
   display: flex;
   justify-content: space-between;
+  gap: 30px;
 }
 
 .team-member-info {
-  padding: 30px 0px;
+  padding: 30px 10px;
 }
 
 .team-member {
@@ -192,7 +190,7 @@ h2 {
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-  background: var(--main-color);
+  background-color: var(--main-color);
 }
 
 .team-member-avatar {
@@ -200,7 +198,7 @@ h2 {
 }
 /* TODO: correct style */
 .team h3 {
-  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .team span {
@@ -214,11 +212,14 @@ h2 {
 }
 
 /* TODO: link should be display block and have margin instead */
-.logo-footer img {
-  display: block;
-  max-width: 145px;
+.logo-footer {
+  display: inline-block;
   padding: 10px;
-  margin-bottom: 10px;
+  margin: 0 0 10px -10px;
+}
+
+.logo-footer img {
+  max-width: 145px;
 }
 
 .footer-address {
@@ -227,6 +228,9 @@ h2 {
 
 .footer-mail,
 .footer-phone {
-  padding: 9px;
+  display: inline-block;
+  padding: 4.5px 10px;
+  margin-left: -10px;
+  line-height: 1;
   color: var(--footer-contacts-text);
 }
