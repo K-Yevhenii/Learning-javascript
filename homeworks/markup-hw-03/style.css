@@ -33,25 +33,26 @@ li {
 }
 /* MAIN STYLES */
 :root {
+  /* TODO: prefix portfolio */
   --portfolio-main-text-color: #212121;
   --portfolio-info-text-color: #757575;
   --portfolio-btn-bg-hover-color: #2196f3;
+  /* btn-color */
   --portfolio-btn-bg-color: #f5f4fa;
 }
 body {
   font: 700 18px "Roboto", sans-serif;
   letter-spacing: 1.08px;
   line-height: 36px;
-  /* TODO: move it to css-variable */
+
   color: var(--portfolio-main-text-color);
 }
 .container {
-  /* TODO: center it */
   max-width: 1170px;
   margin: 0 auto;
 }
 .btn {
-  /* TODO: all these styles except margin should be in button */
+  /* TODO: also add line height in percents */
   font: 500 16px "Roboto", sans-serif;
   letter-spacing: 0.48px;
   padding: 6px 22px;
@@ -62,10 +63,10 @@ body {
 .btn:hover {
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
     0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+  /* TODO: apply variable */
   color: white;
   background: var(--portfolio-btn-bg-hover-color);
 }
-/* TODO: remove me */
 
 .filter-list {
   display: flex;
@@ -73,22 +74,26 @@ body {
   align-items: center;
 }
 .filter-list {
-  /* TODO: replace it by gap */
   gap: 0 16px;
 }
+
 /* TODO: add styles for button on hover and header links. Put color in css variable */
 .portfolio-list {
   display: flex;
-  /* TODO: correct value */
   gap: 30px;
   flex-wrap: wrap;
   justify-content: space-between;
   padding-top: 50px;
 }
+
+/* TODO: add border for portfolio-item */
+
+/* TODO: shouldn't be here but add vertical and horizontal paddings in div */
 .portfolio-item img {
   padding-bottom: 30px;
 }
 .portfolio-info span {
+  /* TODO: use font */
   font-family: Roboto;
   font-size: 16px;
   font-weight: 400;
