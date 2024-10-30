@@ -34,38 +34,41 @@ li {
 /* MAIN STYLES */
 :root {
   /* TODO: prefix portfolio */
-  --portfolio-main-text-color: #212121;
-  --portfolio-info-text-color: #757575;
-  --portfolio-btn-bg-hover-color: #2196f3;
+  ---main-text-color: #212121;
+  --info-text-color: #757575;
+  --btn-bg-hover-color: #2196f3;
   /* btn-color */
-  --portfolio-btn-bg-color: #f5f4fa;
+  --btn-color: #f5f4fa;
+  --btn-text-color: #212121;
 }
 body {
   font: 700 18px "Roboto", sans-serif;
   letter-spacing: 1.08px;
   line-height: 36px;
 
-  color: var(--portfolio-main-text-color);
+  color: var(--main-text-color);
 }
 .container {
-  max-width: 1170px;
+  max-width: 1180px;
   margin: 0 auto;
 }
 .btn {
   /* TODO: also add line height in percents */
   font: 500 16px "Roboto", sans-serif;
+  line-height: 26px;
   letter-spacing: 0.48px;
   padding: 6px 22px;
   border-radius: 4px;
   cursor: pointer;
-  background-color: rgb(245, 244, 250);
+  background-color: var(--btn-color);
+  color: var(--btn-text-color);
 }
 .btn:hover {
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
     0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
   /* TODO: apply variable */
-  color: white;
-  background: var(--portfolio-btn-bg-hover-color);
+  color: var(--btn-color);
+  background: var(--btn-bg-hover-color);
 }
 
 .filter-list {
@@ -89,15 +92,22 @@ body {
 /* TODO: add border for portfolio-item */
 
 /* TODO: shouldn't be here but add vertical and horizontal paddings in div */
-.portfolio-item img {
-  padding-bottom: 30px;
+.portfolio-item {
+  border: 1px solid rgb(238, 238, 238);
+  background: rgb(255, 255, 255);
+}
+
+.portfolio-info {
+  padding: 20px 0 20px;
 }
 .portfolio-info span {
   /* TODO: use font */
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 400;
+  font: 400 16px "Roboto", sans-serif;
   line-height: 30px;
   letter-spacing: 0.48px;
-  color: var(--portfolio-main-text-color);
+  color: var(--main-text-color);
+}
+.portfolio-info h4,
+.portfolio-info span {
+  padding-left: 24px;
 }
