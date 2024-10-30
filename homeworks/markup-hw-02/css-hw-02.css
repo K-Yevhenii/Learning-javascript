@@ -48,8 +48,8 @@ body {
 
 .header {
   display: flex;
-  justify-content: center; /* ??? */
   justify-content: space-between;
+  gap: 20px;
   font-weight: 500;
   /* TODO: add space-between and gap 20px; */
   height: 80px;
@@ -82,21 +82,25 @@ body {
   gap: 50px;
 }
 
-.menu-item:hover,
+.header-phone:hover,
 /* TODO: should highlight individual link */
-.contacts:hover {
+.header-mail:hover {
   color: var(--menu-item-bg-hover);
 }
-
+.menu-item:hover {
+  color: var(--menu-item-bg-hover);
+}
 .contacts {
   display: flex;
   align-items: center;
+  gap: 50px;
+}
+.link {
+  padding: 10px;
 }
 
 /* TODO: use gap for flex-container */
-.contacts {
-  gap: 50px;
-}
+
 .hero {
   color: #ffffff;
   text-align: center;
@@ -129,8 +133,7 @@ body {
 
 .service-list {
   display: flex;
-  list-style: none;
-  gap: 30px;
+  justify-content: space-between;
 }
 .service-list {
   font-weight: 700;
@@ -164,8 +167,7 @@ h2 {
 
 .project-list {
   display: flex;
-  list-style: none;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .team {
@@ -178,8 +180,7 @@ h2 {
 
 .team-list {
   display: flex;
-  justify-content: center;
-  gap: 30px;
+  justify-content: space-between;
 }
 
 .team-member-info {
@@ -215,9 +216,9 @@ h2 {
 /* TODO: link should be display block and have margin instead */
 .logo-footer img {
   display: block;
+  max-width: 145px;
   padding: 10px;
   margin-bottom: 10px;
-  max-width: 145px;
 }
 
 .footer-address {
@@ -226,5 +227,6 @@ h2 {
 
 .footer-mail,
 .footer-phone {
+  padding: 9px;
   color: var(--footer-contacts-text);
 }
