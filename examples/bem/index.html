@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BEM</title>
+    <style>
+      .btn {
+        padding: 10px 16px;
+        border: 0;
+        background-color: blue;
+        color: #fff;
+        border-radius: 4px;
+      }
+
+      .btn_color-warning {
+        background-color: yellow;
+      }
+
+      .btn_color-success {
+        background-color: green;
+      }
+
+      .btn_color-error {
+        background-color: red;
+      }
+
+      .input {
+        border: none;
+        background-color: #a0a0a0;
+      }
+
+      .input_disabled {
+        background-color: #d7d7d7;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>BEM</h1>
+
+      <div>
+        <h2>Modifier examples</h2>
+        <div>
+          <h3>Key-value modifiers</h3>
+          <button class="btn">Button</button>
+          <button class="btn btn_color-warning">Button</button>
+          <button class="btn btn_color-success">Button</button>
+          <button class="btn btn_color-error">Button</button>
+        </div>
+
+        <div>
+          <h3>Boolean modifiers</h3>
+          <input type="text" class="input" />
+          <input type="text" disabled class="input_disabled" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
