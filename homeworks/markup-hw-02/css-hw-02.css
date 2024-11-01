@@ -52,47 +52,50 @@ body {
   gap: 20px;
   font-weight: 500;
   /* TODO: add space-between and gap 20px; */
+  align-items: center;
   height: 80px;
   background: var(--main-color);
 }
 
-.nav {
+.header__nav {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.menu-nav {
+.header__menu-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.logo {
+.header__logo {
   display: flex;
   padding: 10px 20px;
   margin: 0 73px 0 -10px;
 }
 
-.menu {
+.navigation__menu {
   display: flex; /* flexbox горизонтального вирівнювання */
   justify-content: center;
   align-items: center;
   gap: 30px;
 }
 
-.contacts {
+/* .contacts {
   display: flex;
   align-items: center;
   gap: 30px;
+} */
+.header__contacts {
   margin-right: -10px;
 }
 
-.link {
+.navigation__link {
   padding: 20px 10px;
 }
 
-.link:hover {
+.navigation__link:hover {
   color: var(--hover-color);
 }
 
