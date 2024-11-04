@@ -8,21 +8,20 @@ body {
   background-color: black;
 }
 .basic-block {
-  padding: 30px 15px;
-  border: solid 1px wheat;
-  max-width: 405px;
 }
 .basic-block__list-items {
+  /* padding: 15px; */
+  border: solid 1px wheat;
+  max-width: 405px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: stretch;
   flex-wrap: wrap;
-  column-gap: 15px;
-  row-gap: 15px;
+  gap: 15px;
 }
 
 .list-items__item {
-  width: calc(100% / 4);
+  width: 100px;
   height: 100px;
   border: solid 1px wheat;
 }
