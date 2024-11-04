@@ -106,7 +106,7 @@ body {
   background-color: var(--background-hero-footer);
 }
 
-.hero-title {
+.hero__title {
   max-width: 696px;
   margin-bottom: 30px;
   font: 900 44px "Roboto", sans-serif;
@@ -125,28 +125,25 @@ body {
   background: rgb(33, 150, 243);
   color: #ffffff;
 }
-.service-sections {
+.services {
   padding: 94px 0;
 }
 
-.service-list {
+.services__list {
   display: flex;
   justify-content: space-between;
   gap: 30px;
-}
-
-.service-list {
   font-weight: 700;
   line-height: 16px;
   color: var(--main-text);
 }
 
-.service-title {
+.services__title {
   text-transform: uppercase;
   margin-bottom: 10px;
 }
 
-.service-description {
+.services__description {
   font-weight: 400;
   letter-spacing: 0.3px;
   color: var(--text-description-color);
@@ -156,15 +153,17 @@ body {
   padding-bottom: 94px;
 }
 
-h2 {
+.projects__title {
   margin: 0 auto 50px;
-  font: 700 36px / 1.2 "Roboto", sans-serif;
   text-align: center;
+}
+h2 {
+  font: 700 36px / 1.2 "Roboto", sans-serif;
   letter-spacing: 1.8px;
   color: var(--main-text);
 }
 
-.project-list {
+.projects__list {
   display: flex;
   justify-content: space-between;
   gap: 30px;
@@ -174,17 +173,17 @@ h2 {
   background: rgb(245, 244, 250);
   padding: 94px 0;
 }
-.team-section {
-  max-height: 648px;
+.team__title {
+  margin: 0 auto 50px;
+  text-align: center;
 }
-
-.team-list {
+.team__list {
   display: flex;
   justify-content: space-between;
   gap: 30px;
 }
 
-.team-member-info {
+.team-member__info {
   padding: 30px 10px;
 }
 
@@ -196,15 +195,14 @@ h2 {
   background-color: var(--main-color);
 }
 
-.team-member-avatar {
+.team-member__avatar {
   max-width: 270px;
 }
-/* TODO: correct style */
-.team h3 {
+.team-member__name {
   margin-bottom: 10px;
 }
 
-.team span {
+.team-member__position {
   font-size: 16px;
   line-height: 19px;
   color: var(--text-description-color);
@@ -214,23 +212,22 @@ h2 {
   padding: 60px 0;
 }
 
-/* TODO: link should be display block and have margin instead */
-.logo-footer {
+.footer__logo-link {
   display: inline-block;
   padding: 10px;
   margin: 0 0 10px -10px;
 }
 
-.logo-footer img {
+.footer__logo {
   max-width: 145px;
 }
 
-.footer-address {
+.footer-contacts__address {
   color: var(--main-color);
 }
 
-.footer-mail,
-.footer-phone {
+.footer-contacts__mail,
+.footer-contacts__phone {
   display: inline-block;
   padding: 4.5px 10px;
   margin-left: -10px;
