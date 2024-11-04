@@ -67,7 +67,7 @@ body {
   background: var(--hover-color);
 }
 
-.filter-list {
+.filters__list {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,27 +75,27 @@ body {
   margin-bottom: 50px;
 }
 
-.portfolio-list {
+.portfolio {
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.portfolio-item {
+.portfolio-card {
   border: 1px solid rgb(238, 238, 238);
   background: rgb(255, 255, 255);
   line-height: 0;
 }
 
-.portfolio-info {
+.portfolio-card__info {
   padding: 20px 24px;
 }
 
-.portfolio-info h4 {
+.portfolio-card__title {
   line-height: 2;
 }
-.portfolio-info span {
+.portfolio-card__category {
   font: 400 16px / 1.875 "Roboto", sans-serif;
   letter-spacing: 0.48px;
   color: var(--main-text-color);
