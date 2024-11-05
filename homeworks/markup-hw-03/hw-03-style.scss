@@ -60,6 +60,7 @@ body {
     margin-bottom: 50px;
   }
 
+  // TODO: move to global.scss and rename to btn-secondary
   .btn {
     font: 500 16px / 1.625 "Roboto", sans-serif;
     line-height: 26px;
@@ -86,6 +87,7 @@ body {
   justify-content: space-between;
 
   &-card {
+    // TODO: should be in .portfolio-card
     border: 1px solid rgb(238, 238, 238);
     background: rgb(255, 255, 255);
     line-height: 0;
