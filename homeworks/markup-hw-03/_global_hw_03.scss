@@ -1,0 +1,35 @@
+.btn-filters {
+  font: 500 16px / 1.625 "Roboto", sans-serif;
+  line-height: 26px;
+  letter-spacing: 0.48px;
+  padding: 6px 22px;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: var(--btn-color);
+  color: var(--btn-text-color);
+
+  &:hover {
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+      0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+    color: var(--btn-color);
+    background: var(--hover-color);
+  }
+}
+:root {
+  ---main-text-color: #212121;
+  --info-text-color: #757575;
+  --hover-color: #2196f3;
+  --btn-color: #f5f4fa;
+  --btn-text-color: #212121;
+}
+
+body {
+  font: 700 18px / 1.875 "Roboto", sans-serif;
+  letter-spacing: 1.08px;
+
+  color: var(--main-text-color);
+}
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+}
