@@ -1,0 +1,35 @@
+.main-btn {
+  padding: 10px 14px;
+  color: white;
+  border-radius: 4px;
+  background-color: red; }
+  .main-btn:hover {
+    background-color: #b30000; }
+  .main-btn:active {
+    background-color: #660000; }
+  .main-btn:disabled {
+    background-color: #ff4d4d; }
+
+.btn {
+  padding: 10px 14px;
+  color: white;
+  border-radius: 4px;
+  background-color: green; }
+  .btn:hover {
+    background-color: #003400; }
+  .btn:active {
+    background-color: black; }
+  .btn:disabled {
+    background-color: #00cd00; }
+
+.btn-default {
+  padding: 10px 14px;
+  color: white;
+  border-radius: 4px;
+  background-color: blue; }
+  .btn-default:hover {
+    background-color: #0000b3; }
+  .btn-default:active {
+    background-color: #000066; }
+  .btn-default:disabled {
+    background-color: #4d4dff; }

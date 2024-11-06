@@ -1,0 +1,24 @@
+@mixin button($bg-color: blue) {
+  padding: 10px 14px;
+  color: white;
+  border-radius: 4px;
+  background-color: $bg-color;
+  &:hover {
+    background-color: darken($color: $bg-color, $amount: 15%);
+  }
+  &:active {
+    background-color: darken($color: $bg-color, $amount: 30%);
+  }
+  &:disabled {
+    background-color: lighten($color: $bg-color, $amount: 15%);
+  }
+}
+.main-btn {
+  @include button(red);
+}
+.btn {
+  @include button(green);
+}
+.btn-default {
+  @include button();
+}
