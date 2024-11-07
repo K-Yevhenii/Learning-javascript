@@ -1,24 +1,44 @@
-@mixin button($bg-color: blue) {
+$default-color: blue;
+$error-color: red;
+$success-color: green;
+
+@mixin button($bg-color: $default-color) {
   padding: 10px 14px;
   color: white;
   border-radius: 4px;
   background-color: $bg-color;
+
   &:hover {
     background-color: darken($color: $bg-color, $amount: 15%);
   }
+
   &:active {
     background-color: darken($color: $bg-color, $amount: 30%);
   }
+
   &:disabled {
     background-color: lighten($color: $bg-color, $amount: 15%);
   }
 }
-.main-btn {
-  @include button(red);
+
+.btn-error {
+  @include button($error-color);
 }
-.btn {
-  @include button(green);
+
+.btn-success {
+  @include button($success-color);
 }
+
 .btn-default {
   @include button();
+}
+
+@mixin container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+main,
+section {
+  @include container();
 }
