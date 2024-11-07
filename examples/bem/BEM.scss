@@ -93,6 +93,7 @@
     margin: 0 auto;
   }
 }
+
 .btn {
   padding: 10px 16px;
   border: 0;
@@ -116,8 +117,8 @@
 .input {
   border: none;
   background-color: #a0a0a0;
-}
 
-.input_disabled {
-  background-color: #d7d7d7;
+  &_disabled {
+    background-color: #d7d7d7;
+  }
 }
