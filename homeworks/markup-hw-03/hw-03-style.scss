@@ -16,24 +16,24 @@
   gap: 30px;
   flex-wrap: wrap;
   justify-content: space-between;
+}
 
-  .portfolio-card {
-    border: 1px solid rgb(238, 238, 238);
-    background: rgb(255, 255, 255);
-    line-height: 0;
+.portfolio-card {
+  border: 1px solid rgb(238, 238, 238);
+  background: rgb(255, 255, 255);
+  line-height: 0;
 
-    &__info {
-      padding: 20px 24px;
-    }
+  &__info {
+    padding: 20px 24px;
+  }
 
-    &__title {
-      line-height: 2;
-    }
+  &__title {
+    line-height: 2;
+  }
 
-    &__category {
-      font: 400 16px / 1.875 "Roboto", sans-serif;
-      letter-spacing: 0.48px;
-      color: var(--main-text-color);
-    }
+  &__category {
+    font: 400 16px / 1.875 "Roboto", sans-serif;
+    letter-spacing: 0.48px;
+    color: var(--main-text-color);
   }
 }
