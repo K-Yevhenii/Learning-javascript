@@ -26,81 +26,58 @@
     </style>
   </head>
   <body>
-    <select name="choices" multiple id="my-select">
-      <option value="1">Option 1</option>
-      <option value="2">Option 2</option>
-      <option value="3">Option 3</option>
-      <option value="4">Option 4</option>
-      <option value="5">Option 5</option>
-    </select>
-
-    <div>
+    <section>
+      <h2>Bind label to input</h2>
+      <div>
+        <h3>Using id</h3>
+        <div>
+          <label for="form-control">Label</label>
+          <input type="text" name="text" id="form-control" />
+        </div>
+      </div>
+      <div>
+        <h3>Nesting input in label; no id needed</h3>
+        <label>
+          Label
+          <input type="text" name="text" />
+        </label>
+      </div>
+    </section>
+    <section>
+      <h2>Custom checkbox</h2>
       <label class="checkbox">
         <input type="checkbox" class="custom-checkbox" />
         <span class="checkmark"></span>
         <span
-          >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam
-          voluptatem eos aut eum eveniet, nemo harum natus. Officiis ratione,
-          ipsum atque repellat libero nesciunt temporibus quisquam
-          exercitationem provident rem unde.</span
+          >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam voluptatem eos aut eum
+          eveniet, nemo harum natus. Officiis ratione, ipsum atque repellat libero nesciunt
+          temporibus quisquam exercitationem provident rem unde.</span
         >
       </label>
+    </section>
 
-      <div style="margin-top: 30px">
-        <input type="checkbox" id="checkbox" />
-        <div>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod dolorem
-          repellat dolore. Corporis ea ipsa doloribus eveniet. Possimus autem
-          ratione laboriosam, facere sit, dignissimos debitis officiis labore
-          distinctio, nihil similique?
-        </div>
-        <label class="checkbox" for="checkbox">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione unde
-          suscipit numquam esse necessitatibus qui dolor fugiat eveniet? Omnis
-          aliquam sapiente dolores consequuntur, suscipit saepe fugiat
-          blanditiis. Illum, aut tempora.
+    <section>
+      <h2>Custom radio</h2>
+      <!-- Used for grouping inputs in the form -->
+      <fieldset>
+        <!-- Group of radios -->
+        <legend>Custom radios</legend>
+        <label class="radio">
+          <input class="radio__input" type="radio" name="color" value="red" />
+          <span class="radio__checkmark"></span>
+          red
         </label>
-        <div>
-          <form action="">
-            <label class="radio">
-              <input
-                class="radio__input"
-                type="radio"
-                name="color"
-                value="red"
-              />
-              <span class="radio__checkmark"></span>
-              red
-            </label>
-            <label class="radio">
-              <input
-                class="radio__input"
-                type="radio"
-                name="color"
-                value="green"
-              />
-              <span class="radio__checkmark"></span>
-              green
-            </label>
-            <label class="radio">
-              <input
-                class="radio__input"
-                type="radio"
-                name="color"
-                value="yellow"
-              />
-              <span class="radio__checkmark"></span>
-              yellow
-            </label>
-            <div>
-              <form action="#" method="get">
-                <label for="user-id"> User name </label>
-                <input type="text" name="text" id="user-id" />
-              </form>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
+        <label class="radio">
+          <input class="radio__input" type="radio" name="color" value="green" />
+          <span class="radio__checkmark"></span>
+          green
+        </label>
+        <label class="radio">
+          <input class="radio__input" type="radio" name="color" value="yellow" />
+          <span class="radio__checkmark"></span>
+          yellow
+        </label>
+      </fieldset>
+    </section>
   </body>
 </html>
