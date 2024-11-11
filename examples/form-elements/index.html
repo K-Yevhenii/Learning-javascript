@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./form-style.css" />
+    <style>
+      .custom-checkbox {
+        display: none;
+      }
+      select {
+        width: 400px;
+      }
+
+      .checkmark {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: solid 1px gray;
+      }
+
+      .checkbox input:checked ~ .checkmark {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <select name="choices" multiple id="my-select">
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
+      <option value="4">Option 4</option>
+      <option value="5">Option 5</option>
+    </select>
+
+    <div>
+      <label class="checkbox">
+        <input type="checkbox" class="custom-checkbox" />
+        <span class="checkmark"></span>
+        <span
+          >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam
+          voluptatem eos aut eum eveniet, nemo harum natus. Officiis ratione,
+          ipsum atque repellat libero nesciunt temporibus quisquam
+          exercitationem provident rem unde.</span
+        >
+      </label>
+
+      <div style="margin-top: 30px">
+        <input type="checkbox" id="checkbox" />
+        <div>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod dolorem
+          repellat dolore. Corporis ea ipsa doloribus eveniet. Possimus autem
+          ratione laboriosam, facere sit, dignissimos debitis officiis labore
+          distinctio, nihil similique?
+        </div>
+        <label class="checkbox" for="checkbox">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione unde
+          suscipit numquam esse necessitatibus qui dolor fugiat eveniet? Omnis
+          aliquam sapiente dolores consequuntur, suscipit saepe fugiat
+          blanditiis. Illum, aut tempora.
+        </label>
+        <div>
+          <form action="">
+            <label class="radio">
+              <input
+                class="radio__input"
+                type="radio"
+                name="color"
+                value="red"
+              />
+              <span class="radio__checkmark"></span>
+              red
+            </label>
+            <label class="radio">
+              <input
+                class="radio__input"
+                type="radio"
+                name="color"
+                value="green"
+              />
+              <span class="radio__checkmark"></span>
+              green
+            </label>
+            <label class="radio">
+              <input
+                class="radio__input"
+                type="radio"
+                name="color"
+                value="yellow"
+              />
+              <span class="radio__checkmark"></span>
+              yellow
+            </label>
+            <div>
+              <form action="#" method="get">
+                <label for="user-id"> User name </label>
+                <input type="text" name="text" id="user-id" />
+              </form>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

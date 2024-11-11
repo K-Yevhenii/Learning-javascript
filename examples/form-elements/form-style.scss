@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+$color: red;
+
+.radio {
+  display: flex;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  &__input {
+    display: none;
+  }
+  &__checkmark {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    border: solid 1px grey;
+    border-radius: 50%;
+  }
+  &__input:checked + &__checkmark {
+    border: solid 5px $color;
+  }
+  &:hover &__checkmark {
+    border-color: $color;
+  }
+}
