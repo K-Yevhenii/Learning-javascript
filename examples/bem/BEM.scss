@@ -1,67 +1,124 @@
-* {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  box-sizing: border-box;
-  text-decoration: none;
-}
-.rubik-wet-paint-regular {
-  font-family: "Rubik Wet Paint", system-ui;
-  font-size: 90px;
-  font-weight: 400;
-  font-style: normal;
-  color: #ffa500;
-}
+@import './general';
 
-body {
-  font: 30px "Rubik Wet Paint", system-ui;
-  color: aquamarine;
-  background-color: black;
-}
-.container {
-  max-width: 1030px;
-}
-.header {
-  margin: 50px;
-
-  &__menu-nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  &__logo {
-    border: solid 1px #ffa500;
-  }
-}
-
-.navigation__list {
+.team-member-container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  align-items: center;
-  border: solid 1px #ffa500;
+  gap: 30px;
+}
 
-  &__menu-item {
-    font: 100 10px "Rubik Wet Paint", system-ui;
-    color: red;
-    padding: 20px;
+.team-member {
+  width: 270px;
+  text-align: center;
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  background-color: var(--main-color);
+
+  &__info {
+    padding: 30px 10px;
+  }
+
+  &__avatar {
+    max-width: 270px;
+  }
+
+  &__name {
+    margin-bottom: 10px;
+  }
+
+  &__position {
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--text-description-color);
+  }
+
+  &_shadowed {
+    box-shadow: 18px 14px 6px 0px rgba(0, 0, 0, 0.38), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+      0px 1px 3px 0px rgba(0, 0, 0, 0.12);
   }
 }
 
-.main-content {
-  &__list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-evenly;
+// A block that can be reused in different places of application
+.feedback-form {
+  &__title {
+    margin-bottom: 15px;
   }
 
-  &__item {
-    color: aliceblue;
-    &_green {
-      color: green;
-    }
+  &__input {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 5px 10px;
+    border: solid 1px grey;
+    border-radius: 4px;
+  }
+
+  &__submit {
+    display: block;
+    margin: 0 auto;
+    padding: 6px 14px;
+    border: 0;
+    color: #fff;
+    background-color: green;
+    border-radius: 4px;
+  }
+}
+
+.feedback {
+  display: flex;
+  margin-bottom: 10px;
+  padding: 25px;
+  border: solid 1px green;
+  border-radius: 10px;
+
+  &__avatar {
+    max-width: 270px;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  // Applied to .feedback-form
+  &__form {
+    margin-left: 30px;
+  }
+}
+
+.article {
+  &__text {
+    margin-bottom: 25px;
+  }
+
+  // Also applied to .feedback-form
+  &__feedback {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+.btn {
+  padding: 10px 16px;
+  border: 0;
+  background-color: blue;
+  color: #fff;
+  border-radius: 4px;
+
+  &_color-warning {
+    background-color: yellow;
+  }
+
+  &_color-success {
+    background-color: green;
+  }
+
+  &_color-error {
+    background-color: red;
+  }
+}
+
+.input {
+  border: none;
+  background-color: #a0a0a0;
+
+  &_disabled {
+    background-color: #d7d7d7;
   }
 }
