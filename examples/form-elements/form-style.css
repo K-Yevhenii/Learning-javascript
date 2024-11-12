@@ -1,6 +1,21 @@
 * {
   box-sizing: border-box; }
 
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px; }
+  .checkbox__input {
+    display: none; }
+  .checkbox__checkmark {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: solid 1px gray;
+    border-radius: 2px; }
+  .checkbox__input:checked ~ .checkbox__checkmark {
+    background-color: red; }
+
 .radio {
   display: flex;
   align-items: center; }
@@ -17,5 +32,7 @@
     border-radius: 50%; }
   .radio__input:checked + .radio__checkmark {
     border: solid 5px red; }
+  .radio__input:checked:disabled + .radio__checkmark {
+    border-color: #ff6666; }
   .radio:hover .radio__checkmark {
     border-color: red; }
