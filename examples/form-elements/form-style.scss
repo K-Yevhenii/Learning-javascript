@@ -3,6 +3,27 @@
 }
 $color: red;
 
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &__input {
+    display: none;
+  }
+
+  &__checkmark {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: solid 1px gray;
+    border-radius: 2px;
+  }
+
+  &__input:checked ~ &__checkmark {
+    background-color: $color;
+  }
+}
 .radio {
   display: flex;
   align-items: center;
@@ -23,6 +44,9 @@ $color: red;
   }
   &__input:checked + &__checkmark {
     border: solid 5px $color;
+  }
+  &__input:checked:disabled + &__checkmark {
+    border-color: lighten($color: $color, $amount: 20%);
   }
   &:hover &__checkmark {
     border-color: $color;

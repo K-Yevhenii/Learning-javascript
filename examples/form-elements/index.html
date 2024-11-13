@@ -5,25 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./form-style.css" />
-    <style>
-      .custom-checkbox {
-        display: none;
-      }
-      select {
-        width: 400px;
-      }
-
-      .checkmark {
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        border: solid 1px gray;
-      }
-
-      .checkbox input:checked ~ .checkmark {
-        background-color: green;
-      }
-    </style>
   </head>
   <body>
     <section>
@@ -46,12 +27,13 @@
     <section>
       <h2>Custom checkbox</h2>
       <label class="checkbox">
-        <input type="checkbox" class="custom-checkbox" />
-        <span class="checkmark"></span>
+        <input type="checkbox" class="checkbox__input" />
+        <span class="checkbox__checkmark"></span>
         <span
-          >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam voluptatem eos aut eum
-          eveniet, nemo harum natus. Officiis ratione, ipsum atque repellat libero nesciunt
-          temporibus quisquam exercitationem provident rem unde.</span
+          >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam
+          voluptatem eos aut eum eveniet, nemo harum natus. Officiis ratione,
+          ipsum atque repellat libero nesciunt temporibus quisquam
+          exercitationem provident rem unde.</span
         >
       </label>
     </section>
@@ -73,9 +55,27 @@
           green
         </label>
         <label class="radio">
-          <input class="radio__input" type="radio" name="color" value="yellow" />
+          <input
+            class="radio__input"
+            type="radio"
+            name="color"
+            value="yellow"
+            checked
+            disabled
+          />
           <span class="radio__checkmark"></span>
           yellow
+        </label>
+      </fieldset>
+      <fieldset>
+        <label>
+          <select name="options" id="user-options">
+            <option value="option-1">Option-1</option>
+            <option value="option-2">Option-2</option>
+            <option value="option-3">Option-3</option>
+            <option value="option-4">Option-4</option>
+            <option value="option-4">Option-5</option>
+          </select>
         </label>
       </fieldset>
     </section>
