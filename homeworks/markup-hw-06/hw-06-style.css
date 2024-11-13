@@ -46,13 +46,17 @@ button {
 
 .form__body {
   margin: 0 auto;
-  width: 408px;
-  height: 584px; }
-
-.form__title {
-  font: 500 16px "Roboto", sans-serif;
-  line-height: 24px;
-  color: #2e2f42; }
+  width: 408px; }
 
 .form__label {
   display: block; }
+
+.form__title {
+  font: 500 16px 'Roboto', sans-serif;
+  line-height: 24px;
+  color: #2e2f42; }
+
+.form__input {
+  width: 360px;
+  height: 40px;
+  border: solid 1px #4d5ae5; }

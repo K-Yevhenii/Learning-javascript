@@ -1,25 +1,31 @@
-// @import "./_hw-06-global.scss";
-// @import "./_hw-06-reset.scss";
+@import './_hw-06-global.scss';
+@import './_hw-06-reset.scss';
 
 .form {
   &__body {
     margin: 0 auto;
+    // TODO: remove it, a modal should have paddings
     width: 408px;
   }
+  // TODO: add margin for .form__item
+  // TODO: add bottom margin for label
   &__label {
     display: block;
   }
 
-  height: 584px;
-}
+  &__title {
+    // TODO: correct font-site
+    font: 500 16px 'Roboto', sans-serif;
+    //  TODO: use percents
+    line-height: 24px;
+    color: #2e2f42;
+  }
 
-&__title {
-  font: 500 16px "Roboto", sans-serif;
-  line-height: 24px;
-  color: #2e2f42;
-}
-&__input {
-  width: 360px;
-  height: 40px;
-  border: solid 1px #4d5ae5;
+  &__input {
+    // TODO: set width in form
+    width: 360px;
+    // TODO: use paddings instead
+    height: 40px;
+    border: solid 1px #4d5ae5;
+  }
 }
