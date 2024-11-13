@@ -4,31 +4,76 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      /* Task 1. Calculate selector priority */
+      .class:not(:first-child) {
+      }
+
+      table td button[disabled] {
+      }
+
+      main#main.main {
+      }
+
+      .class-1 + div {
+      }
+
+      .class:not(:last-of-type) {
+        background-color: rebeccapurple;
+      }
+      .container {
+        display: flex;
+        gap: 10px;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      .container div:nth-child(2) {
+        flex-grow: 1;
+      }
+      .container div {
+        width: 220px;
+        height: 220px;
+        border: solid 1px red;
+      }
+    </style>
   </head>
-  <style>
-    /* Task 1. Calculate selector priority */
-    .class:not(:first-child) {
-    }
-
-    table td button[disabled] {
-    }
-
-    main#main.main {
-    }
-
-    .class-1 + div {
-
-    }
-
-    .class:not(:last-of-type) {
-
-    }
-  </style>
   <body>
-    <!--
-    Task 2. Create a select where a user can select a country. It should consist of 3 groups - Europe, Asia, Africa;
-    each region should have 3 countries
-    -->
+    <div class="parent">
+      <p class="class"></p>
+      <p class="class"></p>
+      <div class="class"></div>
+      <div class="class"></div>
+    </div>
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <button disabled></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="class-1"></div>
+    <div></div>
+    <select name="" id="">
+      <optgroup label="Europe">
+        <option value="Ukraine">Ukraine</option>
+        <option value="USA">USA</option>
+        <option value="UK">UK</option>
+      </optgroup>
+      <optgroup label="Asia">
+        <option value="Japan">Japan</option>
+        <option value="China">China</option>
+        <option value="India">India"</option>
+      </optgroup>
+      <optgroup label="Africa">
+        <option value="Egypt">Egypt</option>
+        <option value="Tunis">Tunis</option>
+        <option value="Algeria">Algeria</option>
+      </optgroup>
+    </select>
+    <!---Task 2. Create a select where a user can select a country. It should consist
+    of 3 groups - Europe, Asia, Africa; each region should have 3 countries -->
     <!-- Task 3. Create a container that has max-width 1000px that is centered horizontally. It should have 3 blocks;
      the first and the third should take 220px, the second - take all available space
     -->

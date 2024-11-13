@@ -69,14 +69,77 @@
       </fieldset>
       <fieldset>
         <label>
+          <h2>One option from</h2>
           <select name="options" id="user-options">
+            <option>not selected</option>
             <option value="option-1">Option-1</option>
             <option value="option-2">Option-2</option>
             <option value="option-3">Option-3</option>
             <option value="option-4">Option-4</option>
-            <option value="option-4">Option-5</option>
           </select>
         </label>
+      </fieldset>
+      <fieldset>
+        <label>
+          <h2>Multiple options</h2>
+          <span>hold command/ctr</span>
+          <select name="options" id="user-options" multiple>
+            <option value="option-1">Option-1</option>
+            <option value="option-2">Option-2</option>
+            <option value="option-3">Option-3</option>
+            <option value="option-4">Option-4</option>
+          </select>
+        </label>
+      </fieldset>
+      <fieldset>
+        <h2>Multiple checkbox</h2>
+        <label
+          ><input
+            type="checkbox"
+            name="options"
+            value="option-1"
+          />Option-1</label
+        >
+        <label
+          ><input
+            type="checkbox"
+            name="options"
+            value="option-2"
+          />Option-2</label
+        >
+        <label
+          ><input
+            type="checkbox"
+            name="options"
+            value="option-3"
+          />Option-3</label
+        ><label
+          ><input
+            type="checkbox"
+            name="options"
+            value="option-4"
+          />Option-4</label
+        >
+      </fieldset>
+      <fieldset>
+        <h2>One option radio</h2>
+        <label>
+          <input type="radio" name="option" /><span>yes</span>
+          <input type="radio" name="option" /><span>no</span>
+        </label>
+      </fieldset>
+      <fieldset>
+        <h2>One option checkbox</h2>
+        <label
+          ><input type="checkbox" name="agreement" /> I agree to the terms
+          of</label
+        >
+      </fieldset>
+      <fieldset>
+        <form action="javascript:void(0);">
+          <p>Write a comment:</p>
+          <textarea placeholder="Enter your comment here..."></textarea>
+        </form>
       </fieldset>
     </section>
   </body>
