@@ -1,0 +1,42 @@
+/* Скидання стилів форми */
+
+form {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+}
+
+/* Скидання стилів елементів форми */
+input,
+textarea,
+select,
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit; /* Успадкування шрифтів */
+  color: inherit;
+  outline: none;
+  box-shadow: none;
+  appearance: none; /* Відключення нативних стилів (особливо в iOS) */
+}
+
+/* Скидання стилів для чекбоксів і радіокнопок */
+input[type="checkbox"],
+input[type="radio"] {
+  appearance: none;
+}
+
+/* Скидання стилів для кнопок */
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}

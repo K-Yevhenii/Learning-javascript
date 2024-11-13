@@ -1,0 +1,58 @@
+@charset "UTF-8";
+body {
+  font: 400 12px/14px Roboto;
+  letter-spacing: 0.04em;
+  color: #8e8f99; }
+
+/* Скидання стилів форми */
+form {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit; }
+
+/* Скидання стилів елементів форми */
+input,
+textarea,
+select,
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  /* Успадкування шрифтів */
+  color: inherit;
+  outline: none;
+  box-shadow: none;
+  appearance: none;
+  /* Відключення нативних стилів (особливо в iOS) */ }
+
+/* Скидання стилів для чекбоксів і радіокнопок */
+input[type="checkbox"],
+input[type="radio"] {
+  appearance: none; }
+
+/* Скидання стилів для кнопок */
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer; }
+
+.form__body {
+  margin: 0 auto;
+  width: 408px;
+  height: 584px; }
+
+.form__title {
+  font: 500 16px "Roboto", sans-serif;
+  line-height: 24px;
+  color: #2e2f42; }
+
+.form__label {
+  display: block; }

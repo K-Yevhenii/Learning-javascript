@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="./hw-06-style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="form">
+        <form action="#" id="form" class="form__body">
+          <!-- closes form -->
+          <div class="ellipse">
+            <button class="close-btn" onclick="closeForm()">
+              <a href="#"> <img src="./img/Ellipse 1.png" alt="" /></a>
+            </button>
+            <label for="name"></label>
+            <input type="text" id="name" name="name" />
+          </div>
+
+          <!-- form title -->
+          <h1 class="form__title">
+            Leave your contacts and we will call you back
+          </h1>
+
+          <!-- Name -->
+          <div class="form__item">
+            <label for="formName" class="form__label">Name</label>
+            <input
+              id="formName"
+              type="text"
+              placeholder="Enter your name"
+              name="name"
+              class="form__input"
+            />
+          </div>
+
+          <!-- Phone -->
+          <div class="form__item">
+            <label for="formPhone" class="form__label">Phone</label>
+            <input
+              id="formPhone"
+              type="tel"
+              placeholder="Your phone (+123456789)"
+              name="phone"
+              class="form__input"
+            />
+          </div>
+
+          <!-- Email -->
+          <div class="form__item">
+            <label for="formEmail" class="form__label">Email</label>
+            <input
+              id="formEmail"
+              type="email"
+              placeholder="yourname@example.com"
+              name="email"
+              class="form__input"
+            />
+          </div>
+
+          <!-- Comment -->
+          <div class="form__item">
+            <label for="formMessage" class="form__label">Comment</label>
+            <textarea
+              name="message"
+              id="formMessage"
+              class="form__input"
+            ></textarea>
+          </div>
+
+          <!-- Checkbox -->
+          <div class="form__item">
+            <div class="checkbox">
+              <input
+                id="formAgreement"
+                type="checkbox"
+                name="agreement"
+                class="checkbox__lable"
+              />
+              <label for="formAgreement" class="form__label">
+                I accept the terms and conditions of the Privacy Policy
+              </label>
+            </div>
+          </div>
+
+          <!-- Submit -->
+          <div class="form__item">
+            <button type="submit" class="form__button">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

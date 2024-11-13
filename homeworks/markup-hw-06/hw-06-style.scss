@@ -1,0 +1,25 @@
+// @import "./_hw-06-global.scss";
+// @import "./_hw-06-reset.scss";
+
+.form {
+  &__body {
+    margin: 0 auto;
+    width: 408px;
+  }
+  &__label {
+    display: block;
+  }
+
+  height: 584px;
+}
+
+&__title {
+  font: 500 16px "Roboto", sans-serif;
+  line-height: 24px;
+  color: #2e2f42;
+}
+&__input {
+  width: 360px;
+  height: 40px;
+  border: solid 1px #4d5ae5;
+}
