@@ -4,11 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      div:not(:last-child) {
+        margin-bottom: 20px;
+      }
+      div {
+        width: 400px;
+        height: 400px;
+        border: solid 1px red;
+        border-radius: 4px;
+      }
+      .first {
+        background: linear-gradient(red, yellow 30%, blue);
+      }
+      .second {
+        background: linear-gradient(red, yellow 75%, blue);
+      }
+
+      .third {
+        background: linear-gradient(135deg, red, blue);
+      }
+      .fourth {
+        background: linear-gradient(to left, red, blue);
+      }
+    </style>
   </head>
   <body>
     <!--
-    Create a card 400X400px with rounded corners 4px and background that will have gradient that is red in top-left
+    <linear-gradient-syntax> = 
+  [ <angle> | to <side-or-corner> ]? , <color-stop-list> 
+
+    Create a card 400X400px with rounded corners 4px and background that will have 
+    gradient that is red in top-left
     corner and blue in right-bottom corner
     -->
+    <div class="first"></div>
+    <div class="second"></div>
+    <div class="third"></div>
+    <div class="fourth"></div>
   </body>
 </html>
