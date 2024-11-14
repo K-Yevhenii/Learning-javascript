@@ -16,31 +16,34 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="form">
-        <!-- TODO: it should be a .form -->
-        <form action="#" id="form" class="form__body">
-          <!-- closes form -->
+      <!-- TODO: it should be a .form -->
+      <form action="#" id="form" class="form form__body">
+        <!-- closes form -->
+        <!-- TODO: replace by svg -->
+        <!-- TODO: remove a -->
+        <div class="form__inputs">
           <div class="ellipse">
-            <button class="close-btn" onclick="closeForm()">
-              <!-- TODO: replace by svg -->
-              <!-- TODO: remove a -->
-              <a href="#"> <img src="./img/Ellipse 1.png" alt="" /></a>
+            <button class="btn__close" onclick="closeForm()">
+              <img
+                class="btn__icon"
+                src="./img/close-black-18dp (2) 1.svg"
+                alt="Close"
+              />
             </button>
-            <!-- TODO: remove me -->
-            <label for="name"></label>
-            <input type="text" id="name" name="name" />
           </div>
+          <!-- TODO: remove me -->
 
           <!-- form title -->
-          <h1 class="form__title">Leave your contacts and we will call you back</h1>
-
+          <h1 class="form__title">
+            Leave your contacts and we will call you back
+          </h1>
           <!-- Name -->
           <div class="form__item">
             <!-- TODO: rewrite all ids to kebab-case (i.e. formName -> form-name) -->
             <!-- TODO: remove prefix `form` in ids (i.e. formName -> name) -->
-            <label for="formName" class="form__label">Name</label>
+            <label for="name" class="form__label">Name</label>
             <input
-              id="formName"
+              id="name"
               type="text"
               placeholder="Enter your name"
               name="name"
@@ -50,9 +53,9 @@
 
           <!-- Phone -->
           <div class="form__item">
-            <label for="formPhone" class="form__label">Phone</label>
+            <label for="Phone" class="form__label">Phone</label>
             <input
-              id="formPhone"
+              id="phone"
               type="tel"
               placeholder="Your phone (+123456789)"
               name="phone"
@@ -62,9 +65,9 @@
 
           <!-- Email -->
           <div class="form__item">
-            <label for="formEmail" class="form__label">Email</label>
+            <label for="Email" class="form__label">Email</label>
             <input
-              id="formEmail"
+              id="email"
               type="email"
               placeholder="yourname@example.com"
               name="email"
@@ -74,9 +77,14 @@
 
           <!-- Comment -->
           <div class="form__item">
-            <label for="formMessage" class="form__label">Comment</label>
+            <label for="Message" class="form__label">Comment</label>
             <!-- TODO: should be limited to 5 row -->
-            <textarea name="message" id="formMessage" class="form__input"></textarea>
+            <textarea
+              name="message"
+              id="formMessage"
+              placeholder="Text input"
+              class="form__input"
+            ></textarea>
           </div>
 
           <!-- Checkbox -->
@@ -84,21 +92,27 @@
             <!-- TODO: use custom checkbox -->
             <div class="checkbox">
               <!-- TODO:  checkbox__lable -> checkmark -->
-              <input id="formAgreement" type="checkbox" name="agreement" class="checkbox__lable" />
-              <label for="formAgreement" class="form__label">
+              <input
+                id="formAgreement"
+                type="checkbox"
+                name="agreement"
+                class="checkbox__checkmark"
+              />
+              <label for="agreement" class="form__label">
                 <!-- TODO: Privacy Policy should be wrapped in link -->
-                I accept the terms and conditions of the Privacy Policy
+                I accept the terms and conditions of the
+                <a class="form__link" href="#">Privacy Policy</a>
               </label>
             </div>
           </div>
 
           <!-- Submit -->
           <!-- TODO: remove wrapping div -->
-          <div class="form__item">
-            <button type="submit" class="form__button">Submit</button>
+          <div class="form__btn-submit">
+            <button type="submit" class="form__submit">Send</button>
           </div>
-        </form>
-      </div>
+        </div>
+      </form>
     </div>
   </body>
 </html>
