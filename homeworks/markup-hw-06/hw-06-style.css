@@ -53,7 +53,10 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-image: url(./img/people-office.svg); }
+  background-image: url(./img/people-office.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
 
 .wrapper {
   display: flex;
@@ -92,10 +95,11 @@ body {
 .form .checkbox {
   display: flex;
   flex-wrap: wrap;
-  padding: 16px 0 24px;
-  padding-right: 8px; }
+  padding: 16px 0 24px; }
   .form .checkbox__checkmark {
+    display: inline;
     margin: auto 0;
+    vertical-align: sub;
     width: 16px;
     height: 16px;
     border: solid 1px #2e2f4266; }
