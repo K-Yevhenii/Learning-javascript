@@ -48,33 +48,41 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-image: url(./img/people-office.svg);
+  background-image: url(./img/people-office.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; }
 
-.wrapper {
+.modal {
   display: flex;
   justify-content: space-around;
-  width: 408px;
-  padding: 24px 0;
+  padding: 24px;
   margin: 10px auto;
   border-radius: 4px;
   background-color: #fcfcfc; }
+  .modal__wrapper {
+    width: 360px; }
+  .modal__button-wrapper {
+    display: flex;
+    justify-content: flex-end; }
+  .modal__close-button {
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: #e7e9fc;
+    border-radius: 50%;
+    border: 1px solid #0000001a; }
 
 .form__label {
   display: block;
-  padding: 8px 0 4px; }
+  margin: 8px 0 4px; }
 
 .form__title {
   font: 500 16px "Roboto", sans-serif;
-  padding: 32px 0 8px;
+  margin: 32px 0 8px;
   line-height: 150%;
   letter-spacing: 0.32px;
   color: #2e2f42; }
-
-.form__inputs {
-  width: 360px; }
 
 .form__link {
   color: #4d5ae5; }
@@ -91,13 +99,22 @@ body {
   display: flex;
   flex-wrap: wrap;
   padding: 16px 0 24px; }
+  .form .checkbox__text {
+    padding-left: 8px; }
   .form .checkbox__checkmark {
-    display: inline;
+    appearance: auto;
     margin: auto 0;
-    vertical-align: sub;
     width: 16px;
     height: 16px;
+    cursor: pointer;
+    border-radius: 4px;
     border: solid 1px #2e2f4266; }
+    .form .checkbox__checkmark::before {
+      width: 16px;
+      height: 16px;
+      background-image: url(./img/checkbox_icon_149960.svg);
+      background-size: contain;
+      background-repeat: no-repeat; }
 
 .form__btn-submit {
   margin: 24px auto;
@@ -106,23 +123,12 @@ body {
   display: flex;
   justify-content: space-around;
   border-radius: 4px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 4px 0px #00000026;
   background: #4d5ae5; }
 
 .form__submit {
   font: 500 16px "Roboto";
-  padding: 16px 65px;
   color: #ffffff;
+  padding: 16px 65px;
   line-height: 150%;
   letter-spacing: 0.64px; }
-
-.ellipse {
-  display: flex;
-  justify-content: flex-end; }
-  .ellipse .btn__close {
-    justify-content: center;
-    width: 24px;
-    height: 24px;
-    border: 1px solid #0000001a;
-    background: #e7e9fc;
-    border-radius: 50%; }

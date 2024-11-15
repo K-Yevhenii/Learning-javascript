@@ -15,22 +15,43 @@
     <link rel="stylesheet" href="./hw-06-style.css" />
   </head>
   <body>
-    <div class="wrapper">
-      <!-- TODO: it should be a .form -->
-      <form action="#" id="form" class="form">
+    <div class="modal">
+      <div class="modal__wrapper">
+        <div class="modal__button-wrapper">
+          <button
+            class="modal__close-button"
+            type="button"
+            onclick="closeForm()"
+          >
+            <!-- TODO: replace by svg -->
+            <svg
+              class="modal__icon"
+              width="8"
+              height="8"
+              viewBox="0 0 8 8"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_667301_1204)">
+                <path
+                  d="M8 0.805714L7.19429 0L4 3.19429L0.805714 0L0 0.805714L3.19429 4L0 7.19429L0.805714 8L4 4.80571L7.19429 8L8 7.19429L4.80571 4L8 0.805714Z"
+                  fill="#2E2F42"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_667301_1204">
+                  <rect width="8" height="8" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+        </div>
         <!-- closes form -->
-        <div class="form__inputs">
-          <!-- TODO: move out of form -->
-          <div class="ellipse">
-            <button class="btn__close" onclick="closeForm()">
-              <!-- TODO: copy contents of svg and remove img -->
-              <img
-                class="btn__icon"
-                src="./img/close-black-18dp (2) 1.svg"
-                alt="Close"
-              />
-            </button>
-          </div>
+        <!-- TODO: it should be a .form -->
+        <form action="#" id="form" class="form">
+          <!-- TODO: remove a -->
+
+          <!-- TODO: remove me -->
 
           <!-- form title -->
           <h1 class="form__title">
@@ -38,6 +59,8 @@
           </h1>
           <!-- Name -->
           <div class="form__item">
+            <!-- TODO: rewrite all ids to kebab-case (i.e. formName -> form-name) -->
+            <!-- TODO: remove prefix `form` in ids (i.e. formName -> name) -->
             <label for="name" class="form__label">Name</label>
             <input
               id="name"
@@ -50,7 +73,7 @@
 
           <!-- Phone -->
           <div class="form__item">
-            <label for="Phone" class="form__label">Phone</label>
+            <label for="phone" class="form__label">Phone</label>
             <input
               id="phone"
               type="tel"
@@ -62,7 +85,7 @@
 
           <!-- Email -->
           <div class="form__item">
-            <label for="Email" class="form__label">Email</label>
+            <label for="email" class="form__label">Email</label>
             <input
               id="email"
               type="email"
@@ -74,12 +97,13 @@
 
           <!-- Comment -->
           <div class="form__item">
-            <label for="Message" class="form__label">Comment</label>
+            <label for="message" class="form__label">Comment</label>
             <!-- TODO: should be limited to 5 row -->
             <textarea
               name="message"
               id="formMessage"
               placeholder="Text input"
+              rows="5"
               class="form__input"
             ></textarea>
           </div>
@@ -89,16 +113,15 @@
             <!-- TODO: use custom checkbox -->
             <div class="checkbox">
               <!-- TODO:  checkbox__lable -> checkmark -->
-              <!-- TODO: hide checkbox using display: none, wrap all contents in label  -->
               <input
-                id="formAgreement"
+                id="agreement"
                 type="checkbox"
                 name="agreement"
                 class="checkbox__checkmark"
               />
               <label for="agreement" class="form__label">
                 <!-- TODO: Privacy Policy should be wrapped in link -->
-                <span
+                <span class="checkbox__text"
                   >I accept the terms and conditions of the
                   <a class="form__link" href="#">Privacy Policy</a></span
                 >
@@ -107,11 +130,12 @@
           </div>
 
           <!-- Submit -->
+          <!-- TODO: remove wrapping div -->
           <div class="form__btn-submit">
             <button type="submit" class="form__submit">Send</button>
           </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
   </body>
 </html>
