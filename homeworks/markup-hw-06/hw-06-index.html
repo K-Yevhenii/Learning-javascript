@@ -17,13 +17,13 @@
   <body>
     <div class="wrapper">
       <!-- TODO: it should be a .form -->
-      <form action="#" id="form" class="form form__body">
+      <form action="#" id="form" class="form">
         <!-- closes form -->
-        <!-- TODO: replace by svg -->
-        <!-- TODO: remove a -->
         <div class="form__inputs">
+          <!-- TODO: move out of form -->
           <div class="ellipse">
             <button class="btn__close" onclick="closeForm()">
+              <!-- TODO: copy contents of svg and remove img -->
               <img
                 class="btn__icon"
                 src="./img/close-black-18dp (2) 1.svg"
@@ -31,7 +31,6 @@
               />
             </button>
           </div>
-          <!-- TODO: remove me -->
 
           <!-- form title -->
           <h1 class="form__title">
@@ -39,8 +38,6 @@
           </h1>
           <!-- Name -->
           <div class="form__item">
-            <!-- TODO: rewrite all ids to kebab-case (i.e. formName -> form-name) -->
-            <!-- TODO: remove prefix `form` in ids (i.e. formName -> name) -->
             <label for="name" class="form__label">Name</label>
             <input
               id="name"
@@ -92,6 +89,7 @@
             <!-- TODO: use custom checkbox -->
             <div class="checkbox">
               <!-- TODO:  checkbox__lable -> checkmark -->
+              <!-- TODO: hide checkbox using display: none, wrap all contents in label  -->
               <input
                 id="formAgreement"
                 type="checkbox"
@@ -109,7 +107,6 @@
           </div>
 
           <!-- Submit -->
-          <!-- TODO: remove wrapping div -->
           <div class="form__btn-submit">
             <button type="submit" class="form__submit">Send</button>
           </div>

@@ -13,26 +13,19 @@ body {
 .wrapper {
   display: flex;
   justify-content: space-around;
+  // TODO: remove me
   width: 408px;
+  // TODO: horizontal paddings should have the same size
   padding: 24px 0;
   margin: 10px auto;
   border-radius: 4px;
   background-color: #fcfcfc;
 }
 .form {
-  &__body {
-    // TODO: remove it, a modal should have paddings
-  }
-  // TODO: add margin for .form__item
-  // TODO: add bottom margin for label
-  &__item {
-  }
   &__label {
     display: block;
     padding: 8px 0 4px;
   }
-  //  TODO: use percents
-  // TODO: correct font-site
 
   &__title {
     font: 500 16px "Roboto", sans-serif;
@@ -48,8 +41,6 @@ body {
     color: #4d5ae5;
   }
   &__input {
-    // TODO: set width in form
-    // TODO: use paddings instead
     width: 100%;
     padding: 12px;
     border: solid 1px #2e2f4266;
@@ -95,6 +86,7 @@ body {
   }
 }
 
+// TODO: rename to modal__close-button and add for wrapping div class modal
 .ellipse {
   display: flex;
   justify-content: flex-end;
