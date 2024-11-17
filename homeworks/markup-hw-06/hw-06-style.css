@@ -59,6 +59,7 @@ body {
   padding: 24px;
   margin: 10px auto;
   border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px #00000026;
   background-color: #fcfcfc; }
   .modal__wrapper {
     width: 360px; }
@@ -75,7 +76,7 @@ body {
 
 .form__label {
   display: block;
-  margin: 8px 0 4px; }
+  margin-bottom: 4px; }
 
 .form__title {
   font: 500 16px "Roboto", sans-serif;
@@ -84,21 +85,25 @@ body {
   letter-spacing: 0.32px;
   color: #2e2f42; }
 
+.form__item {
+  margin-bottom: 8px; }
+
 .form__link {
   color: #4d5ae5; }
 
 .form__input {
   width: 100%;
   padding: 12px;
-  border: solid 1px #2e2f4266;
-  border-radius: 4px; }
+  border-radius: 4px;
+  resize: vertical;
+  border: solid 1px #2e2f4266; }
   .form__input:focus {
     border: solid 1px #4d5ae5; }
 
 .form .checkbox {
   display: flex;
-  flex-wrap: wrap;
-  padding: 16px 0 24px; }
+  align-items: center;
+  padding: 8px 0 16px; }
   .form .checkbox__text {
     padding-left: 8px; }
   .form .checkbox__checkmark {
@@ -117,9 +122,6 @@ body {
       background-repeat: no-repeat; }
 
 .form__btn-submit {
-  margin: 24px auto;
-  width: 169px;
-  height: 56px;
   display: flex;
   justify-content: space-around;
   border-radius: 4px;

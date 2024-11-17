@@ -13,11 +13,10 @@ body {
 .modal {
   display: flex;
   justify-content: space-around;
-  // TODO: remove me
   padding: 24px;
-  // TODO: horizontal paddings should have the same size
   margin: 10px auto;
   border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px #00000026;
   background-color: #fcfcfc;
 
   &__wrapper {
@@ -41,7 +40,7 @@ body {
 .form {
   &__label {
     display: block;
-    margin: 8px 0 4px;
+    margin-bottom: 4px;
   }
 
   &__title {
@@ -51,23 +50,32 @@ body {
     letter-spacing: 0.32px;
     color: #2e2f42;
   }
+
+  &__item {
+    margin-bottom: 8px;
+  }
+
   &__link {
+    // TODO: css-variable
     color: #4d5ae5;
   }
   &__input {
     width: 100%;
     padding: 12px;
-    border: solid 1px #2e2f4266;
     border-radius: 4px;
+    // TODO: move to modifier
+    resize: vertical;
+    border: solid 1px #2e2f4266;
     &:focus {
       border: solid 1px #4d5ae5;
     }
   }
 
+  // TODO: move out of form
   .checkbox {
     display: flex;
-    flex-wrap: wrap;
-    padding: 16px 0 24px;
+    align-items: center;
+    padding: 8px 0 16px;
 
     &__text {
       padding-left: 8px;
@@ -93,9 +101,6 @@ body {
   }
 
   &__btn-submit {
-    margin: 24px auto;
-    width: 169px;
-    height: 56px;
     display: flex;
     justify-content: space-around;
     border-radius: 4px;
@@ -110,5 +115,3 @@ body {
     letter-spacing: 0.64px;
   }
 }
-
-// TODO: rename to modal__close-button and add for wrapping div class modal
