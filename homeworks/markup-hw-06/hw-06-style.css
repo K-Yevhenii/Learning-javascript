@@ -89,24 +89,39 @@ body {
   margin-bottom: 8px; }
 
 .form__link {
-  color: #4d5ae5; }
+  color: var(--interactive); }
 
 .form__input {
   width: 100%;
   padding: 12px;
   border-radius: 4px;
-  resize: vertical;
   border: solid 1px #2e2f4266; }
   .form__input:focus {
     border: solid 1px #4d5ae5; }
+  .form__input--comment {
+    resize: vertical; }
 
-.form .checkbox {
+.form__btn-submit {
+  display: flex;
+  justify-content: space-around; }
+
+.form__submit {
+  font: 500 16px "Roboto";
+  color: #ffffff;
+  padding: 16px 65px;
+  line-height: 150%;
+  letter-spacing: 0.64px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px #00000026;
+  background: #4d5ae5; }
+
+.checkbox {
   display: flex;
   align-items: center;
   padding: 8px 0 16px; }
-  .form .checkbox__text {
+  .checkbox__text {
     padding-left: 8px; }
-  .form .checkbox__checkmark {
+  .checkbox__checkmark {
     appearance: auto;
     margin: auto 0;
     width: 16px;
@@ -114,23 +129,9 @@ body {
     cursor: pointer;
     border-radius: 4px;
     border: solid 1px #2e2f4266; }
-    .form .checkbox__checkmark::before {
+    .checkbox__checkmark::before {
       width: 16px;
       height: 16px;
       background-image: url(./img/checkbox_icon_149960.svg);
       background-size: contain;
       background-repeat: no-repeat; }
-
-.form__btn-submit {
-  display: flex;
-  justify-content: space-around;
-  border-radius: 4px;
-  box-shadow: 0px 4px 4px 0px #00000026;
-  background: #4d5ae5; }
-
-.form__submit {
-  font: 500 16px "Roboto";
-  color: #ffffff;
-  padding: 16px 65px;
-  line-height: 150%;
-  letter-spacing: 0.64px; }
