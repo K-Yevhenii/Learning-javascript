@@ -57,7 +57,7 @@ body {
 
   &__link {
     // TODO: css-variable
-    color: var(--interactive);
+    color: $interactive;
   }
   &__input {
     width: 100%;
