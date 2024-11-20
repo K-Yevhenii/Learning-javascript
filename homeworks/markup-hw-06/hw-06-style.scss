@@ -56,15 +56,14 @@ body {
   }
 
   &__link {
-    // TODO: css-variable
     color: $interactive;
   }
+
   &__input {
     width: 100%;
     padding: 12px;
     border-radius: 4px;
     border: solid 1px #2e2f4266;
-    // TODO: move to modifier
 
     &:focus {
       border: solid 1px $interactive;
@@ -88,7 +87,7 @@ body {
     background: $interactive;
   }
 }
-// TODO: move out of form
+
 .checkbox {
   display: flex;
   align-items: center;
