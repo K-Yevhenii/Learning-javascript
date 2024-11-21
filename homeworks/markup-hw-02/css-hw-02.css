@@ -51,13 +51,16 @@ h2 {
   color: var(--main-text); }
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  font-weight: 500;
-  align-items: center;
-  height: 80px;
+  position: sticky;
+  top: 0;
   background: var(--main-color); }
+  .header__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    font-weight: 500;
+    align-items: center;
+    height: 80px; }
   .header__nav {
     display: flex;
     justify-content: center;

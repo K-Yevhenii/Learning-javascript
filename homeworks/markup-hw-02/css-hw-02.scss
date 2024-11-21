@@ -2,13 +2,18 @@
 @import "./_global";
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  font-weight: 500;
-  align-items: center;
-  height: 80px;
+  position: sticky;
+  top: 0;
   background: var(--main-color);
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    font-weight: 500;
+    align-items: center;
+    height: 80px;
+  }
 
   &__nav {
     display: flex;
