@@ -1,0 +1,70 @@
+@import "./reset";
+body {
+  font-family: Arial, sans-serif;
+  color: white;
+  background-color: black;
+  .container {
+    max-width: 1400px;
+  }
+}
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 25px;
+  margin-bottom: 25px;
+  border: 5px solid whitesmoke;
+}
+.header-logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 5px solid red;
+}
+.header-nav {
+  border: 3px solid whitesmoke;
+  padding: 10px;
+  .header-nav__contacts {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    align-items: center;
+  }
+  &__contact {
+    border: 3px solid red;
+    width: 150px;
+    height: 50px;
+  }
+}
+.hero {
+  border: 5px solid white;
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  &__item {
+    width: 480px;
+    height: 490px;
+    border: 3px solid red;
+  }
+
+  .item-description {
+    display: flex;
+    justify-content: center;
+
+    gap: 20px;
+    &__item-text {
+      width: 230px;
+      height: 240px;
+      padding: 10px;
+      border: 3px solid red;
+    }
+  }
+}
+/* width: 230px;
+height: 240px; */
