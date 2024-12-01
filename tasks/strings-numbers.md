@@ -36,6 +36,17 @@ typeof NaN;
 // 10F -> -12.22222C
 ```
 
+## Ellipsis
+
+If text has more than 30 symbols replace all content after 30th symbol by ellipis ('...'). If text has smaller length leave it as it's.
+
+```js
+const longText =
+  'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium beatae explicabo accusantium tenetur nesciunt, qui aperiam, id aliquam quas sunt odit nemo, facilis ipsam dolore. Atque dicta recusandae repudiandae deserunt?'; // Expected 'Lorem ipsum dolor sit amet con...'
+
+const shortText = 'Hello world'; // Should remain unchanged
+```
+
 ## Vehicle plate check
 
 Create a logic that tries to find a match between provided input and saved registration plate;
@@ -49,7 +60,7 @@ const secondMatchingPlate = 'GH 1234';
 const thirdMatchingPlate = 'gh 1 2 3 4';
 
 // Shouldn't match
-const thirdMatchingPlate = 'po9876';
+const notMatchingPlate = 'po9876';
 ```
 
 ## Capitalize sentence
