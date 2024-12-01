@@ -24,18 +24,18 @@
         </label>
       </div>
     </section>
+
     <section>
       <h2>Custom checkbox</h2>
-      <label class="checkbox">
-        <input type="checkbox" class="checkbox__input" />
-        <span class="checkbox__checkmark"></span>
-        <span
+      <div class="checkbox">
+        <input id="checkbox" type="checkbox" class="checkbox__input" />
+        <label class="checkbox__label" for="checkbox"
           >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam
           voluptatem eos aut eum eveniet, nemo harum natus. Officiis ratione,
           ipsum atque repellat libero nesciunt temporibus quisquam
-          exercitationem provident rem unde.</span
+          exercitationem provident rem unde.</label
         >
-      </label>
+      </div>
     </section>
 
     <section>
@@ -44,17 +44,27 @@
       <fieldset>
         <!-- Group of radios -->
         <legend>Custom radios</legend>
-        <label class="radio">
-          <input class="radio__input" type="radio" name="color" value="red" />
-          <span class="radio__checkmark"></span>
-          red
-        </label>
-        <label class="radio">
-          <input class="radio__input" type="radio" name="color" value="green" />
-          <span class="radio__checkmark"></span>
-          green
-        </label>
-        <label class="radio">
+        <div class="radio">
+          <input
+            id="red"
+            class="radio__input"
+            type="radio"
+            name="color"
+            value="red"
+          />
+          <label class="radio__label" for="red">red</label>
+        </div>
+        <div class="radio">
+          <input
+            id="green"
+            class="radio__input"
+            type="radio"
+            name="color"
+            value="green"
+          />
+          <label class="radio__label" for="green">green</label>
+        </div>
+        <div class="radio">
           <input
             class="radio__input"
             type="radio"
@@ -63,9 +73,8 @@
             checked
             disabled
           />
-          <span class="radio__checkmark"></span>
-          yellow
-        </label>
+          <label class="radio__label" for="yellow">yellow</label>
+        </div>
       </fieldset>
       <fieldset>
         <label>

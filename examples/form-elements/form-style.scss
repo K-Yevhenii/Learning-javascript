@@ -1,32 +1,38 @@
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
+
 $color: red;
 
 .checkbox {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
+  position: relative;
+  padding-left: 30px;
   &__input {
     display: none;
   }
 
-  &__checkmark {
+  &__label::after {
+    content: "✔";
+    position: absolute;
+    top: 0;
+    left: 0;
     display: inline-block;
     width: 20px;
     height: 20px;
     border: solid 1px gray;
     border-radius: 2px;
+    color: white;
+    text-align: center;
   }
 
-  &__input:checked ~ &__checkmark {
+  &__input:checked ~ &__label::after {
     background-color: $color;
   }
 }
 .radio {
-  display: flex;
-  align-items: center;
+  position: relative;
 
   &:not(:last-child) {
     margin-bottom: 10px;
@@ -34,21 +40,29 @@ $color: red;
   &__input {
     display: none;
   }
-  ваа &__checkmark {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin-right: 5px;
-    border: solid 1px grey;
-    border-radius: 50%;
+  &__label {
+    padding-left: 30px;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-right: 5px;
+      border: solid 1px grey;
+      border-radius: 50%;
+    }
   }
-  &__input:checked + &__checkmark {
+
+  &__input:checked + &__label::after {
     border: solid 5px $color;
   }
-  &__input:checked:disabled + &__checkmark {
+  &__input:checked:disabled + &__label::after {
     border-color: lighten($color: $color, $amount: 20%);
   }
-  &:hover &__checkmark {
+  &:hover &__label::after {
     border-color: $color;
   }
 }

@@ -1,1 +1,1 @@
-npx node-sass ./style-button.scss ./style-button.css -w
+npx node-sass ./positioning-style.scss ./positioning-style.css -w
