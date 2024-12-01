@@ -49,7 +49,7 @@ const shortText = 'Hello world'; // Should remain unchanged
 
 ## Vehicle plate check
 
-Create a logic that tries to find a match between provided input and saved registration plate;
+Create a logic that tries to find a match between provided input and saved registration plate.
 
 ```js
 const SEARCH_TERM = 'gh1234';
@@ -65,7 +65,7 @@ const notMatchingPlate = 'po9876';
 
 ## Capitalize sentence
 
-Write logic that converts the first letter to uppercase and all other letters to lowercase
+Write logic that converts the first letter to uppercase and all other letters to lowercase.
 
 ```js
 const str = 'lorem Ipsum Dolorem Sit Amet'; // Should be converted to 'Lorem ipsum dolorem sit amet'
