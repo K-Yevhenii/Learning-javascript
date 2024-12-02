@@ -10,7 +10,7 @@ null && 5; // returns null
 `||` returns the first truthy value or the last falsey value
 
 ```js
-4 && 5; // returns 4
+4 || 5; // returns 4
 null || ''; // returns ''
 ```
 
