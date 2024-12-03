@@ -11,7 +11,7 @@ null && 5; // returns null
 
 ```js
 4 || 5; // returns 4
-null || ''; // returns ''
+null || ""; // returns ''
 ```
 
 **Important**: logical AND or OR doesn't convert to boolean.
