@@ -1,6 +1,5 @@
 {
-    "cSpell.words": [
-        "maxlength"
-    ],
-    "editor.fontSize": 16
+  "cSpell.words": ["maxlength"],
+  "editor.fontSize": 16,
+  "liveServer.settings.port": 5501
 }
