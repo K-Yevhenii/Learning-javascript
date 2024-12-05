@@ -15,14 +15,21 @@ function conversionFahrenheit() {
 }
 
 
-function conversionFahrenheit2() {
+function conversionFahrenheit2(celsius) {
     fahrenheit2 = (celsius * 9 / 5) + 32;
     console.log(fahrenheit2);
     return fahrenheit2;
 }
 conversionFahrenheit();
-conversionFahrenheit2();
+conversionFahrenheit2(200);
 
+function convertCelsiusToFahrengeit(fahrenheit) {
+    const celsius = (fahrenheit - 32) / 9 * 5;
+    console.log(celsius);
+    return celsius;
+
+}
+convertCelsiusToFahrengeit(180)
 
 // If text has more than 30 symbols replace all content after 30th symbol
 // by ellipis('...').If text has smaller length leave it as it's.
@@ -35,24 +42,22 @@ conversionFahrenheit2();
 
 // const shortText = 'Hello world'; // Should remain unchanged
 
-function truncateString(str, maxLength) {
-    if (str.length > maxLength) {
-        return str.slice(0, maxLength) + "...";
+const MAX_LENGTH = 29;
+function truncateString(str) {
+    if (str.length > MAX_LENGTH) {
+        return str.slice(0, MAX_LENGTH) + "...";
     } else {
         return str;
     }
 }
 
 const text = "";
-const maxLength = 29;
 
-console.log(truncateString(text, maxLength));
+console.log(truncateString(text));
 
 
 // Create a logic that tries to find a match between provided input and saved registration plate.
-
 // const SEARCH_TERM = 'gh1234';
-
 // // All three should match
 // const firstMatchingPlate = 'GH1234';
 // const secondMatchingPlate = 'GH 1234';
@@ -61,10 +66,18 @@ console.log(truncateString(text, maxLength));
 // // Shouldn't match
 // const notMatchingPlate = 'po9876';
 
-function searchNumber(check, plate) {
-    if (check.includes(" ")) {
-        plate.toLowerCase().slice(0, " ")
+function searchPlates(search, searchPlate) {
+    const normalizedSearch = search.toLowerCase().replaceAll(" ", "");
+    const normalizedSearchPlate = searchPlate.toLowerCase();
+    if (normalizedSearch === normalizedSearchPlate) {
+        console.log("Match:", searchPlate);
+    } else {
+        console.log("Mismatch");
     }
-
 }
-const plate = 'gh 1 2 3 4'
+
+let searchPlate = 'GH1234';
+let entrancePlate = 'G  H1 234';
+
+searchPlates(entrancePlate, searchPlate);
+// normalizedSearch === normalizedSearchPlate ? console.log("Match:", searchPlate) : console.log("Mismatch");
