@@ -80,4 +80,17 @@ let searchPlate = 'GH1234';
 let entrancePlate = 'G  H1 234';
 
 searchPlates(entrancePlate, searchPlate);
-// normalizedSearch === normalizedSearchPlate ? console.log("Match:", searchPlate) : console.log("Mismatch");
+// normalizedSearch === normalizedSearchPlate ? console.log("Match:", searchPlate) : console.log("Mismatch");## Capitalize sentence
+
+// Write logic that converts the first letter to uppercase and all other letters to lowercase.
+// const str = 'lorem Ipsum Dolorem Sit Amet'; // Should be converted to 'Lorem ipsum dolorem sit amet'
+
+const str = 'lorem Ipsum Dolorem Sit Amet';
+function convertsFirstLetter(sentence) {
+    const normalizedLetter = sentence.toLowerCase();
+    const firstLatter = normalizedLetter.slice(0, 1).toUpperCase();
+    const normalizeText = firstLatter + normalizedLetter.slice(1);
+    console.log(normalizeText);
+
+}
+convertsFirstLetter(str)
