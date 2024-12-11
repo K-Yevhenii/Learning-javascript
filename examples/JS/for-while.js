@@ -13,7 +13,8 @@ function countFor() {
 }
 function forArr() {
   const arr = ['a', 'b', 'c'];
-  for (let i = arr.length; i > 0; i--) {
-    console.log([i - 1]);
+  for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
   }
 }
+forArr()

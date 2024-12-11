@@ -1,34 +1,38 @@
 // ** Goal ** - improve this code using `if...else` and`switch`.
 const mark = Math.floor(Math.random() * 5 + 1);
-const result = mark
+let result;
 
 switch (mark) {
-    case 5:
-        console.log('Excellent');
+    case 5: {
+        result = 'Excellent';
         break;
-    case 4:
-        console.log('Good');
+    }
+    case 4: {
+        result = 'Good';
+        break;
+    }
 
-        break;
     case 3:
-        console.log('Ok');
+        result = 'Ok';
 
         break;
     case 2:
-        console.log('Bad. Please, try better next time');
+        result = 'Bad. Please, try better next time';
 
         break;
     case 1:
-        console.log('Very bad');
+        result = 'Very bad';
 
         break;
     default:
-        console.log('Unknown mark');
-
+        result = 'Unknown mark'
 }
 
+console.log(result);
+
+
 if (mark === 5) {
-    console.log('Excellent');
+    console.log('Excellent'); //result = 'Excellent'
 } else if (mark === 4) {
     console.log('Good');
 } else if (mark === 3) {
@@ -47,22 +51,30 @@ if (mark === 5) {
 //     - if colour is green, return `Go`
 //         - if colour is yellow, return `Prepare to go`
 //             - if colour isn't red, green or yellow return `Unknown color`.
+
+
 function checkColor(color) {
-    if (mark === 1) {
-        return 'red'
+    if (color === 'red') {
+        return 'stop'
     }
-    if (mark === 2) {
-        return 'green'
+    if (color === 'green') {
+        return 'go'
     }
-    if (mark === 3) {
-        return 'yellow'
-    }
-    if (mark === 4) {
-        return 'blinks red'
-    }
-    if (mark === 5) {
-        return 'blinks gre'
+    if (color === 'yellow') {
+        return 'prier to go'
     }
 
     return null;
 }
+console.log(checkColor('red'));
+
+
+function countLettersInWord() { }
+
+let letterCount = 0;
+for (let i = 0; i < str.length; i++) {
+    if (str[i] === 'a') {
+        letterCount += 1 // letterCount = letterCount +1
+    }
+}
+countLettersInWord()

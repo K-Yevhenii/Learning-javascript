@@ -10,16 +10,16 @@
 const mark = Math.floor(Math.random() * 5 + 1); // Don't pay attention; in this variable random integer between 1 and 5
 const result =
   mark === 5
-    ? 'Excellent'
+    ? "Excellent"
     : mark === 4
-    ? 'Good'
+    ? "Good"
     : mark === 3
-    ? 'Ok'
+    ? "Ok"
     : mark === 2
-    ? 'Bad. Please, try better next time'
+    ? "Bad. Please, try better next time"
     : mark === 1
-    ? 'Very bad'
-    : 'Unknown mark';
+    ? "Very bad"
+    : "Unknown mark";
 ```
 
 ```js
@@ -69,6 +69,13 @@ Write 2 versions using `for` cycle and `while`
 ```js
 // Version with `for`
 function countLettersInWord() {}
+
+let letterCount =0;
+ for(let i= 0; i<str.length; i++){
+if(  str[i]==='a'){
+letterCount + = 1 // letterCount = letterCount +1
+   }
+ }
 ```
 
 ```js
@@ -81,7 +88,11 @@ function countLettersInWord() {}
 **Goal** - find the biggest number using for cycle. Important - discuss task before implementation.
 
 ```js
+let biggestNumbers = null;
 const numbers = [5, -1, 45, 8, -22, 54];
+for (let i = 0; i < numbers.length; i++) {
+  if (numbers[i] > biggestNumber) biggestNumber = numbers[i];
+}
 
 // Add your solution here
 ```
@@ -96,7 +107,7 @@ function reverseString(str) {}
 ```
 
 ```js
-const str = 'ewewqeqweqwe';
+const str = "ewewqeqweqwe";
 ```
 
 ## Multi-match
@@ -104,17 +115,17 @@ const str = 'ewewqeqweqwe';
 **Goal** - rewrite this code to `if...else`
 
 ```js
-const color = prompt('Enter your color');
+const color = prompt("Enter your color");
 
 switch (color) {
-  case 'red':
-  case 'orange':
-  case 'yellow':
-    console.log('Warm color');
+  case "red":
+  case "orange":
+  case "yellow":
+    console.log("Warm color");
     break;
-  case 'blue':
-  case 'violet':
-    console.log('Cold color');
+  case "blue":
+  case "violet":
+    console.log("Cold color");
     break;
 }
 ```
