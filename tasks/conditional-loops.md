@@ -88,11 +88,16 @@ function countLettersInWord() {}
 **Goal** - find the biggest number using for cycle. Important - discuss task before implementation.
 
 ```js
-let biggestNumbers = null;
+let biggestNumber = null;
 const numbers = [5, -1, 45, 8, -22, 54];
+
 for (let i = 0; i < numbers.length; i++) {
-  if (numbers[i] > biggestNumber) biggestNumber = numbers[i];
+  if (biggestNumber === null || numbers[i] > biggestNumber) {
+    biggestNumber = numbers[i];
+  }
 }
+
+console.log(biggestNumber);
 
 // Add your solution here
 ```
@@ -103,11 +108,14 @@ for (let i = 0; i < numbers.length; i++) {
 For example, `asdfqwer` should return `rewqfdsa`.
 
 ```js
-function reverseString(str) {}
-```
-
-```js
+function reverseString(str) {
+  let result = "";
+  for (let i = str.length - 1; i >= 0; i--) {
+    result += str[i];
+  }
+}
 const str = "ewewqeqweqwe";
+reverseString(str);
 ```
 
 ## Multi-match
@@ -127,5 +135,14 @@ switch (color) {
   case "violet":
     console.log("Cold color");
     break;
+}
+
+const color = "red";
+if (color === "red" || color === "orange" || color === "yellow") {
+  console.log("Warm color");
+} else if (color === "blue" || color === "violet") {
+  console.log("Cold color");
+} else {
+  console.log("Choose a different color");
 }
 ```
