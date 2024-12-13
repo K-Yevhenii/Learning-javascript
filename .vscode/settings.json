@@ -1,5 +1,9 @@
 {
-  "cSpell.words": ["maxlength"],
+  "cSpell.words": [
+    "maxlength",
+    "sesrverer",
+    "srever"
+  ],
   "editor.fontSize": 16,
   "liveServer.settings.port": 5501
 }
