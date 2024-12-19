@@ -1,0 +1,51 @@
+:root {
+  --main-color: rgb(36, 101, 36);
+}
+body {
+  font-family: "Roboto", serif;
+}
+.container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+button {
+  padding: 8px 16px;
+  border: solid 2px currentColor;
+  font-size: 16px;
+  font-family: inherit;
+  color: var(--main-color);
+  background-color: transparent;
+  border-radius: 5px;
+}
+
+ul {
+  position: absolute;
+  width: 100%;
+  margin: 5px 0 0;
+  padding: 0;
+  top: 100%;
+  list-style: none;
+  border-radius: 5px;
+  opacity: 0;
+  height: 0;
+  transition: all 1s ease-in-out;
+  overflow: hidden;
+}
+.container div {
+  position: relative;
+}
+.container div:hover ul {
+  opacity: 1;
+  height: 100%;
+}
+
+li {
+  background-color: var(--main-color);
+}
+a {
+  display: block;
+  padding: 4px 6px;
+  color: aliceblue;
+  text-decoration: none;
+}
