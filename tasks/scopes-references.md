@@ -1,6 +1,15 @@
 # Scopes and references
 
 ```js
+let a = 1;
+let b = a;
+a = 2;
+
+console.log(a);
+console.log(b);
+```
+
+```js
 const numbers = [1, 42, 7, 15, 9];
 const numbersCopy = numbers;
 
