@@ -1,5 +1,6 @@
 const board = [];
 const BOARD_SIZE = 3
+
 for (let x = 0; x < BOARD_SIZE; x++) {
     board[x] = [];
     for (let y = 0; y < BOARD_SIZE; y++) {
@@ -59,12 +60,21 @@ function checkWinner(board) {
     }
     return null;
 }
-fillCell(1, 1, 'x')
-fillCell(1, 2, '0')
-fillCell(0, 1, 'x')
-fillCell(2, 1, '0')
-fillCell(0, 2, 'x')
-fillCell(2, 0, '0')
-fillCell(0, 0, 'x')
+
+
+function main() {
+    fillCell(1, 1, 'x')
+    fillCell(1, 2, '0')
+    fillCell(0, 1, 'x')
+    fillCell(2, 1, '0')
+    fillCell(0, 2, 'x')
+    fillCell(2, 0, '0')
+    fillCell(0, 0, 'x')
+}
+
+
+main();
 
 console.log(board, checkWinner(board));
+
+
