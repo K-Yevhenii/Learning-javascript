@@ -37,4 +37,52 @@ function deepCopyArray(arr) {
   return copy;
 }
 
-deepCopyArray(board);
+
+function deepCopyObject(obj) {
+  const copy = {};
+  for (const key in object) {
+    const element = object[key];
+
+    if (typeof element === 'object' && !!element) {
+      copy[key] = deepCopyObject(element)
+    } else if (Array.isArray(element)) {
+      for (let i = 0; i < element.length; i++) {
+        copy[key] = []
+
+        if (Array.isArray(element[i])) {
+
+        }
+        else if (typeof element[i] === 'object' && !!element[i]) {
+          copy[key][i] = deepCopyObject(element[i])
+        } else {
+          copy[key][i] = element
+        }
+      }
+
+      return copy;
+    } else {
+      copy[key] = element
+    }
+  }
+}
+// deepCopyArray(board);
+
+
+function deepCopyObject(object) {
+  const copy = {};
+  for (const key in object) {
+    // const element = object[key];
+    if (typeof element === 'object' && !!element) {
+      addCopy(copy){
+        copy.push(copy)
+      }
+    }
+  }
+}
+deepCopyObject(book)
+const book = {
+  title: "The Last Kingdom",
+  author: "Bernard Cornwall",
+  genres: ["historical prose", "adventure"],
+  rating: 8.38,
+};
