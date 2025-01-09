@@ -66,7 +66,20 @@ function checkColor(color) {
 
     return null;
 }
-console.log(checkColor('red'));
+
+const colors = {
+    red: 'stop',
+    green: 'go',
+    // trailing comma
+    yellow: 'prier to go',
+}
+
+// Computed object key
+function checkColor(color) {
+    return colors[color] || null;
+}
+
+
 
 
 function countLettersInWord() { }

@@ -6,15 +6,15 @@
 }
 ```
 
-# Метод 2
+<!-- # Метод 2
 
 ```css
 html {
   box-sizing: border-box;
 }
 *,
-*:after,
-*:before {
-  box-sizing: inherit; /* наслідується у батьків (в даному випадку htm, батько у всього) */
+*::after,
+*::before {
+  box-sizing: inherit;
 }
-```
+``` -->
