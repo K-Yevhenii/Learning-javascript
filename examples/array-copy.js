@@ -65,24 +65,17 @@ function deepCopyObject(obj) {
     }
   }
 }
-// deepCopyArray(board);
+deepCopyArray(board);
 
 
-function deepCopyObject(object) {
-  const copy = {};
-  for (const key in object) {
-    // const element = object[key];
-    if (typeof element === 'object' && !!element) {
-      addCopy(copy){
-        copy.push(copy)
-      }
-    }
-  }
-}
-deepCopyObject(book)
-const book = {
-  title: "The Last Kingdom",
-  author: "Bernard Cornwall",
-  genres: ["historical prose", "adventure"],
-  rating: 8.38,
-};
+const arr5 = [1, 2, 3, 4, 5];
+const [first, second, ...newArr] = arr5;
+
+const [first1, second1] = arr5;
+
+// const [_, second2] = arr5
+
+const arr6 = [{ foo: 'bar' }, { 'baz': 123 }];
+const [_, second3] = arr6;
+
+const { baz: baz1 } = arr6;
