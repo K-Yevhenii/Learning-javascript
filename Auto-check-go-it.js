@@ -73,8 +73,6 @@
             date: '2024-01-13'
         }
     ];
-    const allVisits = Object.entries(visits);
-    const sumVisits = allVisits.length;
     const usersVisits = {};
     const userNameVisit = [];
     for (const element of visits) {
@@ -84,15 +82,64 @@
         } else {
             usersVisits[name] = 1;
         }
-
-
-        // result = usersVisits.push(element.name);
-        // if (usersVisits.includes(element.name)) {
-        //     userNameVisit.push(element.name);
-
-        // }
     }
     console.log(usersVisits);
 
+    const visitsEntries = Object.entries(usersVisits);
+    let result = [];
+    let entryWithBiggestVisitsCount = null;
+    for (let i = 0; i < visitsEntries.length; i++) {
+        const [name, visitsCount] = visitsEntries[i];
+        if (visitsCount > 1) {
+            result = [...result, name];
+        }
+        if (!entryWithBiggestVisitsCount || entryWithBiggestVisitsCount[1] < visitsCount) {
+            entryWithBiggestVisitsCount = visitsEntries[i];
+        }
+
+    }
+    const [useuserWithBiggestVisitsCount] = entryWithBiggestVisitsCount;
+    console.log(useuserWithBiggestVisitsCount);
+
+    console.log(result);
+
+
 }
 
+
+{
+    let user = {
+        name: "John",
+        years: 30
+    };
+    const { name, years: age, isAdmin = false } = user;
+
+}
+
+
+{
+    let salaries = {
+        "John": 100,
+        "Pete": 300,
+        "Mary": 250
+    };
+
+    function topSalary(salaries) {
+        const salariesEntries = Object.entries(salaries);
+        if (salariesEntries.length === 0) {
+            return null;
+        }
+        let biggestSalaryEntry = null;
+        for (let i = 0; i < salariesEntries.length; i++) {
+            const [name, salary] = salariesEntries[1];
+
+            if (!biggestSalaryEntry || biggestSalaryEntry[1] < salary) {
+                biggestSalaryEntry = salary;
+            }
+
+
+        }
+
+    }
+    topSalary(salaries)
+}
