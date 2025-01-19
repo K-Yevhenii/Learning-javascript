@@ -120,3 +120,93 @@ function getEvenNumbers(start, end) {
 
     // Change code above this line
 }
+
+function sum(a, b, ...args) {
+    // 3, 2, 2, 3 -> [3, 2, 2, 3]
+    let result = 0
+    for (let i = 0; i < args.length; i++) {
+        result += args[i];
+
+    }
+    return result;
+}
+sum(3, 2, 2, 3)
+
+
+const arr1 = [1, 2, 3]
+const arr2 = [4, 5, 6]
+
+const merged = [...arr1, ...arr2]
+
+
+const obj = {
+    foo: 'bar',
+    baz: 'quux',
+    far: null
+}
+
+const obj1 = {
+    foo: 123
+}
+
+const result = {
+    ...obj,
+    ...obj1,
+}
+
+const { foo, ...restObj } = obj;
+
+console.log(rest)
+
+let x = a
+let y = b
+[x, y] = [y, x];
+
+
+function isEmpty(obj) {
+    for (const key in obj) {
+        return false;
+    }
+    return true;
+}
+
+function ObjectEntries(obj) {
+    return Object.entries(obj).length === 0;
+
+}
+
+
+const salaries = {
+    John: 100,
+    Ann: 160,
+    Pete: 130
+}
+
+const salariesList = Object.values(salaries)
+let sum = 0;
+for (let i = 0; i < salariesList.length; i++) {
+    const element = salariesList[i];
+    sum += element;
+
+}
+
+for (const element of salaries) {
+    sum += element;
+}
+
+for (const key in salaries) {
+    sum += salaries[key];
+}
+
+
+const apartment = {
+    descr: "Spacious apartment in the city center",
+    rating: 4,
+    price: 2153,
+};
+const keys = [];
+const values = [];
+for (const key in apartment) {
+    keys.push(key)
+    values.push(apartment[key]);
+}
