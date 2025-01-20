@@ -1,4 +1,59 @@
-# Замінює всі або деякі елементи масиву заданим значенням.
+# Array methods
+
+## Method
+
+```js
+const obj = {
+  sum(a, b) {
+    return a + b;
+  },
+};
+
+function sum(a, b) {
+  return a + b;
+}
+
+// obj.sum - method
+// sum - not method because doesn't belong to object
+```
+
+## Callbacks
+
+```js
+function calculateSum() {
+  return 2 + 2;
+}
+
+// Executes calculateSum, logs its result and returns it - i.e. add extra functionality without modifying original function
+// func is callback
+function logger(func) {
+  const result = func();
+  console.log(result);
+
+  return result;
+}
+
+// Will log 4 and returns it in sum
+const sum = logger(calculateSum);
+```
+
+## Array methods with callbacks
+
+```js
+const arr = [1, 2, 3, 4];
+
+for (let i = 0; i < arr.length; i++) {
+  console.log(arr[i]);
+}
+
+function logger(element) {
+  console.log(element);
+}
+
+arr.forEach(logger); // Prints in console 1, 2, 3, 4 as a separate log
+```
+
+## Замінює всі або деякі елементи масиву заданим значенням.
 
 | Name      | Description                                                      | Returns                  |
 | --------- | ---------------------------------------------------------------- | ------------------------ |
@@ -10,7 +65,7 @@
 | `sort`    | Сортує елементи масиву за вказаною функцією порівняння.          | Sorted array             |
 | `reverse` | Змінює порядок елементів масиву на зворотний.                    | Reversed array           |
 
-# Методи, які не змінюють масив
+## Методи, які не змінюють масив
 
 | Name        | Description                                                             | Returns          |
 | ----------- | ----------------------------------------------------------------------- | ---------------- |
