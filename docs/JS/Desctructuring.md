@@ -7,6 +7,9 @@
 const obj = { foo: "bar" };
 const { foo } = obj;
 
+const products = [{ id: 1, name: "Banana", price: 20 }];
+const [{ id }] = products;
+
 // Retrieve first element
 const arr = [1, 2, 3, 4];
 const [first] = arr;

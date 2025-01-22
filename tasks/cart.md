@@ -10,9 +10,9 @@
 
 ```js
 const products = [
-  { id: 1, name: 'Banana', price: 20 },
-  { id: 2, name: 'Sausages', price: 40 },
-  { id: 3, name: 'Milk', price: 35 },
-  { id: 4, name: 'Mineral water', price: 12 },
+  { id: 1, name: "Banana", price: 20 },
+  { id: 2, name: "Sausages", price: 40 },
+  { id: 3, name: "Milk", price: 35 },
+  { id: 4, name: "Mineral water", price: 12 },
 ];
 ```
