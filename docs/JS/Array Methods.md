@@ -24,6 +24,10 @@ function calculateSum() {
   return 2 + 2;
 }
 
+function double() {
+  return 2 * 2;
+}
+
 // Executes calculateSum, logs its result and returns it - i.e. add extra functionality without modifying original function
 // func is callback
 function logger(func) {
@@ -35,6 +39,7 @@ function logger(func) {
 
 // Will log 4 and returns it in sum
 const sum = logger(calculateSum);
+const doubled = logger(double);
 ```
 
 ## Array methods with callbacks
@@ -48,6 +53,11 @@ for (let i = 0; i < arr.length; i++) {
 
 function logger(element) {
   console.log(element);
+}
+
+function double(element, index) {
+  element === array[index]
+  arr[index] *= 2
 }
 
 arr.forEach(logger); // Prints in console 1, 2, 3, 4 as a separate log
