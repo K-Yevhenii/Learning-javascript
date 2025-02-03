@@ -255,3 +255,18 @@
     }
     findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7)
 }
+
+{
+    const students = [
+        { name: "Манго", courses: ["математика", "фізика"] },
+        { name: "Полі", courses: ["інформатика", "математика"] },
+        { name: "Ківі", courses: ["фізика", "біологія"] },
+    ];
+
+    const allCourses = students.flatMap(student => student.courses);
+    // ['математика', 'фізика', 'інформатика', 'математика', 'фізика', 'біологія'];
+
+    const uniqueCourses = allCourses.filter(
+        (course, index, array) => array.indexOf(course) === index
+    );
+}
