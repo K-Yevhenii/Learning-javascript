@@ -27,6 +27,9 @@ const sum = (a, b) => {
   return a + b;
 };
 
+// Function without arguments
+const sum = () => 2 + 2;
+
 // Function that has 1 line of code, after array returns value immediately
 const sum = (a, b) => a + b;
 
@@ -35,6 +38,7 @@ const sum = a => a + a;
 
 // If function returns object immediately after arrow, the object should be wrapped in parenthesis (круглі дужки)
 const sum = (a, b) => ({ result: a + b });
+// console.log(sum(2, 5)); -> { result: 7 }
 
 // The longest form
 function sum(a, b) {
