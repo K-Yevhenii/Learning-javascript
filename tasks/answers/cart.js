@@ -100,3 +100,21 @@ function addProduct(productID) {
 }
 
 addProduct(3);
+
+function deleteProduct(productID) {
+    const productIndex = getProductInCart(productID);
+    if (!productIndex) {
+        console.log(`There is no product ${productID} in cart`);
+    }
+    const productInCart = productsCart[productIndex]
+    if (productInCart.quantity === 1) {
+        // productsCart = [...productsCart.slice(0, productIndex),
+        // ...productsCart.slice(productIndex + 1)]
+        productsCart.splice(productIndex, 1)
+    } else {
+        productsCart = [...productsCart.slice(0, productIndex),
+        { ...productsCart[productIndex], quantity: productsCart[productIndex].quantity - 1 },
+        ...productsCart.slice(productIndex + 1)]
+    }
+
+}
