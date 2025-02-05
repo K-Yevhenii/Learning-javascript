@@ -34,7 +34,7 @@ const sum = () => 2 + 2;
 const sum = (a, b) => a + b;
 
 // If a function has 1 argument parenthesis (круглі дужки) can be omitted
-const sum = a => a + a;
+const sum = (a) => a + a;
 
 // If function returns object immediately after arrow, the object should be wrapped in parenthesis (круглі дужки)
 const sum = (a, b) => ({ result: a + b });
@@ -51,4 +51,17 @@ function sum(a, b) {
 const sum = (a, b) => {
   return { result: a + b };
 };
+
+const colorPickerOptions = [
+  { label: 'red', color: '#F44336' },
+  { label: 'green', color: '#4CAF50' },
+  { label: 'blue', color: '#2196F3' },
+  { label: 'pink', color: '#E91E63' },
+  { label: 'indigo', color: '#3F51B5' },
+];
+// If param of arrow function is destructured, it should be wrapped in parenthesis (круглі дужки)
+colorPickerOptions.findIndex(({ label }) => label === 'blue'); // 2
+
+const color = { label: 'red', color: '#F44336' };
+Object.entries(color).forEach(([key, value]) => console.log(key, value)); // Will print 'label', 'red' and in the second log 'color', '#F44336'
 ```
