@@ -56,24 +56,71 @@ function logger(element) {
 }
 
 function double(element, index) {
-  element === array[index]
-  arr[index] *= 2
+  element === array[index];
+  arr[index] *= 2;
 }
 
 arr.forEach(logger); // Prints in console 1, 2, 3, 4 as a separate log
 ```
 
+## Sort
+
+### Basic example
+
+Sort mutates original array and returns its sorted.
+
+```js
+let productsCart = [
+  { id: 3, name: 'Milk', price: 35, quantity: 5 },
+  { id: 1, name: 'Banana', price: 20, quantity: 1 },
+  { id: 2, name: 'Sausages', price: 40, quantity: 3 },
+  { id: 4, name: 'Mineral water', price: 12, quantity: 7 },
+];
+
+// Sort by number in ascending order
+productsCart.sort((a, b) => a.price - b.price);
+// Sort by string in ascending order
+productsCart.sort((a, b) => a.name.localeCompare(b.name)); // 1 - if a > b, -1 if a < b, 0 if a === b
+
+// Sort by number in descending order
+productsCart.sort((a, b) => b - a);
+// Sort by string in descending order
+productsCart.sort((a, b) => b.name.localeCompare(a.name)); // 1 - if b > a, -1 if b < a, 0 if a === b
+```
+
+### Stability of sorting
+
+If elements have the same value of sorting key (in example, `grade`) they will be in the same order before and after the sorting - i.e. object with name `Alex` will be followed by `Delvin`.
+
+```js
+const students = [
+  { name: 'Alex', grade: 15 },
+  { name: 'Devlin', grade: 15 },
+  { name: 'Eagle', grade: 13 },
+  { name: 'Sam', grade: 14 },
+];
+
+students.sort((a, b) => a.grade - b.grade);
+// Result
+// [
+//   { name: 'Eagle', grade: 13 },
+//   { name: 'Sam', grade: 14 },
+//   { name: 'Alex', grade: 15 },
+//   { name: 'Devlin', grade: 15 },
+// ];
+```
+
 ## Замінює всі або деякі елементи масиву заданим значенням.
 
-| Name      | Description                                                      | Returns                  |
-| --------- | ---------------------------------------------------------------- | ------------------------ |
-| `push`    | Додає один або кілька елементів у кінець масиву.                 | New length of array      |
-| `pop`     | Видаляє останній елемент масиву та повертає його.                | Removed element          |
-| `shift`   | Видаляє перший елемент масиву та повертає його.                  | Removed element          |
-| `unshift` | Додає один або кілька елементів на початок масиву.               | New length of array      |
-| `splice`  | Додає, видаляє або замінює елементи масиву в зазначеній позиції. | Array of removed element |
-| `sort`    | Сортує елементи масиву за вказаною функцією порівняння.          | Sorted array             |
-| `reverse` | Змінює порядок елементів масиву на зворотний.                    | Reversed array           |
+| Name      | Description                                                      | Returns             |
+| --------- | ---------------------------------------------------------------- | ------------------- |
+| `push`    | Додає один або кілька елементів у кінець масиву.                 | New length of array |
+| `pop`     | Видаляє останній елемент масиву та повертає його.                | Removed element     |
+| `shift`   | Видаляє перший елемент масиву та повертає його.                  | Removed element     |
+| `unshift` | Додає один або кілька елементів на початок масиву.               | New length of array |
+| `splice`  | Додає, видаляє або замінює елементи масиву в зазначеній позиції. | Updated array       |
+| `sort`    | Сортує елементи масиву за вказаною функцією порівняння.          | Sorted array        |
+| `reverse` | Змінює порядок елементів масиву на зворотний.                    | Reversed array      |
 
 ## Методи, які не змінюють масив
 
