@@ -270,3 +270,122 @@
         (course, index, array) => array.indexOf(course) === index
     );
 }
+
+
+{
+    function calculateTotalPrice(orderedItems) {
+        let totalPrice = 0;
+        orderedItems.forEach((item) => { totalPrice += item });
+        return totalPrice;
+    }
+    calculateTotalPrice([12, 85, 37, 4])
+}
+
+
+{
+    function filterArray(numbers, value) {
+        const filteredNumbers = [];
+
+        numbers.forEach((item) => {
+            if (item > value) { filteredNumbers.push(item) }
+        });
+
+        return filteredNumbers;
+    }
+    filterArray([1, 2, 3, 4, 5], 3)
+
+}
+
+
+{
+    function getCommonElements(firstArray, secondArray) {
+        const commonElements = [];
+
+        firstArray.forEach((element) => {
+            if (secondArray.includes(element))
+                commonElements.push(element);
+        });
+        return commonElements;
+    }
+    getCommonElements([1, 2, 3], [2, 4]);
+
+}
+
+
+{
+    const calculateTotalPrice = (quantity, pricePerItem) =>
+        quantity * pricePerItem;
+
+    calculateTotalPrice(5, 100);
+}
+
+
+
+{
+    let totalPrice = 0;
+
+    const calculateTotalPrice = (orderedItems) => {
+        orderedItems.forEach((item) => {
+            totalPrice += item;
+        });
+    };
+
+    calculateTotalPrice([12, 85, 37, 4]);
+}
+
+
+
+{
+    let vasya = { name: "Вася", age: 25 };
+    let petya = { name: "Петя", age: 30 };
+    let masha = { name: "Маша", age: 28 };
+
+    let users = [vasya, petya, masha];
+
+
+
+
+    const names = users.map(({ name }) => name)
+    console.log(names);
+
+}
+
+
+{
+    const vasya = { name: "Вася", surname: "Пупкин", id: 1 };
+    const petya = { name: "Петя", surname: "Иванов", id: 2 };
+    const masha = { name: "Маша", surname: "Петрова", id: 3 };
+
+    const users = [vasya, petya, masha];
+
+    const usersMapped = users.map(({ name, surname, id }) => ({ id, fullName: `${name} ${surname}` }))
+    console.log(usersMapped);
+
+}
+
+
+{
+    let vasya = { name: "Вася", age: 25 };
+    let petya = { name: "Петя", age: 30 };
+    let masha = { name: "Маша", age: 29 };
+
+    let arr = [vasya, petya, masha];
+
+    const getAverageAge = (arr) => {
+        const sum = arr.reduce((acc, { age }) => acc + age, 0)
+        return sum / arr.length;
+    }; // (25 + 30 + 29) / 3 = 28
+
+}
+
+
+{
+    let users = [
+        { id: 'john', name: "John Smith", age: 20 },
+        { id: 'ann', name: "Ann Smith", age: 24 },
+        { id: 'pete', name: "Pete Peterson", age: 31 },
+    ];
+
+    const groupById = (users) => users.reduce((acc, user) => ({ ...acc, [user.id]: user }), {})
+    let usersById = groupById(users);
+}
