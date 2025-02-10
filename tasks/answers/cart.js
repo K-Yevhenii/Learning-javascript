@@ -61,38 +61,49 @@ let productsCart = [
   { id: 3, name: 'Milk', price: 35, quantity: 5 },
   { id: 4, name: 'Mineral water', price: 12, quantity: 7 },
 ];
-function getProductInCart(productID) {
-  for (let i = 0; i < productsCart.length; i++) {
-    const product = productsCart[i];
-    const { id } = product;
-    if (productID === id) {
-      //product.id
-      return i;
-    }
-  }
-  return null;
+function getProductIndexInCart(productID) {
+  // for (let i = 0; i < productsCart.length; i++) {
+  //   const product = productsCart[i];
+  //   const { id } = product;
+  //   if (productID === id) {
+  //     //product.id
+  //     return i;
+  //   }
+  // }
+  // return null;
+  return productsCart.findIndex(({ id }) => id === productID);
 }
 
+const sortProducts = productsCart.sort((a, b) => a.price * a.quantity - b.price * b.quantity)
+
+
+
 function getProductByID(productID) {
-  for (const product of products) {
-    const { id } = product;
-    if (productID === product.id) {
-      //product.id
-      return product;
-    }
-  }
-  return null;
+  // for (const product of products) {
+  //   const { id } = product;
+  //   if (productID === product.id) {
+  //     //product.id
+  //     return product;
+  //   }
+  // }
+  // return null;
+  return productsCart.find(({ id }) => id === productID);
+
+
+
 }
 
 function addProduct(productID) {
-  const productIndex = getProductInCart(productID);
+  const productIndex = getProductIndexInCart(productID);
 
-  if (productIndex !== null) {
-    productsCart = [
-      ...productsCart.slice(0, productIndex),
-      { ...productsCart[productIndex], quantity: productsCart[productIndex].quantity + 1 },
-      ...productsCart.slice(productIndex + 1),
-    ];
+  if (productIndex !== -1) {
+    // productsCart = [
+    //   ...productsCart.slice(0, productIndex),
+    //   { ...productsCart[productIndex], quantity: productsCart[productIndex].quantity + 1 },
+    //   ...productsCart.slice(productIndex + 1),
+    // ];
+    productsCart = productsCart.map((product) =>
+      (product.id === productID ? { ...product, quantity: product.quantity + 1 } : product))
   } else {
     const productPromCatalog = getProductByID(productID);
     productsCart = [...productsCart, { ...productPromCatalog, quantity: 1 }];
@@ -102,8 +113,9 @@ function addProduct(productID) {
 addProduct(3);
 
 function deleteProduct(productID) {
-  const productIndex = getProductInCart(productID);
-  if (!productIndex) {
+  const productIndex = getProductIndexInCart(productID);
+  const hasProductInCart = productInCart.some(({ id }) => id === productID)
+  if (hasProductInCart) {
     console.log(`There is no product ${productID} in cart`);
   }
   const productInCart = productsCart[productIndex];
@@ -122,10 +134,13 @@ function deleteProduct(productID) {
     // Option 3. Filter element by id
     productsCart = productsCart.filter(({ id }) => id !== productID);
   } else {
-    productsCart = [
-      ...productsCart.slice(0, productIndex),
-      { ...productsCart[productIndex], quantity: productsCart[productIndex].quantity - 1 },
-      ...productsCart.slice(productIndex + 1),
-    ];
+    // productsCart = [
+    //   ...productsCart.slice(0, productIndex),
+    //   { ...productsCart[productIndex], quantity: productsCart[productIndex].quantity - 1 },
+    //   ...productsCart.slice(productIndex + 1),
+    // ];
+
+    productsCart = productsCart.map((product) =>
+      (product.id === productID ? { ...product, quantity: product.quantity - 1 } : product))
   }
 }

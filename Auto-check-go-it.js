@@ -389,3 +389,66 @@
     const groupById = (users) => users.reduce((acc, user) => ({ ...acc, [user.id]: user }), {})
     let usersById = groupById(users);
 }
+
+{
+    const getCommonElements = (firstArray, secondArray) => {
+        const commonElements = [];
+
+        firstArray.forEach((element) => {
+            if (secondArray.includes(element)) {
+                commonElements.push(element);
+            }
+        });
+        return commonElements;
+    }
+    getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40])
+
+}
+
+{
+    const planets = ["Earth", "Mars", "Venus", "Jupiter"];
+    const planetsLengths = planets.map(planet => planet.length)
+}
+
+
+{
+    const books = [
+        {
+            title: "The Last Kingdom",
+            author: "Bernard Cornwell",
+            rating: 8.38,
+        },
+        {
+            title: "Beside Still Waters",
+            author: "Robert Sheckley",
+            rating: 8.51,
+        },
+        {
+            title: "The Dream of a Ridiculous Man",
+            author: "Fyodor Dostoevsky",
+            rating: 7.75,
+        },
+        { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+        { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+    ];
+
+    const titles = books.map(book => book.name);
+    console.log(titles);
+
+
+}
+
+
+{
+    const ask = (question, yes, no) => {
+        if (confirm(question)) yes()
+        else no();
+    }
+
+    ask(
+        "Вы согласны?",
+        () => alert("Вы согласились."),
+        () => alert("Вы отменили выполнение."),
+    );
+
+}
