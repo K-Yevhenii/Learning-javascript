@@ -21,3 +21,13 @@ const user = {
 // 2. Find all reviews with rating 5
 // 3. Sort reviews by rating
 // 4. Retrieve postcode from user profile using 1. dot notation 2. destructuring
+
+// TODO: replace keys and values
+const obj = {
+  firstValue: 'firstKey',
+  secondValue: 'secondKey',
+  thirdValue: 'thirdKey',
+};
+
+// TODO: find all numbers that are repeated in the array
+const numbers = [1, 22, 4, 1, 5, 33, 22, 4, 7];
