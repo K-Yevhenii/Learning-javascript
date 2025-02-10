@@ -1,4 +1,5 @@
 # Destructuring
+[Decision tree](https://pixso.net/app/board/KW2E4Q3MFZbj0nP6sq7Ejg)
 
 ## Simple destructuring
 
