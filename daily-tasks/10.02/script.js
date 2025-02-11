@@ -33,6 +33,21 @@ const obj = {
   secondValue: 'secondKey',
   thirdValue: 'thirdKey',
 };
+Object.entries(obj).reduce((acc, [key, value]) => ({ ...acc, [value]: key }), {})
+
 
 // TODO: find all numbers that are repeated in the array
 const numbers = [1, 22, 4, 1, 5, 33, 22, 4, 7];
+const countNumbers = numbers.reduce((acc, number) => {
+  if (acc[number]) {
+    acc[number] += 1;
+  } else {
+    acc[number] = 1;
+  }
+  return acc;
+}, {});
+const numberEntries = Object.entries(countNumbers).reduce((acc, [number, count]) =>
+  count > 1 ? [...acc, Number(number)] : acc
+  , []);
+console.log(numberEntries);
+

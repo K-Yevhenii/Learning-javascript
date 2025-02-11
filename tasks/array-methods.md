@@ -61,13 +61,22 @@ function replaceString(array, stringToReplace, replacement) {
 
 For ascending sorting statuses should be in this order:
 
-- new
-- confirmed
-- in progress
-- delivered
-- cancelled.
+new
+confirmed
+inProgress
+delivered
+cancelled.
 
 ```js
+const orderStatusPriorities = {
+  new: 0,
+  confirmed: 1,
+  inProgress: 2,
+  [orderStatuses.IN_PROGRESS]: 2,
+  delivered: 3,
+  cancelled: 4,
+};
+
 const orderStatuses = {
   NEW: "new",
   CONFIRMED: "confirmed",
@@ -164,5 +173,10 @@ const studentAttendance = [
   },
 ];
 
-function calculateAttendanceCount() {} // Should return object { Sam: 3, John: 1, Joseph: 2 }
+function calculateAttendanceCount() {
+  return studentAttendance.reduce(
+    (acc, { name }) => ({ ...acc, [name]: acc[name] ? acc[name] + 1 : 1 }),
+    {}
+  );
+} // Should return object { Sam: 3, John: 1, Joseph: 2 }
 ```
