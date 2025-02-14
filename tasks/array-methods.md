@@ -68,15 +68,6 @@ delivered
 cancelled.
 
 ```js
-const orderStatusPriorities = {
-  new: 0,
-  confirmed: 1,
-  inProgress: 2,
-  [orderStatuses.IN_PROGRESS]: 2,
-  delivered: 3,
-  cancelled: 4,
-};
-
 const orderStatuses = {
   NEW: "new",
   CONFIRMED: "confirmed",
@@ -84,7 +75,19 @@ const orderStatuses = {
   DELIVERED: "delivered",
   CANCELLED: "cancelled",
 };
-
+const orderStatusPriorities = {
+  [orderStatuses.NEW]: 0,
+  [orderStatuses.CONFIRMED]: 1,
+  [orderStatuses.IN_PROGRESS]: 2,
+  [orderStatuses.DELIVERED]: 3,
+  [orderStatuses.CANCELLED]: 4,
+};
+orders.sort((a, b) => {
+  if (a.status === b.status) {
+    return a.createdAt > b.createdAt;
+  }
+  return orderStatusPriorities[a.status] - orderStatusPriorities[b.status];
+});
 const orders = [
   {
     id: 1,
