@@ -1,3 +1,7 @@
+# `this`
+
+`this` - reference to object in method
+
 ```js
 // Bad because data and handlers of this data are not connected
 const bookShelf = {
@@ -68,4 +72,34 @@ booksWithSciFi.addBook('I, Robot');
 
 console.log(booksWithSciFi.getBooks()); // ['Artificial Intelligence', '200-years man', 'I, Robot']
 console.log(booksWithDetective.getBooks()); // ['Sherlock Holmes']
+```
+
+## Chaining
+
+Chaining - можливість викликати методи ланцюжком
+
+Для chaining потрібно:
+
+1. Виконати роботу, яка буде оновлювати дані в обʼєкті
+2. Повернути `this`.
+
+```js
+const ladder = {
+  step: 0,
+  up() {
+    this.step++;
+
+    return this;
+  },
+  down() {
+    this.step--;
+
+    return this;
+  },
+  showStep() {
+    alert(this.step);
+  },
+};
+
+ladder.up().up().down().showStep().down().showStep();
 ```
