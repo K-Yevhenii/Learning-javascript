@@ -1091,3 +1091,74 @@ const users =
     const alphabeticalAuthors = authors;
 
 }
+
+{
+    const bookShelf = {
+        books: ["The last kingdom", "The guardian of dreams"],
+        getBooks() {
+            return "Returning all books";
+        },
+        addBook(bookName) {
+            return `Adding book ${bookName}`;
+        },
+        updateBook(oldName, newName) {
+            return `Updating book ${oldName} to ${newName}`;
+        },
+        removeBook(bookName) {
+            return `Deleting book ${bookName}`;
+        }
+    };
+    bookShelf.updateBook("Sands of dune", "Dune")
+}
+
+{
+    const atTheOldToad = {
+        potions: ["Speed potion", "Dragon breath", "Stone skin"],
+        getPotions() {
+            return this.potions
+        }
+    };
+    atTheOldToad.getPotions()
+}
+
+
+{
+    const atTheOldToad = {
+        potions: ["Speed potion", "Dragon breath", "Stone skin"],
+        addPotion(potionName) {
+            this.potions.push(potionName);
+            return this.potions;
+        },
+    };
+    atTheOldToad.addPotion("Power potion")
+}
+
+
+{
+    const atTheOldToad = {
+        potions: ["Speed potion", "Dragon breath", "Stone skin"],
+        removePotion(potionName) {
+            const potionIndex = this.potions.indexOf(potionName);
+            this.potions.splice(potionIndex, 1);
+        },
+    };
+}
+
+{
+    const atTheOldToad = {
+        potions: ["Speed potion", "Dragon breath", "Stone skin"],
+        updatePotionName(oldName, newName) {
+
+        },
+    };
+
+}
+
+{
+    function sumArgs() {
+        const allArgs = arguments;
+        [].reduce.call(arguments, (acc, element) => acc + element, 0);
+    }
+
+    alert(sumArgs(1, 2, 3)); // 6, аргументы переданы через запятую, без массива
+}
