@@ -1091,3 +1091,34 @@ const users =
     const alphabeticalAuthors = authors;
 
 }
+
+{
+    const bookShelf = {
+        books: ["The last kingdom", "The guardian of dreams"],
+        getBooks() {
+            return "Returning all books";
+        },
+        addBook(bookName) {
+            return `Adding book ${bookName}`;
+        },
+        updateBook(oldName, newName) {
+            return `Updating book ${oldName} to ${newName}`;
+        },
+        removeBook(bookName) {
+            return `Deleting book ${bookName}`;
+        }
+    };
+    bookShelf.updateBook("Sands of dune", "Dune")
+}
+
+{
+    const atTheOldToad = {
+        potions: ["Speed potion", "Dragon breath", "Stone skin"],
+        getPotions() {
+            return this.potions
+        }
+    };
+    atTheOldToad.getPotions()
+}
+
+
