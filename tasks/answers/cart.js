@@ -144,3 +144,57 @@ function deleteProduct(productID) {
       (product.id === productID ? { ...product, quantity: product.quantity - 1 } : product))
   }
 }
+class Cart {
+  constructor() {
+    this._productsCart = []
+  }
+
+  addProduct(productID) {
+    const productIndex = this._getProductIndexInCart(productID);
+
+    if (productIndex !== -1) {
+
+      this._productsCart = this._productsCart.map((product) =>
+        (product.id === productID ? { ...product, quantity: product.quantity + 1 } : product))
+    } else {
+      const productPromCatalog = this._getProductByID(productID);
+      this._productsCart = [...this._productsCart, { ...productPromCatalog, quantity: 1 }];
+    }
+    return this;
+  }
+
+  _getProductIndexInCart(productID) {
+    return this._productsCart.findIndex(({ id }) => id === productID);
+  }
+
+  _getProductByID(productID) {
+    return this._productsCart.find(({ id }) => id === productID);
+  }
+  deleteProduct(productID) {
+    const productIndex = this._getProductIndexInCart(productID);
+    const hasProductInCart = this._productsCart.some(({ id }) => id === productID)
+
+    if (!hasProductInCart) {
+      console.log(`There is no product ${productID} in cart`);
+      return;
+    }
+
+    const productInCart = this._productsCart[productIndex];
+
+    if (productInCart.quantity === 1) {
+
+      this._productsCart = this._productsCart.filter(({ id }) => id !== productID);
+    } else {
+
+
+      this._productsCart = this._productsCart.map((product) =>
+        (product.id === productID ? { ...product, quantity: product.quantity - 1 } : product))
+    }
+    return this;
+  }
+
+
+}
+const cart = new Cart()
+
+cart.addProduct(1).deleteProduct(2).addProduct(1)._getProductByID(1) // 
