@@ -73,6 +73,7 @@ const discountedCart = new CartWithDiscount(catalog);
 
 console.log(discountedCart instanceof CartWithDiscount); // true
 console.log(discountedCart instanceof Cart); // true
+
 console.log(discountedCart.constructor === CartWithDiscount); // true
 console.log(discountedCart.constructor === Cart); // false
 

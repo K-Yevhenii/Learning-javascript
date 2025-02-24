@@ -17,6 +17,10 @@ Car.prototype.sayHi = function () {
   console.log('Hello :)');
 };
 
+function CoolCar({ brand, model, price }) {
+  Car.call(this, { brand, model, price }); // the same as `CoolCar extends Car`
+}
+
 // Static property
 Car.wheels = 4;
 ```
