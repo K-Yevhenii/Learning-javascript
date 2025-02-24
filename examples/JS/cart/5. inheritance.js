@@ -11,9 +11,7 @@ class Cart {
     this._catalog = catalog;
   }
 
-  get totalPrice() {
-
-  }
+  get totalPrice() {}
 
   addProduct(productID) {
     const productIndex = this._getProductIndexInCart(productID);
@@ -72,6 +70,11 @@ class CartWithDiscount extends Cart {
 }
 
 const discountedCart = new CartWithDiscount(catalog);
+
+console.log(discountedCart instanceof CartWithDiscount); // true
+console.log(discountedCart instanceof Cart); // true
+console.log(discountedCart.constructor === CartWithDiscount); // true
+console.log(discountedCart.constructor === Cart); // false
 
 console.log(discountedCart.discount);
 console.log(discountedCart.totalPrice);
