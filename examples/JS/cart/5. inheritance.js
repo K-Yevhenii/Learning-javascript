@@ -66,6 +66,7 @@ class CartWithDiscount extends Cart {
   #discount;
 
   constructor(catalog, discount = null) {
+    // Під час ініціалізації дочірнього класу потрібно викликати конструктор батьківського класу
     super(catalog);
 
     this.#discount = discount || CartWithDiscount.#DEFAULT_DISCOUNT;
