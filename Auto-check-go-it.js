@@ -1162,3 +1162,34 @@ const users =
 
     alert(sumArgs(1, 2, 3)); // 6, аргументы переданы через запятую, без массива
 }
+
+
+
+{
+    function sum() { // суммирует аргументы: sum(1,2,3) = 6
+        return [].reduce.call(arguments, function (a, b) {
+            return a + b;
+        });
+    }
+
+    function mul() { // перемножает аргументы: mul(2,3,4) = 24
+        return [].reduce.call(arguments, function (a, b) {
+            return a * b;
+        });
+    }
+
+    function applyAll(fun, ...arg) {
+        return fun(...arg)
+    }
+
+    function applyAllWithArguments() {
+        const fn = arguments[0];
+        const args = [].slice.call(arguments, 1);
+        return fn(...args);
+    }
+
+    alert(applyAll(sum, 1, 2, 3)); // -> sum(1, 2, 3) = 6
+    alert(applyAll(mul, 2, 3, 4)); // -> mul(2, 3, 4) = 24
+}
+
+
