@@ -62,14 +62,21 @@ const cart = new Cart(catalog);
 cart.addProduct(1).deleteProduct(2).addProduct(1);
 
 class CartWithDiscount extends Cart {
-  static #DISCOUNT = 20;
+  static #DEFAULT_DISCOUNT = 20;
+  #discount;
+
+  constructor(catalog, discount = null) {
+    super(catalog);
+
+    this.#discount = discount || CartWithDiscount.#DEFAULT_DISCOUNT;
+  }
 
   get discount() {
-    return CartWithDiscount.#DISCOUNT;
+    return this.#discount;
   }
 }
 
-const discountedCart = new CartWithDiscount(catalog);
+const discountedCart = new CartWithDiscount(catalog, 30);
 
 console.log(discountedCart instanceof CartWithDiscount); // true
 console.log(discountedCart instanceof Cart); // true
