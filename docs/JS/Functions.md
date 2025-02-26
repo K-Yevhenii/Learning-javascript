@@ -1,5 +1,7 @@
 # Functions
 
+## Basic function syntax
+
 ```js
 // Function declaration
 function sum(a, b) {
@@ -65,3 +67,21 @@ colorPickerOptions.findIndex(({ label }) => label === 'blue'); // 2
 const color = { label: 'red', color: '#F44336' };
 Object.entries(color).forEach(([key, value]) => console.log(key, value)); // Will print 'label', 'red' and in the second log 'color', '#F44336'
 ```
+
+## Function patterns
+
+### Partial function
+
+```js
+const multiple = (a, b) => a * b;
+const double = multiple.bind(null, 2); // partial function from multiple; context is null because this is not important
+
+double(3); // 6, the same as multiple(2, 3)
+double(4); // 8
+double(10); // 20
+
+const getFour = multiple.bind(null, 2, 2);
+getFour(); // Cannot pass arguments because all arguments has already bound
+```
+
+### Currying
