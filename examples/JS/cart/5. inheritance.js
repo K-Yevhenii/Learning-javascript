@@ -79,12 +79,7 @@ class CartWithDiscount extends Cart {
 
 const discountedCart = new CartWithDiscount(catalog, 30);
 
-console.log(discountedCart instanceof CartWithDiscount); // true
-console.log(discountedCart instanceof Cart); // true
-
-console.log(discountedCart.constructor === CartWithDiscount); // true
-console.log(discountedCart.constructor === Cart); // false
-
+// discountedCart має доступ як до властивостей і методів CartWithDiscount, так і до Cart.
 console.log(discountedCart.discount);
 console.log(discountedCart.totalPrice);
 console.log(discountedCart.addProduct(1));
