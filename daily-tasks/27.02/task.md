@@ -19,6 +19,7 @@ Hero:
 Potion:
 - should have these fields:
   - has owner
+  - name
 
 Create 2 types of potions:
 - Health potion
