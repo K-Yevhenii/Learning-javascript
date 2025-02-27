@@ -1153,3 +1153,91 @@ const users =
     };
 
 }
+
+
+{
+    const parent = {
+        name: "Stacey",
+        surname: "Moore",
+        age: 54,
+        heritage: "Irish",
+    };
+
+    const child = Object.create(parent);
+    child.name = "Jason";
+    child.age = 27;
+}
+
+
+{
+    const ancestor = {
+        name: "Paul",
+        age: 83,
+        surname: "Dawson",
+        heritage: "Irish",
+    };
+    // Change code below this line
+
+    const parent = Object.create(ancestor);
+    parent.name = "Stacey";
+    parent.surname = "Moore";
+    parent.age = 54;
+
+    const child = Object.create(parent);
+    child.name = "Jason";
+    child.age = 27;
+}
+
+{
+    class Car {
+        constructor({ brand, model, price }) {
+            this.brand = brand;
+            this.model = model;
+            this.price = price;
+        }
+    }
+    new Car("Audi", "Q3", 36000);
+}
+
+{
+    class Car {
+        constructor({ brand, model, price }) {
+            this.brand = brand;
+            this.model = model;
+            this.price = price;
+        }
+        getPrice() {
+            return this.price;
+        }
+        changePrice(newPrice) {
+            return this.price = newPrice;
+        }
+    }
+
+}
+
+
+{
+    class Storage {
+        constructor(items) {
+            this.items = items;
+        }
+        getItems() {
+            return this.items;
+        }
+        addItem(newItem) {
+            return this.items.push(newItem);
+        }
+        removeItem(itemToRemove) {
+            const itemIndex = this.items.findIndex(item => item === itemToRemove);
+            return this.items.splice(itemIndex, 1);
+        }
+    }
+
+    const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
+    console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
+    storage.addItem("Droid");
+    console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
+    storage.removeItem("Prolonger");
+    console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
+}
