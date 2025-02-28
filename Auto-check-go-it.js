@@ -1241,3 +1241,21 @@ const users =
     storage.removeItem("Prolonger");
     console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
 }
+
+{
+
+    class StringBuilder {
+        constructor(initialValue) {
+
+        }
+    }
+
+    const builder = new StringBuilder(".");
+    console.log(builder.getValue()); // "."
+    builder.padStart("^");
+    console.log(builder.getValue()); // "^."
+    builder.padEnd("^");
+    console.log(builder.getValue()); // "^.^"
+    builder.padBoth("=");
+    console.log(builder.getValue()); // "=^.^="
+}
