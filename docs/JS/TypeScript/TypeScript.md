@@ -11,17 +11,17 @@ const sum = (a: number, b: number): number => {
 };
 
 sum(1, 2); // Ok
-sum(1, '2'); // Error
+sum(1, "2"); // Error
 ```
 
 ```ts
-const a: string = 'abc';
+const a: string = "abc";
 const b: null = null;
 const c: boolean = true;
 
 const numbers = [1, 2, 3];
 const getNumber = (value: number): number | undefined =>
-  number.find((element) => element === value);
+  numbers.find((element) => element === value);
 
 const getProperty = (key: string, obj: object): unknown | undefined => obj[key];
 ```
@@ -35,11 +35,11 @@ type FunctionType = (a: number, b: number) => number;
 const sum: FunctionType = (a, b) => a + b;
 
 // Union type - only one of there variants is valid
-type TrafficLightColor = 'red' | 'green' | 'yellow';
+type TrafficLightColor = "red" | "green" | "yellow";
 
 const logTrafficLightColor = (light: TrafficLightColor) => console.log(light);
-logTrafficLight('yellow'); // Ok because it's one of options
-logTrafficLight('purple'); // Not ok because it's not in TrafficLightColor
+logTrafficLight("yellow"); // Ok because it's one of options
+logTrafficLight("purple"); // Not ok because it's not in TrafficLightColor
 
 // Object type
 type Potion = {
@@ -55,13 +55,13 @@ type Potion = {
 ```ts
 // Question: how to describe type of potion?
 const potion = {
-  name: 'Health potion',
+  name: "Health potion",
   owner: null,
 };
 
 // Bad because we don't know about potion fields
 const potion: object = {
-  name: 'Health potion',
+  name: "Health potion",
   owner: null,
 };
 
@@ -72,7 +72,7 @@ interface Potion {
 }
 
 const potion: Potion = {
-  name: 'Health potion',
+  name: "Health potion",
   owner: null,
 };
 
@@ -83,7 +83,7 @@ type Potion = {
 };
 
 const potion: Potion = {
-  name: 'Health potion',
+  name: "Health potion",
   owner: null,
 };
 ```
@@ -102,7 +102,7 @@ function logElements<T>(arr: Array<T>) {
 }
 
 logElements<number>([1, 2, 3]); // ok
-logElements<string>(['1', '2', '3']); // ok
+logElements<string>(["1", "2", "3"]); // ok
 logElements<boolean>([true, false, 123]); // not ok because 123 is not a boolean
 
 // Pass generic in interface
@@ -127,7 +127,7 @@ function replaceElement<T>(iterable: T): T {
   return iterable.slice(0, index) + replacement + iterable.slice(index + 1);
 }
 
-replaceElement<string>('Lorem ipsum dolorem sit amet');
+replaceElement<string>("Lorem ipsum dolorem sit amet");
 replaceElement<[]>([1, 2, 3]);
 replaceElement<{}>({ foo: bar }); // Not ok because object doesn't have indexOf or slice
 
@@ -159,8 +159,8 @@ Tuple type describes array of fixed length.
 
 ```ts
 const obj = {
-  foo: 'bar',
-  baz: 'quux',
+  foo: "bar",
+  baz: "quux",
 };
 
 const entries = Object.entries(obj); // Will return [['foo', 'bar'], ['baz', 'quux']]
