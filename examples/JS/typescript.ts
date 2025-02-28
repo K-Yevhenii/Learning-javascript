@@ -74,3 +74,82 @@ function logElements<T>(arr: Array<T>) {
 logElements<number>([1, 2, 3]);
 logElements<string>(["1", "2", "3"]);
 logElements<boolean>([true, false, true]);
+
+// interface ICoffeeMachine {
+//   capacity: number;
+//   boil: () => void;
+//   addWater: (amount: number) => void;
+// }
+
+// interface Gadget {
+//   power: number;
+//   turnOn: () => void;
+//   turnOff: () => void;
+// }
+
+// class CoffeeMachine implements ICoffeeMachine, Gadget {
+//   capacity = 300;
+//   power = 220;
+
+//   private water: number;
+
+//   constructor() {
+//     this.water = 0;
+//   }
+
+//   boil() {
+//     console.log("Boiling");
+//     console.log("Boiled");
+//   }
+
+//   addWater(amount: number) {
+//     this.water += amount;
+//   }
+
+//   turnOff() {}
+
+//   turnOn() {}
+// }
+
+// class AnotherCoffeeMachine implements ICoffeeMachine {}
+
+// const coffeeMachine = new CoffeeMachine();
+// coffeeMachine.addWater(220);
+// coffeeMachine.boil();
+// console.log(coffeeMachine.capacity);
+
+// class User {
+//   private password;
+//   protected email;
+//   public readonly username: string;
+//   // or can be written as username: string without `public`
+
+//   constructor(password, username, email) {
+//     this.password = password;
+//     this.username = username;
+//     this.email = email;
+//   }
+
+//   logPassword() {
+//     console.log(this.password);
+//   }
+// }
+
+// const user = new User("12345567", "John", "john@doe.com");
+
+// console.log(user.password); // Will raise error
+// console.log(user.email); // Will raise error
+// console.log(user.username); // Ok
+
+// class Employee extends User {
+//   logEmail() {
+//     console.log(this.email); // Ok
+//   }
+
+//   updatePassword(newPassword) {
+//     this.password = newPassword; // Will raise error because `password` exists only in User type
+//   }
+// }
+
+// const employee = new Employee("Qwerty123!", "Joe");
+// console.log(employee.email); // Will raise error
