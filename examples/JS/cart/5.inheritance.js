@@ -1,3 +1,4 @@
+// TODO: describe type
 const catalog = [
   { id: 1, name: 'Banana', price: 20 },
   { id: 2, name: 'Sausages', price: 40 },
@@ -5,13 +6,19 @@ const catalog = [
   { id: 4, name: 'Mineral water', price: 12 },
 ];
 
+// TODO: use access modifiers for properties and methods
+// TODO: create interface for Cart
 class Cart {
   constructor(catalog) {
     this._productsCart = [];
     this._catalog = catalog;
   }
 
+  // TODO: implement getter
   get totalPrice() {}
+
+  // TODO: implement method
+  clearCart() {}
 
   addProduct(productID) {
     const productIndex = this._getProductIndexInCart(productID);
@@ -75,6 +82,10 @@ class CartWithDiscount extends Cart {
   get discount() {
     return this.#discount;
   }
+
+  // TODO: add setter for discount that should be in range from 0 to 100
+
+  // TODO: override totalPrice getter
 }
 
 const discountedCart = new CartWithDiscount(catalog, 30);
