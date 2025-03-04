@@ -10,6 +10,7 @@ export default tseslint.config(eslint.configs.recommended, tseslint.configs.reco
         quotes: ['error', 'single'],
         'max-len': ['error', { code: 100 }],
         'comma-dangle': ['error', 'always-multiline'],
+        'prefer-destructuring': ['error'],
     },
     languageOptions: {
         globals: {
