@@ -1,5 +1,5 @@
 {
-    // -----------------
+
     const keys = [];
     const values = [];
     const advert = {
@@ -17,7 +17,7 @@
             values.push(apartment[key]);
         }
     }
-    // -----------------------
+
 }
 
 
@@ -116,7 +116,9 @@
 
 }
 
-// -------------------------------------------------------------------------
+
+
+
 {
     let salaries = {
         "John": 100,
@@ -144,7 +146,8 @@
     console.log(topSalary(salaries));
 
 }
-// -------------------------------------------------------------------------------
+
+
 
 
 {
@@ -256,6 +259,11 @@
     findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7)
 }
 
+
+
+
+
+
 {
     const students = [
         { name: "Манго", courses: ["математика", "фізика"] },
@@ -270,6 +278,10 @@
         (course, index, array) => array.indexOf(course) === index
     );
 }
+
+
+
+
 
 
 {
@@ -295,6 +307,9 @@
     filterArray([1, 2, 3, 4, 5], 3)
 
 }
+
+
+
 
 
 {
@@ -351,6 +366,9 @@
 }
 
 
+
+
+
 {
     const vasya = { name: "Вася", surname: "Пупкин", id: 1 };
     const petya = { name: "Петя", surname: "Иванов", id: 2 };
@@ -362,6 +380,9 @@
     console.log(usersMapped);
 
 }
+
+
+
 
 
 {
@@ -379,6 +400,9 @@
 }
 
 
+
+
+
 {
     let users = [
         { id: 'john', name: "John Smith", age: 20 },
@@ -389,6 +413,11 @@
     const groupById = (users) => users.reduce((acc, user) => ({ ...acc, [user.id]: user }), {})
     let usersById = groupById(users);
 }
+
+
+
+
+
 
 {
     const getCommonElements = (firstArray, secondArray) => {
@@ -404,6 +433,10 @@
     getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40])
 
 }
+
+
+
+
 
 {
     const planets = ["Earth", "Mars", "Venus", "Jupiter"];
@@ -683,6 +716,9 @@
 }
 
 
+
+
+
 {
     const users =
         [
@@ -765,6 +801,10 @@
         return uniqueFriends;
     };
 };
+
+
+
+
 
 
 {
@@ -850,6 +890,8 @@
 }
 
 
+
+
 {
     const users =
         [
@@ -931,6 +973,8 @@
     };
 
 }
+
+
 
 
 {
@@ -1034,6 +1078,9 @@ const users =
 }
 
 
+
+
+
 {
     const firstArray = [26, 94, 36, 18];
     const secondArray = [17, 61, 23];
@@ -1048,6 +1095,9 @@ const users =
     const eachElementInThirdIsEven = thirdArray.every(number => number % 2 === 0);
     const eachElementInThirdIsOdd = thirdArray.every(number => number % 2 >= 1);
 }
+
+
+
 
 
 {
@@ -1255,7 +1305,7 @@ const users =
             this.value += str;
         }
         padStart(str) {
-            str += this.value
+            return str += this.value
         }
         padBoth(str) {
             this.value = str + this.value + str;
@@ -1273,20 +1323,26 @@ const users =
 }
 
 
-class Car {
-    #brand;
-    constructor({ brand, model, price }) {
-        this.#brand = brand;
-        this.modal = this.modal;
-        this.price = price;
+
+{
+    class Car {
+        #brand;
+        constructor({ brand, modal, price }) {
+            this.#brand = brand;
+            this.modal = modal;
+            this.price = price;
+        }
+        getBrand() {
+            return this.#brand
+        }
+        changeBrand(newBrand) {
+            this.#brand = newBrand;
+        }
     }
-    getBrand() {
-        return this.#brand
-    }
-    changeBrand(newBrand) {
-        this.#brand = newBrand;
-    }
+    Car.getBrand()
 }
+
+
 
 
 
@@ -1326,10 +1382,62 @@ class Car {
 {
     class Car {
         #brand;
-        #modal;
+        #model;
         #price;
-        constructor(brand, modal, price) {
 
+        constructor(brand, model, price) {
+            this.#brand = brand;
+            this.#model = model;
+            this.#price = price;
+        }
+
+        get brand() {
+            return this.#brand
+        }
+
+        set brand(newBrand) {
+            this.#brand = newBrand;
+        }
+
+        get model() {
+            return this.#model
+        }
+
+        set model(newModel) {
+            this.#model = newModel;
+        }
+        get price() {
+            return this.#price;
+        }
+        set price(newPrice) {
+            this.#price = newPrice;
         }
     }
+    Car.price();
+}
+
+{
+    class Car {
+        static MAX_PRICE = 50000;
+        #price;
+        constructor({ price }) {
+            this.#price = price;
+        }
+        get price() {
+            return this.#price;
+        }
+        set price(NewPrice) {
+            if (NewPrice <= 50000)
+                this.#price = NewPrice;
+        }
+    }
+    const audi = new Car({ price: 35000 });
+    console.log(audi.price); // 35000
+
+    audi.price = 49000;
+    console.log(audi.price); // 49000
+
+    audi.price = 51000;
+    console.log(audi.price); // 49000
+
 }

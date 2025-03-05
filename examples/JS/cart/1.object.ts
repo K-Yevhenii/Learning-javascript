@@ -1,20 +1,24 @@
-const catalog = [
-  { id: 1, name: 'Banana', price: 20 },
-  { id: 2, name: 'Sausages', price: 40 },
-  { id: 3, name: 'Milk', price: 35 },
-  { id: 4, name: 'Mineral water', price: 12 },
+interface CatalogItem {
+  id: number;
+  name: string;
+  price: number;
+}
+
+const catalog: CatalogItem[] = [
+  { id: 1, name: "Banana", price: 20 },
+  { id: 2, name: "Sausages", price: 40 },
+  { id: 3, name: "Milk", price: 35 },
+  { id: 4, name: "Mineral water", price: 12 },
 ];
 
 let productsCart = {
-  1: { id: 1, name: 'Banana', price: 20 },
-  2: { id: 2, name: 'Sausages', price: 40 },
-  3: { id: 3, name: 'Milk', price: 35 },
-  4: { id: 4, name: 'Mineral water', price: 12 },
+  1: { id: 1, name: "Banana", price: 20 },
+  2: { id: 2, name: "Sausages", price: 40 },
+  3: { id: 3, name: "Milk", price: 35 },
+  4: { id: 4, name: "Mineral water", price: 12 },
 };
 
-productsCart[productID];
-
-function getProductFromCatalog(productID) {
+function getProductFromCatalog(productID: number): CatalogItem | null {
   for (const product of catalog) {
     const { id } = product;
     if (productID === id) {
@@ -25,7 +29,7 @@ function getProductFromCatalog(productID) {
   return null;
 }
 
-function addProduct(productID) {
+function addProduct(productID: number) {
   const product = getProductFromCatalog(productID);
 
   if (productsCart[product.id]) {
@@ -48,7 +52,7 @@ function addProduct(productID) {
   return productsCart;
 }
 
-function removeProductFromCart(productID) {
+function removeProductFromCart(productID: number) {
   if (productsCart[productID]) {
     const { quantity } = productsCart[productID];
     if (quantity === 1) {

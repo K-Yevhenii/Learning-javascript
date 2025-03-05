@@ -8,5 +8,7 @@
     "unshift"
   ],
   "editor.fontSize": 16,
-  "liveServer.settings.port": 5501
+  "liveServer.settings.port": 5501,
+  "prettier.printWidth": 100,
+  "prettier.tabWidth": 4
 }
