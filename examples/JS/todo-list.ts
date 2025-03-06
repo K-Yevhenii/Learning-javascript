@@ -5,10 +5,9 @@ interface ToDo {
     isDone: boolean;
 }
 
-type ToDoUpdateOrCreate = Omit<ToDo, 'id'>;
+type ToDoUpdateOrCreate = Pick<ToDo, 'title' | 'description'>;
 
-
-export class TodoList {
+export class ToDoList {
     private toDos: ToDo[];
     title: string;
     owner: User;
@@ -19,12 +18,12 @@ export class TodoList {
         this.toDos = [];
     }
 
-    addTodo(todo: ToDoUpdateOrCreate) {
-        this.toDos.push({ id: Math.random(), ...todo });
+    addToDo(todo: ToDoUpdateOrCreate) {
+        this.toDos.push({ id: Math.random(), isDone: false, ...todo });
     }
 
     updateToDo(id: number, updatedToDo: ToDoUpdateOrCreate) {
-        this.toDos.map((todo) => (id === todo.id ? { id, ...updatedToDo } : todo));
+        this.toDos.map((toDo) => (id === toDo.id ? { id, ...updatedToDo } : toDo));
     }
 
     deleteToDo(id: number) {
