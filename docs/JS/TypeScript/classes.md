@@ -7,7 +7,8 @@ interface ICoffeeMachine {
   addWater: (amount: number) => void;
 }
 
+// Should have capacity and methods boil and addWater
 class CoffeeMachine implements ICoffeeMachine {}
 
-const coffeeMachine = new Co();
+const coffeeMachine = new CoffeeMachine();
 ```
