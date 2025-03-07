@@ -1,3 +1,12 @@
+interface IToDoList {
+    title: string;
+    owner: User;
+    addToDo: (todo: ToDoUpdateOrCreate) => void;
+    updateToDo: (id: number, updatedToDo: ToDoUpdateOrCreate) => void;
+    deleteToDo: (id: number) => void;
+    toDoList: ToDo[];
+}
+
 interface ToDo {
     id: number;
     title: string;
@@ -7,7 +16,7 @@ interface ToDo {
 
 type ToDoUpdateOrCreate = Pick<ToDo, 'title' | 'description'>;
 
-export class ToDoList {
+export class ToDoList implements IToDoList {
     private toDos: ToDo[];
     title: string;
     owner: User;
@@ -35,4 +44,29 @@ export class ToDoList {
     }
 }
 
-export class User {}
+export class User {
+    private toDoLists: ToDoList[];
+    firstName: string;
+    lastName: string;
+
+    constructor(firstName: string, lastName: string) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    get fullName() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+    set fullName(value: string) {
+        const [firstName, lastName] = value.split(' ');
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+    get uncompletedToDos(): ToDo[] {
+        return this.toDoLists.reduce<ToDo[]>((acc, toDoList) => {
+            const { toDoList: todos } = toDoList;
+            const result = todos.filter(({ isDone }) => !isDone);
+            return [...acc, ...result];
+        }, []);
+    }
+}
