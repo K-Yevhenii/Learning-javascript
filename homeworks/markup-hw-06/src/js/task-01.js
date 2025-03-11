@@ -18,7 +18,17 @@
 // Category: Technologies
 // Elements: 5
 
-const listLiItem = document.querySelectorAll('li');
-listLiItem.forEach((item){
-    console.log(item);
-})
+const list = document.getElementById('categories');
+if (list) {
+    console.log(list);
+    console.log(list.children.length);
+}
+const items = document.querySelectorAll('li.item');
+console.log(`Number of categories: ${items.length}`);
+
+
+items.forEach((item) => {
+    console.log(`Category: ${item.firstElementChild.textContent}`);
+    console.log(`Elements: ${item.lastElementChild.children.length}`);
+    console.log(item.querySelectorAll('li'));
+});

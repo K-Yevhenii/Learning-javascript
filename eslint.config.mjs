@@ -15,6 +15,7 @@ export default tseslint.config(eslint.configs.recommended, tseslint.configs.reco
     languageOptions: {
         globals: {
             console: 'readonly',
+            document: 'readonly',
         },
     },
 });

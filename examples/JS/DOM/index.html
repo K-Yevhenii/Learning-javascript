@@ -1,0 +1,29 @@
+<html>
+    <body>
+        <div>Пользователи:</div>
+        <ul>
+            <li>Джон</li>
+            <li>Пит</li>
+        </ul>
+        <script>
+            const div = document.body.firstElementChild;
+
+            const divQuery = document.querySelector('div'); //return element | null
+
+            const divGetByTagName = document.getElementsByTagName('div')[0]; // collection of elements [0]
+            const divGetByTagNameElement = divGetByTagName[0]; // else
+
+            const ulQuery = document.querySelector('ul');
+            if (ulQuery) {
+                const liQueryAll = ulQuery.querySelectorAll('li');
+                const li = liQueryAll[1];
+            }
+        </script>
+    </body>
+</html>
+
+<!-- //Напишите код, как получить…
+
+элемент <div>?
+<ul>?
+второй <li> (с именем Пит)? -->
