@@ -4,13 +4,13 @@
 
 ```js
 const obj = {
-  sum(a, b) {
-    return a + b;
-  },
+    sum(a, b) {
+        return a + b;
+    },
 };
 
 function sum(a, b) {
-  return a + b;
+    return a + b;
 }
 
 // obj.sum - method
@@ -21,20 +21,20 @@ function sum(a, b) {
 
 ```js
 function calculateSum() {
-  return 2 + 2;
+    return 2 + 2;
 }
 
 function double() {
-  return 2 * 2;
+    return 2 * 2;
 }
 
 // Executes calculateSum, logs its result and returns it - i.e. add extra functionality without modifying original function
 // func is callback
 function logger(func) {
-  const result = func();
-  console.log(result);
+    const result = func();
+    console.log(result);
 
-  return result;
+    return result;
 }
 
 // Will log 4 and returns it in sum
@@ -48,16 +48,16 @@ const doubled = logger(double);
 const arr = [1, 2, 3, 4];
 
 for (let i = 0; i < arr.length; i++) {
-  console.log(arr[i]);
+    console.log(arr[i]);
 }
 
 function logger(element) {
-  console.log(element);
+    console.log(element);
 }
 
 function double(element, index) {
-  element === array[index];
-  arr[index] *= 2;
+    element === array[index];
+    arr[index] *= 2;
 }
 
 arr.forEach(logger); // Prints in console 1, 2, 3, 4 as a separate log
@@ -71,10 +71,10 @@ Sort mutates original array and returns its sorted.
 
 ```js
 let productsCart = [
-  { id: 3, name: "Milk", price: 35, quantity: 5 },
-  { id: 1, name: "Banana", price: 20, quantity: 1 },
-  { id: 2, name: "Sausages", price: 40, quantity: 3 },
-  { id: 4, name: "Mineral water", price: 12, quantity: 7 },
+    { id: 3, name: 'Milk', price: 35, quantity: 5 },
+    { id: 1, name: 'Banana', price: 20, quantity: 1 },
+    { id: 2, name: 'Sausages', price: 40, quantity: 3 },
+    { id: 4, name: 'Mineral water', price: 12, quantity: 7 },
 ];
 
 // Sort by number in ascending order
@@ -94,10 +94,10 @@ If elements have the same value of sorting key (in example, `grade`) they will b
 
 ```js
 const students = [
-  { name: "Alex", grade: 15 },
-  { name: "Devlin", grade: 15 },
-  { name: "Eagle", grade: 13 },
-  { name: "Sam", grade: 14 },
+    { name: 'Alex', grade: 15 },
+    { name: 'Devlin', grade: 15 },
+    { name: 'Eagle', grade: 13 },
+    { name: 'Sam', grade: 14 },
 ];
 
 students.sort((a, b) => a.grade - b.grade);
@@ -110,7 +110,7 @@ students.sort((a, b) => a.grade - b.grade);
 // ];
 ```
 
-## Замінює всі або деякі елементи масиву заданим значенням.
+## Замінює всі або деякі елементи масиву заданим значенням (змінюють масив)
 
 | Name      | Description                                                      | Returns             |
 | --------- | ---------------------------------------------------------------- | ------------------- |

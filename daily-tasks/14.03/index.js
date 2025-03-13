@@ -11,3 +11,20 @@ export const topics = [
     { id: 6, name: 'Redux', complexity: 3 },
     { id: 7, name: 'TypeScript', complexity: 1 },
 ];
+
+const averageComplexity = topics.reduce((acc, { complexity }) => (acc + complexity)
+
+    , 0) / topics.length;
+
+let mostComplex;
+
+for (const topic of topics) {
+    const { complexity } = topic;
+
+    if (!mostComplex || complexity > mostComplex.complexity) {
+        mostComplex = topic;
+    }
+}
+
+
+topics.sort((a, b) => a.name.localeCompare(b.name));
