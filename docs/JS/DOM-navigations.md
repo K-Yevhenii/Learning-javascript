@@ -40,7 +40,7 @@
 
 ### **Методи пошуку елементів**
 
-| Search method            | Looking for a...       | return            | Searching inside an element? | living collection? | syntax                                         |
+| Search method            | Searching for a...     | return            | Searching inside an element? | living collection? | syntax                                         |
 | ------------------------ | ---------------------- | ----------------- | ---------------------------- | ------------------ | ---------------------------------------------- |
 | `querySelector`          | Будь-який CSS-селектор | Один об'єкт       | Так                          | Ні                 | `document.querySelector(".box")`               |
 | `querySelectorAll`       | Будь-який CSS-селектор | Колекцію об'єктів | Так                          | Ні                 | `document.querySelectorAll(".box")`            |
