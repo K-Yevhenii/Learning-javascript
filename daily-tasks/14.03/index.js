@@ -12,9 +12,12 @@ export const topics = [
     { id: 7, name: 'TypeScript', complexity: 1 },
 ];
 
-const averageComplexity = topics.reduce((acc, { complexity }) => (acc + complexity)
+const averageComplexity =
+    topics.reduce(
+        (acc, { complexity }) => acc + complexity,
 
-    , 0) / topics.length;
+        0,
+    ) / topics.length;
 
 let mostComplex;
 
@@ -26,5 +29,53 @@ for (const topic of topics) {
     }
 }
 
-
 topics.sort((a, b) => a.name.localeCompare(b.name));
+
+const app = {
+    folders: [
+        {
+            name: 'src',
+            folders: [
+                {
+                    name: 'components',
+                    folders: [
+                        {
+                            name: 'Header',
+                            files: ['Header.js', 'index.js'],
+                        },
+                        {
+                            name: 'Footer',
+                            files: ['Footer.js', 'index.js'],
+                        },
+                        {
+                            name: 'Main',
+                            files: ['Main.js', 'index.js'],
+                        },
+                    ],
+                },
+                {
+                    name: 'pages',
+                    folders: [
+                        {
+                            name: 'Home',
+                            files: ['Home.js', 'index.js'],
+                        },
+                        {
+                            name: 'About',
+                            files: ['About.js', 'index.js'],
+                        },
+                    ],
+                },
+                {
+                    name: 'utils',
+                    files: ['api.js', 'helpers.js'],
+                },
+            ],
+        },
+        {
+            name: 'tests',
+            files: ['Header.test.js', 'Footer.test.js', 'Main.test.js'],
+        },
+    ],
+    files: ['index.js', 'eslintrc.js', 'package.json'],
+};
