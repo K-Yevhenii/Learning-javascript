@@ -47,15 +47,15 @@ const rootFolder = {
     files: ['index.js', 'eslintrc.js', 'package.json'],
 };
 
-function calculateFilesInFolder(folder) {
+function calculateFilesInFolder(root) {
     let files = 0;
 
-    if (folder.files) {
-        files += folder.files.length;
+    if (root.files) {
+        files += root.files.length;
     }
 
-    if (folder.folders) {
-        for (const folder of folder.folders) {
+    if (root.folders) {
+        for (const folder of root.folders) {
             files += calculateFilesInFolder(folder);
         }
     }
