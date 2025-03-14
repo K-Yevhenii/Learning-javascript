@@ -8,7 +8,7 @@ const rootFolder = {
                     folders: [
                         {
                             name: 'Header',
-                            files: ['Header.js', 'index.js'],
+                            files: ['Header.js', 'index.js', 'style.css'],
                         },
                         {
                             name: 'Footer',
@@ -44,19 +44,24 @@ const rootFolder = {
             files: ['Header.test.js', 'Footer.test.js', 'Main.test.js'],
         },
     ],
-    files: ['index.js', 'eslintrc.js', 'package.json'],
+    files: ['index.js', 'eslintrc.js', 'package.json', 'index.html'],
 };
 
-function calculateFilesInFolder(root) {
+function calculateFilesInFolder(root, extension) {
     let files = 0;
 
     if (root.files) {
-        files += root.files.length;
+        if (extension) {
+            const matchingFiles = root.files.filter((file) => file.endsWith(extension));
+            files += matchingFiles.length;
+        } else {
+            files += root.files.length;
+        }
     }
 
     if (root.folders) {
         for (const folder of root.folders) {
-            files += calculateFilesInFolder(folder);
+            files += calculateFilesInFolder(folder, extension);
         }
     }
 
@@ -64,3 +69,5 @@ function calculateFilesInFolder(root) {
 }
 
 console.log(calculateFilesInFolder(rootFolder));
+console.log(calculateFilesInFolder(rootFolder, '.js'));
+console.log(calculateFilesInFolder(rootFolder, '.test.js'));
