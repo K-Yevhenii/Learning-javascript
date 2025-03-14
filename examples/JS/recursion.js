@@ -1,4 +1,4 @@
-const app = {
+const rootFolder = {
     folders: [
         {
             name: 'src',
@@ -46,16 +46,21 @@ const app = {
     ],
     files: ['index.js', 'eslintrc.js', 'package.json'],
 };
-function appFiles(app) {
+
+function calculateFilesInFolder(folder) {
     let files = 0;
-    if (app.files) {
-        files += app.files.length;
+
+    if (folder.files) {
+        files += folder.files.length;
     }
-    if (app.folders) {
-        for (const folder of app.folders) {
-            files += appFiles(folder);
+
+    if (folder.folders) {
+        for (const folder of folder.folders) {
+            files += calculateFilesInFolder(folder);
         }
     }
+
     return files;
 }
-console.log(appFiles(app));
+
+console.log(calculateFilesInFolder(rootFolder));
