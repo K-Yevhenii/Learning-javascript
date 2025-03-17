@@ -61,3 +61,9 @@ container.addEventListener('click', (event) => {
     console.log(event.currentTarget); // button
 });
 ```
+
+## Options of `addEventListener`
+
+```js
+document.addEventListener('click', () => console.log('click'), { once: true });
+```
