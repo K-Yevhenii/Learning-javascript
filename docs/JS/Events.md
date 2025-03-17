@@ -55,7 +55,7 @@ container.addEventListener('click', () => console.log('Click from container'));
 // Click from button
 // Click from container
 
-//On button click 2 logs will appear:
+// On button click 2 logs will appear:
 container.addEventListener('click', (event) => {
     console.log(event.target); // container
     console.log(event.currentTarget); // button
