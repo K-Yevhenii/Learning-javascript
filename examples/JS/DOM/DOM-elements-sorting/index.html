@@ -53,7 +53,6 @@
         </table>
 
         <script>
-            // ...ваш код...
             const table = document.getElementById('grid');
 
             function getAgeFromTableRow(row) {
@@ -66,21 +65,23 @@
                 const [, secondCell] = row.children;
                 return secondCell.textContent;
             }
+
             table.addEventListener('click', (event) => {
                 if (event.target.tagName !== 'TH') {
                     return;
                 }
+
                 const sortType = event.target.dataset.type;
-                const rows = table.querySelectorAll('tbody tr');
+                const rows = [...table.querySelectorAll('tbody tr')];
 
                 if (sortType === 'number') {
-                    Array.prototype.sort.call(rows, (a, b) => {
+                    rows.sort((a, b) => {
                         const ageA = getAgeFromTableRow(a);
                         const ageB = getAgeFromTableRow(b);
                         return ageA - ageB;
                     });
                 } else if (sortType === 'string') {
-                    Array.prototype.sort.call(rows, (a, b) => {
+                    rows.sort((a, b) => {
                         const nameA = getNameFromTableRow(a);
                         const nameB = getNameFromTableRow(b);
                         return nameA.localeCompare(nameB);
