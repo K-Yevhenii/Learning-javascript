@@ -54,17 +54,38 @@
 
         <script>
             // ...ваш код...
-            const table = getElementById('grid');
+            const table = document.getElementById('grid');
+
+            function getAgeFromTableRow(row) {
+                const firstCell = row.firstElementChild;
+                const content = firstCell.textContent;
+                return Number(content);
+            }
+
+            function getNameFromTableRow(row) {
+                const [, secondCell] = row.children;
+                return secondCell.textContent;
+            }
             table.addEventListener('click', (event) => {
-                event.target.tagName;
                 if (event.target.tagName !== 'TH') {
                     return;
                 }
                 const sortType = event.target.dataset.type;
                 const rows = table.querySelectorAll('tbody tr');
-                rows.sort((a, b) => a - b);
-                rows.sort((a, b) => a.localeCompare(b));
-                Array.prototype.sort.call(rows, ....);
+
+                if (sortType === 'number') {
+                    Array.prototype.sort.call(rows, (a, b) => {
+                        const ageA = getAgeFromTableRow(a);
+                        const ageB = getAgeFromTableRow(b);
+                        return ageA - ageB;
+                    });
+                } else if (sortType === 'string') {
+                    Array.prototype.sort.call(rows, (a, b) => {
+                        const nameA = getNameFromTableRow(a);
+                        const nameB = getNameFromTableRow(b);
+                        return nameA.localeCompare(nameB);
+                    });
+                }
             });
         </script>
     </body>
