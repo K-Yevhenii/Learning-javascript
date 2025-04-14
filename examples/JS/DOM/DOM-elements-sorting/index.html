@@ -87,6 +87,8 @@
                         return nameA.localeCompare(nameB);
                     });
                 }
+                const tableBody = table.querySelector('tbody');
+                tableBody.replaceChildren(...rows);
             });
         </script>
     </body>
