@@ -1441,3 +1441,67 @@ const users =
     console.log(audi.price); // 49000
 
 }
+
+
+
+{
+    //     Выделить число
+    //     важность: 4
+    // Есть стоимость в виде строки "$120".То есть сначала идёт знак валюты, а затем – число.
+
+    // Создайте функцию extractCurrencyValue(str), которая будет из такой строки выделять числовое значение и возвращать его.
+
+    //         Например:
+
+    //     alert(extractCurrencyValue('$120') === 120); // true
+
+    function extractCurrencyValue(str) {
+        const correctValue = str.slice(1)
+        const number = Number(correctValue);
+        return number;
+    }
+    extractCurrencyValue('$120')
+}
+
+
+{
+    //     Сумма свойств объекта
+    //     важность: 5
+    // Есть объект salaries с произвольным количеством свойств, содержащих заработные платы.
+
+    // Напишите функцию sumSalaries(salaries), которая возвращает сумму всех зарплат с 
+    // помощью метода Object.values и цикла for..of.
+
+    // Если объект salaries пуст, то результат должен быть 0.
+
+    //     Например:
+
+    let salaries = {
+        "John": 100,
+        "Pete": 300,
+        "Mary": 250
+    };
+
+    let sumSalaries = 0;
+    for (const salary of Object.values(salaries)) {
+        sumSalaries += salary;
+    }
+
+}
+{
+    function calculate() {
+        let calculator = {
+            read() {
+                console.log(a, b);
+
+            },
+            sum() {
+                const calculateSum = a + b;
+
+            },
+            mul() {
+                const mulSum = a * b;
+            },
+        };
+    }
+}
