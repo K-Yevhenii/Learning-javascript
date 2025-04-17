@@ -1488,20 +1488,22 @@ const users =
     }
 
 }
+
+
 {
-    function calculate() {
-        let calculator = {
-            read() {
-                console.log(a, b);
 
-            },
-            sum() {
-                const calculateSum = a + b;
+    let calculator = {
+        read() {
+            this.a = Number(prompt())
+            this.b = Number(prompt())
 
-            },
-            mul() {
-                const mulSum = a * b;
-            },
-        };
-    }
+        },
+        sum() {
+            return this.a + this.b;
+
+        },
+        mul() {
+            return this.a * this.b;
+        },
+    };
 }
