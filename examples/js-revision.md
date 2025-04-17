@@ -145,3 +145,89 @@ bagira.eat();
 type ArrayOfStrings = string[]; // Any number of elements
 type TupleWithString = [string]; // Array with only one string
 ```
+
+## DOM
+
+```html
+<button class="btn" id="button">Button</button>
+```
+
+```css
+#button {
+}
+```
+
+```js
+const button = document.querySelector('#button');
+const button = document.querySelector('.btn');
+const button = document.querySelector('button');
+
+const button = document.getElementById('button'); // HTMLButtonElement | null
+
+const buttons = document.querySelectorAll('button'); // NodeList
+
+buttons.length // Works
+buttons.forEach(...) // Will also work
+buttons.map(...) // Will raise error
+
+// How to call map?
+// Option 1. Spread to array.
+const array = [...buttons]
+
+Array.prototype.map.call(buttons, (button) => ...) // Will work
+```
+
+```html
+<ul>
+    <li>item 1</li>
+    <!-- Comment -->
+    I'm text
+    <li>item 2</li>
+    <li id="item">item 3</li>
+</ul>
+```
+
+```js
+const item = document.getElementById('item');
+
+const list = item.parentNode; // Or item.parentElement
+
+const items = list.children(); // only li
+const allItemsWithWhitespacesAndText = list.childNodes;
+```
+
+## Events
+
+## Create and removal of event listeners
+
+```html
+<button class="btn" id="button">Button</button>
+```
+
+```js
+// Step 1. Find element
+const button = document.getElementById('button');
+
+function clickHandler(event) {
+    alert('Hello!');
+    console.log(this); // button
+}
+
+button.addEventListener('click', clickHandler);
+button.removeEventListener('click', clickHandler);
+```
+
+## Bubbling
+
+```html
+<div>
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>
+            item 3
+            <button>Click</button>
+        </li>
+    </ul>
+</div>
+```

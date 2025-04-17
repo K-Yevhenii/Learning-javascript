@@ -67,3 +67,8 @@ container.addEventListener('click', (event) => {
 ```js
 document.addEventListener('click', () => console.log('click'), { once: true });
 ```
+
+```js
+event.stopPropagation(); // Stop bubbling;
+event.preventDefault(); // Stop default scenario; e.g. reload of the page on form submission
+```
