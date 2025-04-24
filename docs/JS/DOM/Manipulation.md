@@ -80,3 +80,13 @@ console.log(section.dataset);
 ```html
 <!-- Section with id in html is represented in this way -->
 ```
+
+### Styles
+
+```html
+<button id="button">Click me!</button>
+```
+
+```js
+// Makes button with white background, green text, green border 2px and radius of borders 4px
+```
