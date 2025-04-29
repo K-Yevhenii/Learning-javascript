@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            function printNumbersInterval(from, to) {
+                let count = from;
+                const timer = setInterval(() => {
+                    if (count >= to) {
+                        clearInterval(timer);
+                    }
+                    console.log(count);
+                    count += 1;
+                }, 1000);
+            }
+            // printNumbers(1, 20);
+            function printNumbersTimeout(from, to) {
+                let count = from;
+                let timer = setTimeout(function handler() {
+                    if (count > to) {
+                        clearTimeout(timer);
+                        return;
+                    }
+                    console.log(count);
+                    count += 1;
+                    timer = setTimeout(handler, 1000);
+                }, 1000);
+            }
+            printNumbersTimeout(1, 5);
+        </script>
+    </body>
+</html>
+<!-- Вывод каждую секунду
+важность: 5
+Напишите функцию printNumbers(from, to), которая выводит число каждую секунду, 
+начиная от from и заканчивая to.
+
+Сделайте два варианта решения.
+
+Используя setInterval.
+Используя рекурсивный setTimeout. -->
