@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <input type="text" id="input" placeholder="Type something..." />
+        <script>
+            let timer;
+            function debounce(fn, timeout) {
+                timer = setTimeout(() => {
+                    if (timer) {
+                        clearTimeout(timer);
+                    }
+
+                    timer = setTimeout(() => fn(), timeout);
+                }, timeout);
+            }
+            const input = document.getElementById('input');
+
+            input.addEventListener('input', (e) => {
+                debounce(() => {
+                    console.log(e.target.value);
+                }, 400);
+            });
+        </script>
+    </body>
+</html>
