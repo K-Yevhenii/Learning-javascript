@@ -8,6 +8,6 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["./**/*.ts"],
+  "include": ["./**/*.ts", "examples/JS/Dates-and-time/print-week-day.js"],
   "exclude": ["node_modules"]
 }
