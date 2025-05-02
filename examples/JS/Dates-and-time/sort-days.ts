@@ -1,5 +1,5 @@
 function sortDays(...dates: Date[]) {
-    dates.sort((a, b) => a - b);
+    dates.sort((a, b) => a.valueOf() - b.valueOf());
 
     return dates;
 }

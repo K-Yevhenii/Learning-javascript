@@ -1,0 +1,1 @@
+const mockAsync = (value, timeout) => {};
