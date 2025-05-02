@@ -2,6 +2,7 @@ export class ToDoList {
     constructor(title) {
         this.title = title;
         this.isCompleted = false;
+        this.toDos = [];
     }
 
     addToDo(todo) {
