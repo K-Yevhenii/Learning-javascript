@@ -11,9 +11,17 @@ function makeRequestWithPromises(): Promise<string> {
 
 async function makeRequestWithAsyncAwait(): Promise<string> {
     try {
-        const response = await axios.get('https://api.example.com/data');
+        if (Math.random() > 0.5) {
+            throw new Error('This is an error');
+        }
 
-        return response.data;
+        const { data: token } = await axios.get('https://api.example.com/login');
+
+        const { data: users } = await axios.get('https://api.example.com/users', {
+            headers: { Authorization: `Bearer ${token}` },
+        });
+
+        return users;
     } catch (error) {
         console.error('Error fetching data:', error);
 
