@@ -5,15 +5,15 @@
 ```js
 // Function can accept primitives as arguments
 function sum(a, b) {
-  return a + b;
+    return a + b;
 }
 
 const processUser = (error, result) => {
-  if (error) {
-  }
+    if (error) {
+    }
 
-  if (result) {
-  }
+    if (result) {
+    }
 };
 
 function getAPIData() {}
@@ -27,17 +27,17 @@ const getUser = getAPIData('/users', processUser);
 ```js
 // Runs once code in callback after 1s. Returns count of miliseconds till execution of callback
 const miliseconds = setTimeout(() => {
-  console.log('Hello from callback');
+    console.log('Hello from callback');
 }, 1000);
 
 // ...
 
 if (miliseconds > 500) {
-  console.log('Half of time passed');
+    console.log('Half of time passed');
 }
 
 const miliseconds = setInterval(() => {
-  console.log('Hello from interval');
+    console.log('Hello from interval');
 }, 1000);
 ```
 
@@ -48,29 +48,29 @@ const miliseconds = setInterval(() => {
 // If request is successful callback was called with null, Response
 
 const loginUser = getAPIData('/login', (error, result) => {
-  if (error) {
-    console.log(error);
-  }
-
-  if (result) {
-    getAPIData('/users', (error, user) => {
-      if (error) {
+    if (error) {
         console.log(error);
-      }
+    }
 
-      if (user) {
-        getUserOrder(`/orders?user-id=${user.id}`, (error, result) => {
-          if (error) {
-            console.log(error);
-          }
+    if (result) {
+        getAPIData('/users', (error, user) => {
+            if (error) {
+                console.log(error);
+            }
 
-          if (result) {
-            console.log(error);
-          }
+            if (user) {
+                getUserOrder(`/orders?user-id=${user.id}`, (error, result) => {
+                    if (error) {
+                        console.log(error);
+                    }
+
+                    if (result) {
+                        console.log(error);
+                    }
+                });
+            }
         });
-      }
-    });
-  }
+    }
 });
 ```
 
@@ -90,35 +90,35 @@ loginUser()
 
 ```js
 async function loadUserPage() {
-  try {
-    const token = await loginUser();
-    const user = await getUserProfile(token);
-    const orders = await getUserOrders(user.id);
-  } catch (error) {
-    console.log(error);
-  } finally {
-    console.log('Finished');
-  }
+    try {
+        const token = await loginUser();
+        const user = await getUserProfile(token);
+        const orders = await getUserOrders(user.id);
+    } catch (error) {
+        console.log(error);
+    } finally {
+        console.log('Finished');
+    }
 }
 ```
 
 ```js
 async function getData() {
-  try {
-    const result = await axios.method(`${API_HOST}/${path}`, {
-      // Only for GET: query params that will be built as query string
-      params: { foo: 'bar', baz: 123 },
-      // Only for POST, PUT, PATCH request body converted to application/json
-      data: { foo: 'bar', baz: 123 },
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    });
+    try {
+        const result = await axios.method(`${API_HOST}/${path}`, {
+            // Only for GET: query params that will be built as query string
+            params: { foo: 'bar', baz: 123 },
+            // Only for POST, PUT, PATCH request body converted to application/json
+            data: { foo: 'bar', baz: 123 },
+            headers: {
+                Authorization: `Bearer ${token}`,
+            },
+        });
 
-    // http://localhost:8000/api?foo=bar&baz=123
-  } catch (error) {
-    console.log(error);
-  }
+        // http://localhost:8000/api?foo=bar&baz=123
+    } catch (error) {
+        console.log(error);
+    }
 }
 ```
 

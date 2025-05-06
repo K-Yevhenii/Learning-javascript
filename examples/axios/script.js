@@ -217,12 +217,13 @@ async function renameAuctionAdmin(auctionId) {
     }
 }
 
-// 
+//
 async function main() {
 
     // TODO: fix register flow and uncomment
     // const newUser = await registerUser()
     // const newUserToken = await loginUser(newUser.email, newUser.password)
+
     const adminToken = await loginUser('y.korniakov@gmail.com', '1234');
 
     await getAuctionsList();
@@ -233,5 +234,26 @@ async function main() {
     await finishAuction(newCreateAuctionsAdmin.id, adminToken)
 
 }
-querySelector
-main()
+
+async function mainWithAsync() {
+    try {
+        const adminToken = await loginUser('y.korniakov@gmail.com', '1234');
+        const auction = await createAuctionAdmin(adminToken);
+
+        console.log(auction);
+    } catch (error) {
+        console.log(error);
+    } finally {
+        console.log('Finally');
+    }
+}
+
+function mainWithPromises() {
+    return loginUser('y.korniakov@gmail.com', '1234')
+        .then(adminToken => createAuctionAdmin(adminToken))
+        .then(auction => console.log(auction))
+        .catch(error => console.log(error))
+        .finally(() => console.log('Finally'));
+}
+
+main();
