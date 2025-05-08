@@ -23,7 +23,7 @@ async function loginUser(email, password) {
         console.log(result);
         console.log('Access Token:', result.data.access);
 
-        return result.data.access
+        return result.data.access;
 
 
     } catch (error) {
@@ -45,7 +45,7 @@ async function getAuctionsList(params) {
         console.log(result);
         console.log('Auctions list');
 
-        return result.data
+        return result.data;
 
 
     } catch (error) {
@@ -226,7 +226,7 @@ async function main() {
 
     const adminToken = await loginUser('y.korniakov@gmail.com', '1234');
 
-    await getAuctionsList();
+    await getAuctionsList({ status: 'declined' }); // ?status=declined
     const newCreateAuctionsAdmin = await createAuctionAdmin(adminToken)
     await renameAuctionAdmin(newCreateAuctionsAdmin.id, adminToken)
     await getAuctionById(newCreateAuctionsAdmin.id, adminToken);
