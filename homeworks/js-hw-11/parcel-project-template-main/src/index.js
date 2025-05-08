@@ -3,11 +3,22 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 const API_KEY = '50147129-6157c9390204a79bca0017f28';
 const IMAGE_API_URL = 'https://pixabay.com/api/';
+
 const form = document.getElementById('search-form');
 const gallery = document.querySelector('.gallery');
 const button = document.querySelector('.load-more');
+
 let page = 1;
 let searchQuery = '';
+// Step 2. Create a variable that will store total amount images
+
+/*
+ * Step 5. Add function that will check can load more images
+ * 1. Compare per_page * (page + 1) is bigger that total amount of images
+ * 2. If yes, load more images
+ * 3. If no, hide button
+ */
+
 
 form.addEventListener('submit', async (event) => {
     event.preventDefault();
@@ -16,11 +27,13 @@ form.addEventListener('submit', async (event) => {
     const images = await searchImages(searchQuery, page);
     renderGallery(images);
 });
+
 button.addEventListener('click', async () => {
     page += 1;
     const images = await searchImages(searchQuery, page);
     renderGallery(images);
 });
+
 async function searchImages(q, page) {
     const params = {
         key: API_KEY,
@@ -28,6 +41,7 @@ async function searchImages(q, page) {
         image_type: 'photo',
         orientation: 'horizontal',
         safesearch: true,
+        // Step 4. Move to const under IMAGE_API_URL
         per_page: 40,
         page,
     };
@@ -36,9 +50,11 @@ async function searchImages(q, page) {
         params,
     });
     console.log(response);
-    return response.data.hits;
 
+    // Step 1. Return object with hits and totalHits
+    return response.data.hits;
 }
+
 function renderGallery(images) {
     if (!images.length) {
         button.classList.add('hidden');
@@ -71,5 +87,6 @@ function renderGallery(images) {
 function clearGallery() {
     gallery.innerHTML = '';
     page = 1;
+    // Step 3. Reset variable with total amount of images
 }
 
