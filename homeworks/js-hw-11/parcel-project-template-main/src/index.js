@@ -16,9 +16,10 @@ let searchQuery = '';
  * Step 5. Add function that will check can load more images
  * 1. Compare per_page * (page + 1) is bigger that total amount of images
  * 2. If yes, load more images
- * 3. If no, hide button
+ * 3. If no, show error message "We're sorry, but you've reached the end of search results."
+ *
+ * Step 6. call this function on click of button 'Load more'
  */
-
 
 form.addEventListener('submit', async (event) => {
     event.preventDefault();
