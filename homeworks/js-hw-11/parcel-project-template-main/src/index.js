@@ -62,7 +62,7 @@ function renderGallery(images) {
         return;
     }
     const cards = images.map((image) => {
-        return `<a href=" <div class="photo-card" >
+        return `<a href="" ><div class="photo-card">
   <img src="${image.webformatURL}" alt="${image.tags}" loading="lazy" />
   <div  class="info">
     <p class="info-item">
