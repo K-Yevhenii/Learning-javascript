@@ -3,9 +3,11 @@
     "існуючого",
     "maxlength",
     "Orderstatus",
+    "safesearch",
     "sesrverer",
     "srever",
-    "unshift"
+    "unshift",
+    "webformat"
   ],
   "editor.fontSize": 16,
   "liveServer.settings.port": 5501,
