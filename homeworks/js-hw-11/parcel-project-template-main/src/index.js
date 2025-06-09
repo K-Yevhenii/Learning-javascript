@@ -62,7 +62,9 @@ function renderGallery(images) {
         return;
     }
     const cards = images.map((image) => {
-        return `<a href=" <div class="photo-card" >
+        return `<a href="${image.largeImageURL}" 
+        data-lg-size="${image.imageWidth}-${image.imageHeight}"> 
+        <div class="photo-card" >
   <img src="${image.webformatURL}" alt="${image.tags}" loading="lazy" />
   <div  class="info">
     <p class="info-item">
@@ -78,11 +80,13 @@ function renderGallery(images) {
       <b>${image.downloads} Downloads</b>
     </p>
   </div>
-</div></a>`;
+</div>
+</a>`;
 
     }).join();
     gallery.innerHTML += cards;
     button.classList.remove('hidden');
+    lightGallery(gallery);
 
 };
 
