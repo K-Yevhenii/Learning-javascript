@@ -1,0 +1,35 @@
+.container {
+    width: 400px;
+    height: 400px;
+    border: 5px solid red;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    border: 5px solid blueviolet;
+}
+.margin {
+    margin: 0 auto;
+}
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-margin {
+    display: flex;
+    .box {
+        margin: auto;
+    }
+}
+.position-absolute {
+    position: relative;
+    .box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
