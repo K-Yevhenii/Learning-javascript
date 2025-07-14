@@ -2,6 +2,37 @@
 
 ## State
 
+```jsx
+import { useState } from 'react';
+const App = () => {
+    let [counter, setCounter] = useState(0);
+    return (
+        <div>
+            <div>{counter}</div>
+            <button
+                onClick={() => {
+                    setCounter((actual) => actual + 1);
+                }}
+            >
+                +
+            </button>
+            <div>
+                <button
+                    onClick={() => {
+                        setCounter((actual) => actual - 1);
+                    }}
+                >
+                    -
+                </button>
+            </div>
+            <button onClick={() => setCounter(0)}>reset</button>
+        </div>
+    );
+};
+
+export default App;
+```
+
 ### Class components
 
 #### Initialization
@@ -103,21 +134,25 @@ class Counter extends Component {
 #### Initialization
 
 ```tsx
+
 ```
 
 #### Initialization based on props
 
 ```tsx
+
 ```
 
 #### Update of state
 
 ```tsx
+
 ```
 
 #### Update of state based on previous value
 
 ```tsx
+
 ```
 
 ## TypeScript
