@@ -4,14 +4,15 @@
 
 ```jsx
 import { useState } from 'react';
-const App = () => {
-    let [counter, setCounter] = useState(0);
+
+const App = ({ counter: inputValue }) => {
+    let [counter, setCounter] = useState(inputValue);
     return (
         <div>
             <div>{counter}</div>
             <button
                 onClick={() => {
-                    setCounter((actual) => actual + 1);
+                    setCounter((prev) => prev + 1);
                 }}
             >
                 +
@@ -19,7 +20,7 @@ const App = () => {
             <div>
                 <button
                     onClick={() => {
-                        setCounter((actual) => actual - 1);
+                        setCounter((prev) => prev - 1);
                     }}
                 >
                     -
