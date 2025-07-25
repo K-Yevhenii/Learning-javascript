@@ -14,14 +14,18 @@ let searchQuery = '';
 let totalImages;
 const IMAGES_PER_PAGE = 10;
 
+// useEffect that listens state with `page` and state with input value
 form.addEventListener('submit', async (event) => {
     event.preventDefault();
+    // Will be a state in App.jsx
     searchQuery = event.target.elements.searchQuery.value;
     clearGallery();
     const images = await searchImages(searchQuery, page);
     renderGallery(images);
 });
 
+
+// onClick handler with name handleLoadMore
 button.addEventListener('click', async () => {
     if (checkHasNextPage()) {
         page += 1;
@@ -32,6 +36,16 @@ button.addEventListener('click', async () => {
         Notify.failure('We\'re sorry, but you\'ve reached the end of search results.');
     }
 });
+
+// Should in useEffect that performs data fetch
+// Important: async function should be declared in useEffect and called in useEffect
+//  useEffect(() => {
+//     function searchImages(q, page) {
+//         // Your implementation
+//     }
+//
+//     searchImages();
+//  });
 
 async function searchImages(q, page) {
     const params = {
@@ -48,22 +62,26 @@ async function searchImages(q, page) {
         params,
     });
 
+    // Should be a separate state with count of total image
     totalImages = response.data.totalHits;
 
+    // Should be saved in state with images
     return response.data.hits;
-
-
 }
 
+// Component ImageGallery
 function renderGallery(images) {
     if (!images.length) {
         button.classList.add('hidden');
+        // Render a separate component <Notification /> with this message if no images found
         Notify.failure('Sorry, there are no images matching your search query. Please try again.');
         return;
     }
+
     const cards = images.map((image) => {
-        return `<a href="${image.largeImageURL}" 
-        data-lg-size="${image.imageWidth}-${image.imageHeight}"> 
+        // Component ImageGalleryItem - one link with image and data
+        return `<a href="${image.largeImageURL}"
+        data-lg-size="${image.imageWidth}-${image.imageHeight}">
         <div class="photo-card" >
   <img src="${image.webformatURL}" alt="${image.tags}" loading="lazy" />
   <div  class="info">
@@ -85,13 +103,16 @@ function renderGallery(images) {
 
     }).join();
     gallery.innerHTML += cards;
+    // TODO: skip removal of button class and lightGallery
     button.classList.remove('hidden');
     lightGallery(gallery);
 
 };
 
 function clearGallery() {
+    // Should reset state with images and page
     gallery.innerHTML = '';
+    // Should be a separate state with page number
     page = 1;
     button.classList.add('hidden');
 }
