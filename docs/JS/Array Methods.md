@@ -83,7 +83,7 @@ productsCart.sort((a, b) => a.price - b.price);
 productsCart.sort((a, b) => a.name.localeCompare(b.name)); // 1 - if a > b, -1 if a < b, 0 if a === b
 
 // Sort by number in descending order
-productsCart.sort((a, b) => b - a);
+productsCart.sort((a, b) => b.price - a.price);
 // Sort by string in descending order
 productsCart.sort((a, b) => b.name.localeCompare(a.name)); // 1 - if b > a, -1 if b < a, 0 if a === b
 ```
